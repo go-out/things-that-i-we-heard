@@ -40,7 +40,8 @@ input[type="button"] {
 
 body,
 #title,
-#map {
+#map,
+#changeHidden {
   overflow: hidden;
   padding: 0;
   margin: 0;
