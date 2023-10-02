@@ -98,6 +98,11 @@
         })
       }
     }
+
+    map.on("mousedown",()=>{userInteracting=!0}),
+    map.on("dragstart",()=>{userInteracting=!0}),
+    map.on("moveend",()=>{spinGlobe()}),
+    spinGlobe()
   </script>
   <script src="js/mapbox.js"></script>
 </body>
