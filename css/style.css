@@ -1,0 +1,92 @@
+html {
+  font-size: 16px;
+  height: -webkit-fill-available;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #CDCBCC;
+  color: #fff;
+  font-family: 'Libre Baskerville', 'Zen Old Mincho', serif;
+}
+
+#changeHidden {
+  font-family: 'Zen Old Mincho', serif;
+}
+
+button,
+input[type="button"],
+textarea,
+summary {
+  appearance: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button:hover,
+input[type="button"]:hover,
+summary:hover {
+  cursor: pointer;
+}
+
+button,
+input[type="button"] {
+  background: transparent;
+  border: none;
+}
+
+body,
+#title,
+#map {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+#map {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+#changeHidden,
+#title {
+  position: absolute;
+}
+
+body,
+#title,
+#map {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#title {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  z-index: 1;
+}
+
+#changeHidden {
+  display: grid;
+  place-items: center;
+}
+
+#changeHidden {
+  color: #fff;
+  font-size: 200%;
+  width: 3rem;
+  height: 3rem;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

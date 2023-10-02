@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <script src="js/index.js"></script>
+
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>私（わたしたち）が聞いた言葉</title>
+  <meta content="私（わたしたち）が聞いた言葉" property="og:title">
+  <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="description">
+  <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="og:description">
+
+  <link rel="icon" href="img/favicon.png">
+  <link rel="icon" href="img/mobile.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="img/mobile.png" sizes="180x180">
+
+  <!--for Twitter-->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://creative-community.space/map/heard/" property="og:url">
+  <meta content="https://creative-community.space/map/heard/img/card.png" property="og:image">
+  <meta content="https://creative-community.space/map/heard/img/card.png" name="twitter:image:src">
+
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/cover.css" rel="stylesheet" />
+  <link href="css/dialog.css" rel="stylesheet" />
+  <link href="css/thing.css" rel="stylesheet" />
+
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet" />
+
+  <style>
+    #title h1 {
+      font-size: 4.5rem;
+    }
+
+    .enter #title h1 {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      #title h1 {
+        font-size: 4rem;
+      }
+
+      .enter #title h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button id="changeHidden" type="button" name="button">?</button>
+
+  <main id="title">
+    <h1>things that i (we) heard</h1>
+  </main>
+
+  <main hidden>
+  </main>
+
+  <dialog id="readme">
+    <button id="closeModal">×</button>
+    <section></section>
+    <footer id="copy">Copyright © 2020 - <time></time> You. All Rights Reserved.</footer>
+  </dialog>
+
+  <article id="map"></article>
+
+  <script src="js/things.js"></script>
+  <script src="js/mapbox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+#readme {
+  background-color: #CDCBCC;
+  color: #fff;
+  overflow: auto;
+}
+
+#readme a {
+  color: #fff;
+  text-decoration: none;
+  transition: 1s;
+}
+
+#readme a:hover {
+  background: #fff;
+  color: #CDCBCC;
+}
+
+#readme [data-ruby]::before {
+  content: attr(data-ruby);
+  color: #000;
+  display: block;
+  text-align: left;
+}
+
+#readme h2,
+#readme a {
+  font-size: 125%;
+}
+
+#readme {
+  font-size: 111%;
+}
+
+#readme [data-ruby]::before,
+#readme h3,
+#readme #copy {
+  font-size: 75%;
+}
+
+#readme h2 {
+  font-weight: 500;
+}
+
+#readme a {
+  font-style: italic;
+}
+
+#readme [data-ruby] {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+#readme h3 {
+  font-weight: 500;
+  padding: 0;
+  margin: 2rem 0;
+  line-height: 200%;
+}
+
+#closeModal {
+  color: #fff;
+  display: block;
+  float: right;
+  font-size: 200%;
+}
+
+@media screen and (max-width: 750px) {
+  #readme {
+    font-size: 3vw;
+  }
+}
