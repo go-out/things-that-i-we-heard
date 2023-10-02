@@ -36,8 +36,3 @@ function flyToStore(currentFeature) {
         zoom: 15
     });
 }
-
-map.on("mousedown",()=>{userInteracting=!0}),
-map.on("dragstart",()=>{userInteracting=!0}),
-map.on("moveend",()=>{spinGlobe()}),
-spinGlobe()
