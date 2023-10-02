@@ -1,0 +1,60 @@
+#about {
+    padding: 0.5rem;
+    overflow: auto;
+    z-index: 5;
+}
+
+#about article {
+    font-size: 95%;
+    margin: 1rem auto 2.5rem;
+    width: 90%;
+    max-width: 950px;
+}
+
+#about a {
+    color: #fff;
+}
+
+#about a:hover,
+#about u,
+#about details summary {
+    background: #fff;
+    color: #CDCBCC;
+}
+
+#about a,
+#about u {
+    padding: 0.125rem 0.25rem;
+    text-decoration: none;
+}
+
+#about a,
+#about details summary {
+    transition: 1s;
+}
+
+#about details summary:hover {
+    background: #CDCBCC;
+    color: #fff;
+}
+
+
+#about h2 {
+    font-size: 150%;
+    font-weight: 500;
+}
+
+#about a,
+#about details summary {
+    font-size: 125%;
+}
+
+#about details summary,
+#about details p {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+#about p {
+    line-height: 175%;
+}
