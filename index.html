@@ -5,7 +5,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="js/index.js"></script>
+  <script src="things.js"></script>
+  <script src="www/js/index.js"></script>
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        fetchHTML('readme.html', '#readme section');
+      } else if (event.target.readyState === 'complete') {
+        //
+      }
+    });
+  </script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -14,20 +24,20 @@
   <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="description">
   <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="og:description">
 
-  <link rel="icon" href="img/favicon.png">
-  <link rel="icon" href="img/mobile.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="img/mobile.png" sizes="180x180">
+  <link rel="icon" href="www/icon/favicon.png">
+  <link rel="icon" href="www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="www/icon/ios.png" sizes="180x180">
 
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
-  <meta content="https://creative-community.space/map/heard/" property="og:url">
-  <meta content="https://creative-community.space/map/heard/img/card.png" property="og:image">
-  <meta content="https://creative-community.space/map/heard/img/card.png" name="twitter:image:src">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/" property="og:url">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/www/icon/card.png" property="og:image">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/www/icon/card.png" name="twitter:image:src">
 
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/cover.css" rel="stylesheet" />
-  <link href="css/dialog.css" rel="stylesheet" />
-  <link href="css/thing.css" rel="stylesheet" />
+  <link href="www/css/style.css" rel="stylesheet" />
+  <link href="www/css/title.css" rel="stylesheet" />
+  <link href="www/css/thing.css" rel="stylesheet" />
+  <link href="www/css/readme.css" rel="stylesheet" />
 
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet" />
@@ -60,52 +70,46 @@
     <h1>things that i (we) heard</h1>
   </main>
 
-  <main hidden>
+  <main id="readme" hidden>
+    <section></section>
+    <footer id="copy">Copyright © 2021 - <time></time> You. All Rights Reserved.</footer>
   </main>
 
-  <dialog id="readme">
-    <button id="closeModal">×</button>
-    <section></section>
-    <footer id="copy">Copyright © 2020 - <time></time> You. All Rights Reserved.</footer>
-  </dialog>
+  <div id="map"></div>
 
-  <article id="map"></article>
-
-  <script src="otobuilding/things.js"></script>
-  <script src="bnaaltermuseum/things.js"></script>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-        center: [0, 0],
-        zoom: 2
+    const map = new mapboxgl.Map({
+      container: 'map',
+      center: [0, 0],
+      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+      zoom: '2',
+      attributionControl: false
     });
 
     // 回転する地球儀を作成
     let userInteracting = 0;
-    function spinGlobe(){
+    function spinGlobe() {
       const zoom = map.getZoom();
-      if(!userInteracting && zoom < 5) {
+      if (!userInteracting && zoom < 5) {
         let speed = 1;
-        if(zoom > 3) {
+        if (zoom > 3) {
           speed *= (5 - zoom) / 2
         }
         const lng = map.getCenter();
         lng.lng -= speed,
-        map.easeTo({
-          center: lng,
-          easing: zoom => zoom
-        })
+          map.easeTo({
+            center: lng,
+            easing: zoom => zoom
+          })
       }
     }
 
-    map.on("mousedown",()=>{userInteracting=!0}),
-    map.on("dragstart",()=>{userInteracting=!0}),
-    map.on("moveend",()=>{spinGlobe()}),
-    spinGlobe()
+    map.on("mousedown", () => { userInteracting = !0 });
+    map.on("dragstart", () => { userInteracting = !0 });
+    map.on("moveend", () => { spinGlobe() });
+    spinGlobe();
   </script>
-  <script src="js/mapbox.js"></script>
 </body>
 
 </html>

@@ -7,17 +7,16 @@
 }
 
 .mapboxgl-popup {
-  font-size: 0.75rem;
-  width: 400px;
-  min-width: 400px;
-  max-width: 400px;
+  font-size: 0.9rem;
+  width: 450px;
+  min-width: 450px;
+  max-width: 450px;
   filter: invert(90%);
 }
 
 .mapboxgl-popup-content {
   color: #000;
   text-align: center;
-  font-family: 'Zen Old Mincho', serif;
 }
 
 .mapboxgl-popup h3,
@@ -26,13 +25,14 @@
 }
 
 .mapboxgl-popup h3 {
+  font-family: 'Libre Baskerville', 'Zen Maru Gothic', serif;
   font-size: 150%;
   line-height: 150%;
   padding: 2rem 0.5rem 1.5rem;
-  font-family: 'Libre Baskerville', 'Zen Old Mincho', serif;
 }
 
 .mapboxgl-popup p {
+  font-family: 'Zen Maru Gothic', serif;
   font-size: 100%;
   line-height: 200%;
   padding: 0.5rem 1rem;

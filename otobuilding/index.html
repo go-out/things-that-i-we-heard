@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <script src="things.js"></script>
+  <script src="../www/js/index.js"></script>
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        fetchHTML('readme.html', '#about article');
+      } else if (event.target.readyState === 'complete') {
+        //
+      }
+    });
+  </script>
+
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>things that i (we) heard around OTO building</title>
+  <meta content="things that i (we) heard around OTO building" property="og:title">
+  <meta content="私（わたしたち）が 大阪市住之江区全域と大正区・西成区の一部で聞いた 80 の言葉" name="description">
+  <meta content="私（わたしたち）が 大阪市住之江区全域と大正区・西成区の一部で聞いた 80 の言葉" name="og:description">
+
+  <link rel="icon" href="../www/icon/favicon.png">
+  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
+
+  <!--for Twitter-->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/" property="og:url">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/icon/card.png" property="og:image">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/icon/card.png" name="twitter:image:src">
+
+  <link href="../www/css/style.css" rel="stylesheet" />
+  <link href="../www/css/title.css" rel="stylesheet" />
+  <link href="../www/css/thing.css" rel="stylesheet" />
+  <link href="../www/css/about.css" rel="stylesheet" />
+
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet" />
+
+  <style>
+    #title h1 {
+      font-size: 5rem;
+    }
+
+    .enter #title h1 {
+      font-size: 2rem;
+    }
+
+    #player {
+      width: 100%;
+      height: 550px;
+    }
+
+    @media screen and (max-width: 920px) {
+      #title h1 {
+        font-size: 10vw;
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      #player {
+        height: 50vw;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      #title h1 {
+        font-size: 14.5vw;
+      }
+
+      .enter #title h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button id="changeHidden" type="button" name="button">?</button>
+
+  <main id="title">
+    <h1>things that i (we) heard around OTO building</h1>
+  </main>
+
+  <main id="about" hidden>
+    <article></article>
+    <div id="player"></div>
+    <footer id="copy">Copyright © 2020 - <time></time> You. All Rights Reserved.</footer>
+  </main>
+
+  <div id="map"></div>
+
+  <script src="../www/js/youtube.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+      center: [135.47306292634534, 34.62458544610712],
+      zoom: 13.5,
+      attributionControl: false
+    });
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'E_5MC9sASw8',
+        playerVars: {
+          'controls': 0
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

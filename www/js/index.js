@@ -12,7 +12,6 @@ async function fetchHTML(url = '', query = '') {
 
 function indexHead() {
     const head = document.querySelector('head');
-
     const googleapis = document.createElement("link");
     googleapis.setAttribute("rel", "preconnect");
     googleapis.setAttribute("href", "https://fonts.googleapis.com");
@@ -26,7 +25,7 @@ function indexHead() {
 
     const fonts = document.createElement("link");
     fonts.setAttribute("rel", "stylesheet");
-    fonts.setAttribute("href", "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zen+Old+Mincho&display=swap");
+    fonts.setAttribute("href", "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zen+Maru+Gothic&display=swap");
     head.appendChild(fonts);
 }
 
@@ -35,17 +34,11 @@ document.addEventListener('readystatechange', event => {
         const title = document.querySelector('#title');
         title.addEventListener('click', function () {
             document.body.classList.toggle('enter');
-            openModal()
         }, false);
-
-        const dialogModal = document.querySelector('dialog')
-        const closeModal = document.querySelector('#closeModal')
-        closeModal.addEventListener('click', () => {
-            dialogModal.close()
-        })
 
         let mainBtn = document.querySelector('#changeHidden');
         mainBtn.addEventListener('click', function () {
+            document.body.classList.add('enter');
             const mainAll = document.querySelectorAll('main');
             mainAll.forEach(main => {
                 if (main.hidden == false) {
@@ -57,20 +50,40 @@ document.addEventListener('readystatechange', event => {
                 }
             })
         }, false);
-
-        fetchHTML('https://things-that-i-we-heard.github.io/readme.html', '#readme section');
     } else if (event.target.readyState === 'complete') {
         const now = new Date();
         const year = now.getFullYear();
         document.querySelector('#copy time').innerHTML = year;
+
+        for (const marker of things.features) {
+            const el = document.createElement('div');
+            el.className = 'thing';
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({
+                        offset: 12.5
+                    })
+                        .setHTML(`
+                        <h3>${marker.properties.title}</h3>
+                        <p class="date">
+                        ${marker.properties.date}</br>
+                        ${marker.properties.address}
+                        </p>
+                        `
+                        )
+                )
+                .addTo(map);
+            el.addEventListener('click', (e) => {
+                flyToStore(marker);
+            });
+        }
+
+        function flyToStore(currentFeature) {
+            map.flyTo({
+                center: currentFeature.geometry.coordinates,
+                zoom: 15
+            });
+        }
     }
 });
-
-function openModal() {
-    const dialogModal = document.querySelector('dialog')
-    if (typeof dialogModal.showModal === "function") {
-        dialogModal.showModal()
-    } else {
-        alert("The <dialog> API is not supported by this browser")
-    }
-}

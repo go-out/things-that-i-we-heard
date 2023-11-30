@@ -10,11 +10,15 @@ html {
 body {
   background-color: #CDCBCC;
   color: #fff;
-  font-family: 'Libre Baskerville', 'Zen Old Mincho', serif;
 }
 
-#changeHidden {
-  font-family: 'Zen Old Mincho', serif;
+body {
+  font-family: 'Libre Baskerville', 'Zen Maru Gothic', serif;
+}
+
+#changeHidden,
+.mapboxgl-ctrl-attrib-inner {
+  font-family: 'Zen Maru Gothic', serif;
 }
 
 button,
@@ -26,23 +30,22 @@ summary {
   outline: none;
 }
 
-button:hover,
-input[type="button"]:hover,
-summary:hover {
-  cursor: pointer;
-}
-
 button,
 input[type="button"] {
   background: transparent;
   border: none;
 }
 
+button:hover,
+input[type="button"]:hover,
+summary:hover {
+  cursor: pointer;
+}
+
 body,
 #title,
 #map,
 #changeHidden {
-  overflow: hidden;
   padding: 0;
   margin: 0;
 }
@@ -60,6 +63,16 @@ main {
   position: absolute;
 }
 
+main,
+#changeHidden {
+  display: grid;
+  place-items: center;
+}
+
+main[hidden] {
+  display: none;
+}
+
 body,
 main,
 #map {
@@ -73,13 +86,8 @@ main {
   height: 100%;
 }
 
-#map {
+main {
   z-index: 1;
-}
-
-#changeHidden {
-  display: grid;
-  place-items: center;
 }
 
 #changeHidden {

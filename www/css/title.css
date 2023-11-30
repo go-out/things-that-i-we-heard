@@ -1,18 +1,16 @@
 #title {
   pointer-events: all;
   user-select: text;
-  z-index: 50;
-}
-
-.enter #title {
-  pointer-events: none;
-  user-select: none;
-  z-index: 5;
 }
 
 #title:hover {
   cursor: pointer;
   font-style: italic;
+}
+
+.enter #title {
+  pointer-events: none;
+  user-select: none;
 }
 
 #title h1 {
