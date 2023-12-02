@@ -3,14 +3,14 @@
   user-select: text;
 }
 
-#title:hover {
-  cursor: pointer;
-  font-style: italic;
-}
-
 .enter #title {
   pointer-events: none;
   user-select: none;
+}
+
+#title:hover {
+  cursor: pointer;
+  font-style: italic;
 }
 
 #title h1 {
@@ -18,7 +18,7 @@
   display: block;
   font-weight: 500;
   transition: all 1s ease-out;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -33,8 +33,13 @@
   font-style: italic;
   top: 0;
   left: 0;
+  padding: 0.5rem;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   width: calc(100% - 3.5rem);
   max-width: 100%;
+}
+
+hr {
+  border: none;
 }

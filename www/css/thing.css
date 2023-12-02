@@ -7,10 +7,10 @@
 }
 
 .mapboxgl-popup {
-  font-size: 0.9rem;
-  width: 450px;
-  min-width: 450px;
-  max-width: 450px;
+  font-size: 0.75rem;
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
   filter: invert(90%);
 }
 

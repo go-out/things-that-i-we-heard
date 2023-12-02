@@ -5,14 +5,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.js"></script>
+  <script src="otobuilding/things.js"></script>
+  <script src="bnaaltermuseum/things.js"></script>
   <script src="www/js/index.js"></script>
   <script>
+    let things = {
+      'type': 'FeatureCollection',
+      'features': []
+    }
+
+    for (const otobuil of otobuilAll.heard) {
+      things.features.push(otobuil);
+    }
+    for (const bna of bnaAll.heard) {
+      things.features.push(bna);
+    }
+
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        fetchHTML('readme.html', '#readme section');
+        fetchHTML('dear.html', '#readme section');
       } else if (event.target.readyState === 'complete') {
-        //
+        const now = new Date();
+        const year = now.getFullYear();
+        document.querySelector('#copy time').innerHTML = year;
       }
     });
   </script>

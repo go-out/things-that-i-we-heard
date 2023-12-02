@@ -90,6 +90,11 @@ main {
   z-index: 1;
 }
 
+main:not(#title) {
+  background-position: center;
+  background-size: contain;
+}
+
 #changeHidden {
   color: #fff;
   font-size: 200%;

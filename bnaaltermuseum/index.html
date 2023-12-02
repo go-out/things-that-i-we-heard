@@ -8,15 +8,23 @@
   <script src="things.js"></script>
   <script src="../www/js/index.js"></script>
   <script>
+    let things = {
+      'type': 'FeatureCollection',
+      'features': []
+    }
+    for (const bna of bnaAll.heard) {
+      things.features.push(bna);
+    }
+
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        fetchHTML('readme.html', '#about article');
+        fetchHTML('credit.html', '#about article');
       } else if (event.target.readyState === 'complete') {
         //
       }
     });
   </script>
-  
+
   <!--og:meta-->
   <meta content="website" property="og:type">
   <title>things that i (we) heard around BnA Alter Museum</title>
@@ -66,26 +74,34 @@
         font-size: 1.5rem;
       }
     }
+
+    @media (orientation: landscape) {
+      iframe {
+        width: 100%;
+        height: 500px;
+      }
+    }
+
+    @media (orientation: portrait) {
+      iframe {
+        width: 100%;
+        height: 47.5vw;
+      }
+    }
   </style>
 </head>
 
 <body>
   <button id="changeHidden" type="button" name="button">?</button>
-  
+
   <main id="title">
     <h1>things that i (we) heard around BnA Alter Museum</h1>
   </main>
 
   <main id="about" hidden>
     <article></article>
-    <footer id="copy">Copyright © 2020 - <time></time> You. All Rights Reserved.</footer>
+    <small id="copy">Copyright © 2022 You. All Rights Reserved.</small>
   </main>
-
-  <dialog id="readme">
-    <button id="closeModal">×</button>
-    <section></section>
-    <footer id="copy">Copyright © 2020 - <time></time> You. All Rights Reserved.</footer>
-  </dialog>
 
   <div id="map"></div>
 
@@ -98,6 +114,7 @@
       zoom: 15.5
     });
   </script>
+  <script src="img/script.js"></script>
 </body>
 
 </html>

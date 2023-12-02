@@ -51,10 +51,6 @@ document.addEventListener('readystatechange', event => {
             })
         }, false);
     } else if (event.target.readyState === 'complete') {
-        const now = new Date();
-        const year = now.getFullYear();
-        document.querySelector('#copy time').innerHTML = year;
-
         for (const marker of things.features) {
             const el = document.createElement('div');
             el.className = 'thing';
@@ -79,9 +75,9 @@ document.addEventListener('readystatechange', event => {
             });
         }
 
-        function flyToStore(currentFeature) {
+        function flyToStore(e) {
             map.flyTo({
-                center: currentFeature.geometry.coordinates,
+                center: e.geometry.coordinates,
                 zoom: 15
             });
         }

@@ -1,6 +1,5 @@
-let things = {
-  type: 'FeatureCollection',
-  features: [
+let bnaAll = {
+  heard: [
     {
       type: 'Feature',
       geometry: {
@@ -89,7 +88,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76788133860566,35.000006276002495]
+        coordinates: [135.76788133860566, 35.000006276002495]
       },
       properties: {
         title: '麦茶はいいんやで、ミネラルが入ってる',
@@ -101,7 +100,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76828078144308,35.00375576142723]
+        coordinates: [135.76828078144308, 35.00375576142723]
       },
       properties: {
         title: 'It is in a house? NO',
@@ -113,7 +112,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.77182001546186,34.99863256550397]
+        coordinates: [135.77182001546186, 34.99863256550397]
       },
       properties: {
         title: 'ご入用の方お持ち帰りください',
@@ -125,7 +124,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7681257561544,34.99899075302402]
+        coordinates: [135.7681257561544, 34.99899075302402]
       },
       properties: {
         title: 'そんなとこ止まらんときや～',
@@ -137,7 +136,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7695921021695,34.995663687378766]
+        coordinates: [135.7695921021695, 34.995663687378766]
       },
       properties: {
         title: 'ちょっと一瞬だけ待ってて',
@@ -149,7 +148,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7681689800413,34.99911706223267]
+        coordinates: [135.7681689800413, 34.99911706223267]
       },
       properties: {
         title: 'ソルト？',
@@ -161,7 +160,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76326297145846,34.99999864332054]
+        coordinates: [135.76326297145846, 34.99999864332054]
       },
       properties: {
         title: '今日1日ありがとうございました',
@@ -173,7 +172,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76685243417177,34.99898418379705]
+        coordinates: [135.76685243417177, 34.99898418379705]
       },
       properties: {
         title: 'ちょっと待ってここでちょっと調べるわ',
@@ -185,7 +184,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76814765511472,34.99966515575949]
+        coordinates: [135.76814765511472, 34.99966515575949]
       },
       properties: {
         title: '780円です。おおきに',
@@ -197,7 +196,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76714942359928,34.99608966347003]
+        coordinates: [135.76714942359928, 34.99608966347003]
       },
       properties: {
         title: 'その”うん”ってどういう意味なんやろ',
@@ -209,7 +208,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76769592663993,34.99633548087435]
+        coordinates: [135.76769592663993, 34.99633548087435]
       },
       properties: {
         title: 'ブランコする？',
@@ -221,7 +220,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76843074646666,35.00047477022633]
+        coordinates: [135.76843074646666, 35.00047477022633]
       },
       properties: {
         title: '14万はでかいよ',
@@ -233,7 +232,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76907933562353,35.00233974341751]
+        coordinates: [135.76907933562353, 35.00233974341751]
       },
       properties: {
         title: 'ラーメンとチャーハンと餃子いきます',
@@ -245,7 +244,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7691943126444,35.00254909259776]
+        coordinates: [135.7691943126444, 35.00254909259776]
       },
       properties: {
         title: '「傘は？」<br/>「忘れた。もうええわ」',
@@ -257,7 +256,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76933639901182,35.002749831526344]
+        coordinates: [135.76933639901182, 35.002749831526344]
       },
       properties: {
         title: '今渡れるいこか',
@@ -269,7 +268,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76918586577523,35.0032538322895]
+        coordinates: [135.76918586577523, 35.0032538322895]
       },
       properties: {
         title: 'わっ！',
@@ -281,7 +280,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7692514281921,35.00372020304634]
+        coordinates: [135.7692514281921, 35.00372020304634]
       },
       properties: {
         title: 'で、何？京都の若者は？',
@@ -293,7 +292,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7694101582549,35.003703244156696]
+        coordinates: [135.7694101582549, 35.003703244156696]
       },
       properties: {
         title: '「寺町ってあっち？」<br/>「わからへん私覚えられへん」<br/>「OK調べるわ」',
@@ -305,7 +304,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76939635564105,35.003850221086765]
+        coordinates: [135.76939635564105, 35.003850221086765]
       },
       properties: {
         title: '「YouTubeとか見て笑ってる。」<br/>「わかる。笑うよな」',
@@ -317,7 +316,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7698759964805,35.00386435346995]
+        coordinates: [135.7698759964805, 35.00386435346995]
       },
       properties: {
         title: '16歳',
@@ -329,7 +328,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7704684577036,35.003902731727635]
+        coordinates: [135.7704684577036, 35.003902731727635]
       },
       properties: {
         title: 'エディオンガチ勢',
@@ -341,7 +340,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.77127222646072,35.00395605842333]
+        coordinates: [135.77127222646072, 35.00395605842333]
       },
       properties: {
         title: '人多いな',
@@ -353,7 +352,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.77095523983678,35.00283075474614]
+        coordinates: [135.77095523983678, 35.00283075474614]
       },
       properties: {
         title: 'パコーン蹴ったったらええねん',
@@ -365,7 +364,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.77069186263333,35.002247231361835]
+        coordinates: [135.77069186263333, 35.002247231361835]
       },
       properties: {
         title: 'みんな言ってても何も信じられへん',
@@ -377,7 +376,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76978133001802,35.00078840468787]
+        coordinates: [135.76978133001802, 35.00078840468787]
       },
       properties: {
         title: '暗すぎて何も見えない',
@@ -389,7 +388,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76907575585352,35.00384615210797]
+        coordinates: [135.76907575585352, 35.00384615210797]
       },
       properties: {
         title: 'マジでドンドンドンキ一緒に行く？',
@@ -401,7 +400,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7670441869874,35.00320520120307]
+        coordinates: [135.7670441869874, 35.00320520120307]
       },
       properties: {
         title: '常にジェットコースター乗ってる感じやな',
@@ -413,7 +412,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76688599105637,35.00309848700391]
+        coordinates: [135.76688599105637, 35.00309848700391]
       },
       properties: {
         title: 'グラフで言うたら30パー程度ちゃう',
@@ -425,7 +424,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76631373669824,34.99922107069672]
+        coordinates: [135.76631373669824, 34.99922107069672]
       },
       properties: {
         title: 'すっごいイライラする毎日',
@@ -437,7 +436,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76703891556002,34.99774453319523]
+        coordinates: [135.76703891556002, 34.99774453319523]
       },
       properties: {
         title: 'お兄さんがいるの？',
@@ -449,7 +448,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76699230620545,34.99902796425627]
+        coordinates: [135.76699230620545, 34.99902796425627]
       },
       properties: {
         title: '俺と20年離れてる',
@@ -461,7 +460,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76625715069844,35.000080485316275]
+        coordinates: [135.76625715069844, 35.000080485316275]
       },
       properties: {
         title: 'はりきってさぁ、具合悪くなった',
@@ -473,7 +472,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76683373338625,35.00041339191216]
+        coordinates: [135.76683373338625, 35.00041339191216]
       },
       properties: {
         title: '何回言っても変わらへんから私が辞めた',
@@ -485,7 +484,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76683638355325,35.000612083664194]
+        coordinates: [135.76683638355325, 35.000612083664194]
       },
       properties: {
         title: 'おいでやす',
@@ -497,7 +496,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76556561530037,35.001935370702384]
+        coordinates: [135.76556561530037, 35.001935370702384]
       },
       properties: {
         title: '卒業するまでめっちゃ気にしてた',
@@ -509,7 +508,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76555246067392,35.00279792324103]
+        coordinates: [135.76555246067392, 35.00279792324103]
       },
       properties: {
         title: '離れておくれやす',
@@ -521,7 +520,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76492224886505,35.00362540052488]
+        coordinates: [135.76492224886505, 35.00362540052488]
       },
       properties: {
         title: '今日は大丈夫まだ待ちだから',
@@ -533,7 +532,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76412302820415,35.003608349933]
+        coordinates: [135.76412302820415, 35.003608349933]
       },
       properties: {
         title: 'からあげもやけどアジとか魚もやばい',
@@ -545,7 +544,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76309889487385,35.00348745118896]
+        coordinates: [135.76309889487385, 35.00348745118896]
       },
       properties: {
         title: 'レシート落ちましたよ',
@@ -557,7 +556,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7619135354389,35.003616761625054]
+        coordinates: [135.7619135354389, 35.003616761625054]
       },
       properties: {
         title: '来てからでもええやん',
@@ -569,7 +568,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7610870139788,35.003577397910576]
+        coordinates: [135.7610870139788, 35.003577397910576]
       },
       properties: {
         title: 'さあどっち行こっか',
@@ -581,7 +580,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76215955501812,35.00385601654065]
+        coordinates: [135.76215955501812, 35.00385601654065]
       },
       properties: {
         title: 'ロレックスは大丸の経営店舗',
@@ -593,7 +592,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76274588274543,35.00377756245271]
+        coordinates: [135.76274588274543, 35.00377756245271]
       },
       properties: {
         title: 'ミスチルともう1人誰か',
@@ -605,7 +604,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76328741690764,35.00378656945088]
+        coordinates: [135.76328741690764, 35.00378656945088]
       },
       properties: {
         title: '重みはメンズやけどレディース。ギラっとしてる',
@@ -617,7 +616,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.7662810576935,35.00380062458066]
+        coordinates: [135.7662810576935, 35.00380062458066]
       },
       properties: {
         title: 'あんたも一緒に誕生日プレゼント割る？',
@@ -629,7 +628,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76686638596203,35.00380453358453]
+        coordinates: [135.76686638596203, 35.00380453358453]
       },
       properties: {
         title: 'バスは嫌',
@@ -641,7 +640,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76692015764047,35.00355671508812]
+        coordinates: [135.76692015764047, 35.00355671508812]
       },
       properties: {
         title: 'グンゼサブリナお買い得です',
@@ -653,7 +652,7 @@ let things = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.76906294717782,35.0015100384681]
+        coordinates: [135.76906294717782, 35.0015100384681]
       },
       properties: {
         title: 'この２つはあんまりオススメしないです～',
@@ -662,4 +661,4 @@ let things = {
       }
     }
   ]
-};
+}
