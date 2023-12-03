@@ -70,7 +70,7 @@ document.addEventListener('readystatechange', event => {
                         )
                 )
                 .addTo(map);
-            el.addEventListener('click', (e) => {
+            el.addEventListener('click', () => {
                 flyToStore(marker);
             });
         }

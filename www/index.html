@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <script src="things.js"></script>
+  <script src="../www/js/index.js"></script>
+  <script>
+    let things = {
+      'type': 'FeatureCollection',
+      'features': []
+    }
+
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        //
+      } else if (event.target.readyState === 'complete') {
+        const thisYear = document.querySelector('#copy time');
+        thisYear.innerHTML = new Date().getFullYear();
+      }
+    });
+  </script>
+
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>things that i (we) heard</title>
+  <meta content="things that i (we) heard" property="og:title">
+  <meta content="私（わたしたち）が 聞いた の言葉" name="description">
+  <meta content="私（わたしたち）が 聞いた の言葉" name="og:description">
+
+  <link rel="icon" href="../www/icon/favicon.png">
+  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
+
+  <!--for Twitter-->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/www/" property="og:url">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/www/icon/card.png" property="og:image">
+  <meta content="https://go-out.github.io/things-that-i-we-heard/www/icon/card.png" name="twitter:image:src">
+
+  <link href="../www/css/style.css" rel="stylesheet" />
+  <link href="../www/css/title.css" rel="stylesheet" />
+  <link href="../www/css/form.css" rel="stylesheet" />
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+  <style>
+    #title,
+    #changeHidden {
+      mix-blend-mode: exclusion;
+    }
+
+    #title h1 {
+      font-size: 3.5rem;
+    }
+
+    .enter #title h1 {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 920px) {
+      #title h1 {
+        font-size: 7.5vw;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      #title h1 {
+        font-size: 10vw;
+      }
+
+      .enter #title h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button id="changeHidden" type="button" name="button">?</button>
+
+  <main id="title">
+    <h1>things that i (we) heard</h1>
+    <pre id="coordinates" class="coordinates"></pre>
+  </main>
+
+  <main id="form" hidden>
+    <form post="post">
+      <label for="timestamp">when you heard this thing here ?</label>
+      <input type="datetime-local" id="timestamp" required>
+      <label for="comment">what the thing you heard here ?</label>
+      <textarea name="comment" id="comment" rows="5.5" placeholder="ここに、あなたがここで聞いた言葉を入力してください。" required></textarea>
+      <button type="submit" id="enter">Submit</button>
+    </form>
+
+    <small id="copy">
+      Copyright © 2021 -
+      <time></time>
+      You. All Rights Reserved.
+    </small>
+  </main>
+
+  <div id="map"></div>
+
+  <script src="js/findme.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/light-v10',
+      center: [0, 0],
+      zoom: 13.5,
+      pitch: 40
+    });
+  </script>
+
+  <!--建物を3Dで表示-->
+  <script src="../www/js/3d.js"></script>
+</body>
+
+</html>

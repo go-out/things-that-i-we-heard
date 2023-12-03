@@ -47,8 +47,8 @@
   <link href="../www/css/thing.css" rel="stylesheet" />
   <link href="../www/css/about.css" rel="stylesheet" />
 
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
-  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
   <style>
     #title h1 {
@@ -106,11 +106,18 @@
   <script src="../www/js/youtube.js"></script>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+    const bounds = [
+      [135.39146702295744, 34.59380194128228], // 南西座標
+      [135.5079278126247, 34.6540329633829] // 北東座標
+    ];
+
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
       center: [135.47306292634534, 34.62458544610712],
-      zoom: 13.5
+      zoom: 13.5,
+      maxBounds: bounds
     });
 
     var player;

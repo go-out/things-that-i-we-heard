@@ -1,0 +1,57 @@
+form label,
+form input,
+form textarea,
+form button {
+    background: #111;
+    color: #fff;
+    display: block;
+}
+
+#copy {
+    color: #111;
+}
+
+form label {
+    font-size: 90%;
+    font-style: italic;
+}
+
+form textarea,
+form button {
+    font-size: 111%;
+    font-family: inherit;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    text-align: center;
+    margin: 0;
+}
+
+form label,
+form input {
+    padding: 0.5rem;
+}
+
+form textarea,
+form button {
+    padding: 1rem;
+}
+
+form {
+    width: 90%;
+    max-width: 500px;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    border: none;
+    outline: none;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}

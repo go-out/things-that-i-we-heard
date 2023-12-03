@@ -54,21 +54,27 @@
   <link href="www/css/thing.css" rel="stylesheet" />
   <link href="www/css/readme.css" rel="stylesheet" />
 
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
-  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
   <style>
     #title h1 {
-      font-size: 4.5rem;
+      font-size: 3.5rem;
     }
 
     .enter #title h1 {
       font-size: 2rem;
     }
 
+    @media screen and (max-width: 920px) {
+      #title h1 {
+        font-size: 7.5vw;
+      }
+    }
+
     @media screen and (max-width: 550px) {
       #title h1 {
-        font-size: 4rem;
+        font-size: 10vw;
       }
 
       .enter #title h1 {
