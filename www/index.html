@@ -5,14 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.js"></script>
+  <script src="../www/js/submit.js"></script>
   <script src="../www/js/index.js"></script>
   <script>
-    let things = {
-      'type': 'FeatureCollection',
-      'features': []
-    }
-
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         //
@@ -54,26 +49,40 @@
     }
 
     #title h1 {
-      font-size: 3.5rem;
+      font-size: 2rem;
+    }
+
+    #title h2 {
+      background: #fff;
+      color: #111;
+      font-size: 100%;
+      font-weight: 100;
+      padding: 0.25rem;
+      margin-bottom: 4.5rem;
+      place-self: end center;
     }
 
     .enter #title h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     @media screen and (max-width: 920px) {
       #title h1 {
-        font-size: 7.5vw;
+        font-size: 5.5vw;
       }
     }
 
     @media screen and (max-width: 550px) {
+      html {
+        font-size: 3.21vw;
+      }
+
       #title h1 {
-        font-size: 10vw;
+        font-size: 7vw;
       }
 
       .enter #title h1 {
-        font-size: 1.5rem;
+        font-size: 4vw;
       }
     }
   </style>
@@ -84,7 +93,7 @@
 
   <main id="title">
     <h1>things that i (we) heard</h1>
-    <pre id="coordinates" class="coordinates"></pre>
+    <h2 id="coordinates" class="coordinates"></h2>
   </main>
 
   <main id="form" hidden>
@@ -92,7 +101,7 @@
       <label for="timestamp">when you heard this thing here ?</label>
       <input type="datetime-local" id="timestamp" required>
       <label for="comment">what the thing you heard here ?</label>
-      <textarea name="comment" id="comment" rows="5.5" placeholder="ここに、あなたがここで聞いた言葉を入力してください。" required></textarea>
+      <textarea name="comment" id="comment" rows="5" placeholder="ここに、あなたがここで聞いた言葉を入力してください。" required></textarea>
       <button type="submit" id="enter">Submit</button>
     </form>
 
@@ -105,7 +114,7 @@
 
   <div id="map"></div>
 
-  <script src="js/findme.js"></script>
+  <script src="../www/js/findme.js"></script>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 

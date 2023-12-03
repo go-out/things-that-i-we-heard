@@ -18,7 +18,7 @@ form label {
 
 form textarea,
 form button {
-    font-size: 111%;
+    font-size: inherit;
     font-family: inherit;
 }
 
@@ -26,6 +26,8 @@ form label,
 form input,
 form textarea,
 form button {
+    appearance: none;
+    border-radius: 0;
     text-align: center;
     margin: 0;
 }

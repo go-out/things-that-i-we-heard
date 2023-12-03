@@ -1,4 +1,4 @@
-geoFindMe()
+'use strict'
 
 function flyToStore(center) {
   map.flyTo({
@@ -10,7 +10,6 @@ function flyToStore(center) {
 let center;
 
 function geoFindMe() {
-  const h1 = document.querySelector('h1');
   const coordinates = document.getElementById('coordinates');
 
   function success(position) {
@@ -31,8 +30,8 @@ function geoFindMe() {
     function onDragEnd() {
       const lngLat = findme.getLngLat();
       coordinates.innerHTML = `
-      Longitude: ${lngLat.lng}
-      Latitude: ${lngLat.lat}
+      Longitude: <strong id="lng">${lngLat.lng}</strong><br>
+      Latitude: <strong id="lat">${lngLat.lat}</strong>
       `;
 
       // Mapbox リバースジオコーディング
@@ -41,7 +40,7 @@ function geoFindMe() {
         return response.text().then(function (jsonStr) {
           var data = JSON.parse(jsonStr);
           var context = data.features[0].place_name.replace(/\,/g, "");
-          h1.textContent = context;
+          document.querySelector('h1').textContent = context;
         });
       }).catch(err => { console.log(err); });
 
@@ -69,3 +68,5 @@ function geoFindMe() {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 }
+
+geoFindMe()
