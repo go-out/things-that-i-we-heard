@@ -124,16 +124,31 @@
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+    let center,
+      zoom,
+      userInteracting;
+
+    if (localStorage.getItem('heard')) {
+      const geoJSON = JSON.parse(localStorage.getItem('heard'))[0];
+      center = [geoJSON.longitude, geoJSON.latitude]
+      userInteracting = !0
+      zoom = '2';
+    } else {
+      center = [0, 0]
+      userInteracting = 0
+      zoom = '2';
+    }
+
     const map = new mapboxgl.Map({
       container: 'map',
-      center: [0, 0],
+      center: center,
       style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-      zoom: '2',
+      zoom: zoom,
       attributionControl: false
     });
 
     // 回転する地球儀を作成
-    let userInteracting = 0;
     function spinGlobe() {
       const zoom = map.getZoom();
       if (!userInteracting && zoom < 5) {
