@@ -1,4 +1,4 @@
-.thing {
+.thing.mapboxgl-marker {
   background: #fff;
   border-radius: 50%;
   cursor: pointer;

@@ -17,9 +17,33 @@
     for (const otobuil of otobuilAll.heard) {
       things.features.push(otobuil);
     }
+
     for (const bna of bnaAll.heard) {
       things.features.push(bna);
     }
+
+    async function csvtojson() {
+      const response = await fetch('www/submit.csv');
+      const text = await response.text();
+      const data = text.trim().split('\n')
+        .map(line => line.split(',').map(x => x.trim()))
+        .map(csv => {
+          let weHeard = {
+            'type': 'Feature',
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [csv[2], csv[1]]
+            },
+            'properties': {
+              'title': csv[4].replace(/"/g, ''),
+              'date': csv[0],
+              'address': csv[3].replace(/"/g, '')
+            }
+          }
+          things.features.push(weHeard)
+        })
+    }
+    csvtojson()
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
