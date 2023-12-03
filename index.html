@@ -15,16 +15,16 @@
     }
 
     for (const otobuil of otobuilAll.heard) {
-      things.features.push(otobuil);
+      things.features.push(otobuil)
     }
 
     for (const bna of bnaAll.heard) {
-      things.features.push(bna);
+      things.features.push(bna)
     }
 
     async function csvtojson() {
-      const response = await fetch('www/submit.csv');
-      const text = await response.text();
+      const response = await fetch('www/submit.csv')
+      const text = await response.text()
       const data = text.trim().split('\n')
         .map(line => line.split(',').map(x => x.trim()))
         .map(csv => {
@@ -47,10 +47,9 @@
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        fetchHTML('dear.html', '#readme section');
+        fetchHTML('dear.html', '#readme section')
       } else if (event.target.readyState === 'complete') {
-        const now = new Date();
-        const year = now.getFullYear();
+        const year = new Date().getFullYear()
         document.querySelector('#copy time').innerHTML = year;
       }
     });
@@ -117,7 +116,14 @@
 
   <main id="readme" hidden>
     <section></section>
-    <footer id="copy">Copyright © 2021 - <time></time> You. All Rights Reserved.</footer>
+    <p id="enter">
+      <a href="www/">Submit the thing you heard</a>
+    </p>
+    <footer id="copy">
+      Copyright © 2020 -
+      <time></time>
+      You. All Rights Reserved.
+    </footer>
   </main>
 
   <div id="map"></div>
@@ -131,13 +137,13 @@
 
     if (localStorage.getItem('heard')) {
       const geoJSON = JSON.parse(localStorage.getItem('heard'))[0];
-      center = [geoJSON.longitude, geoJSON.latitude]
-      userInteracting = !0
-      zoom = '2';
+      center = [geoJSON.longitude, geoJSON.latitude];
+      userInteracting = !0;
+      zoom = '11.11';
     } else {
-      center = [0, 0]
-      userInteracting = 0
-      zoom = '2';
+      center = [0, 0];
+      userInteracting = 0;
+      zoom = '1';
     }
 
     const map = new mapboxgl.Map({
@@ -165,10 +171,10 @@
       }
     }
 
-    map.on("mousedown", () => { userInteracting = !0 });
-    map.on("dragstart", () => { userInteracting = !0 });
-    map.on("moveend", () => { spinGlobe() });
-    spinGlobe();
+    map.on("mousedown", () => { userInteracting = !0 })
+    map.on("dragstart", () => { userInteracting = !0 })
+    map.on("moveend", () => { spinGlobe() })
+    spinGlobe()
   </script>
 </body>
 

@@ -30,8 +30,8 @@ function geoFindMe() {
     function onDragEnd() {
       const lngLat = findme.getLngLat();
       coordinates.innerHTML = `
-      Longitude: <strong id="lng">${lngLat.lng}</strong><br>
-      Latitude: <strong id="lat">${lngLat.lat}</strong>
+      <i id="lng">${lngLat.lng}</i>,
+      <i id="lat">${lngLat.lat}</i>
       `;
 
       // Mapbox リバースジオコーディング
@@ -40,7 +40,7 @@ function geoFindMe() {
         return response.text().then(function (jsonStr) {
           var data = JSON.parse(jsonStr);
           var context = data.features[0].place_name.replace(/\,/g, "");
-          document.querySelector('h1').textContent = context;
+          document.querySelector('#address').textContent = context;
         });
       }).catch(err => { console.log(err); });
 

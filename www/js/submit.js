@@ -34,7 +34,9 @@ if (localStorage.getItem("heard")) {
 
 document.addEventListener('readystatechange', e => {
     if (e.target.readyState === 'interactive') {
-        //
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        document.querySelector('#timestamp').value = now.toISOString().slice(0, -7);
     } else if (e.target.readyState === 'complete') {
         // localStorageから位置情報を取得
         let array = JSON.parse(localStorage.getItem("heard")) || [];
@@ -56,7 +58,7 @@ document.addEventListener('readystatechange', e => {
 
             const thisLng = document.querySelector('#lng').textContent;
             const thisLat = document.querySelector('#lat').textContent;
-            const thisAddress = document.querySelector('h1').textContent;
+            const thisAddress = document.querySelector('#address').textContent;
             const thisComment = document.querySelector('#comment').value;
             const timestamp = document.querySelector('#timestamp').value;
             const thisTime = new Date(timestamp).toLocaleString();

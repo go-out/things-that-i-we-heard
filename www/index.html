@@ -7,16 +7,6 @@
   <meta name="format-detection" content="telephone=no" />
   <script src="../www/js/submit.js"></script>
   <script src="../www/js/index.js"></script>
-  <script>
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
-        //
-      } else if (event.target.readyState === 'complete') {
-        const thisYear = document.querySelector('#copy time');
-        thisYear.innerHTML = new Date().getFullYear();
-      }
-    });
-  </script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -54,67 +44,75 @@
     }
 
     #title h1 {
-      font-size: 2rem;
-    }
-
-    #title h2 {
-      background: #fff;
-      color: #111;
-      font-size: 100%;
-      font-weight: 100;
-      padding: 0.25rem;
-      margin-bottom: 4.5rem;
-      place-self: end center;
-    }
-
-    .enter #title h1 {
       font-size: 1.5rem;
     }
 
-    @media screen and (max-width: 920px) {
-      #title h1 {
-        font-size: 5.5vw;
-      }
+    #title h2 {
+      font-size: 1rem;
+      margin-bottom: 4.5rem;
+      max-width: 95%;
+      place-self: end center;
+    }
+
+    #title h1 strong {
+      font-size: 100%;
+    }
+
+    #title h1 small {
+      font-size: 55%;
+    }
+
+    #title h1,
+    #title h2,
+    #title strong {
+      font-weight: 500;
+    }
+
+    #title h1 i {
+      font-style: normal;
+    }
+
+    #title h1 small,
+    #title h2 u {
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      padding: 0.25rem;
     }
 
     @media screen and (max-width: 550px) {
       html {
-        font-size: 3.21vw;
+        font-size: 2.5vw;
       }
 
       #title h1 {
-        font-size: 7vw;
-      }
-
-      .enter #title h1 {
         font-size: 4vw;
       }
     }
   </style>
 </head>
 
-<body>
+<body class="enter">
   <button id="changeHidden" type="button" name="button">?</button>
 
   <main id="title">
-    <h1>things that i (we) heard</h1>
-    <h2 id="coordinates" class="coordinates"></h2>
+    <h1>
+      <small id="coordinates">Longitude, Latitude</small><br>
+      <strong id="address">things that i (we) heard</strong>
+    </h1>
+    <h2>
+      <u>Move the Pin to where you want to submit the things you heard</u>
+    </h2>
   </main>
 
   <main id="form" hidden>
     <form post="post">
-      <label for="timestamp">when you heard this thing here ?</label>
+      <label for="timestamp">when you heard this thing ?</label>
       <input type="datetime-local" id="timestamp" required>
-      <label for="comment">what the thing you heard here ?</label>
-      <textarea name="comment" id="comment" rows="5" placeholder="ここに、あなたがここで聞いた言葉を入力してください。" required></textarea>
+      <label for="comment">what the thing you heard ?</label>
+      <textarea name="comment" id="comment" rows="5" placeholder="あなたが聞いた言葉を入力してください" required></textarea>
       <button type="submit" id="enter">Submit</button>
     </form>
-
-    <small id="copy">
-      Copyright © 2021 -
-      <time></time>
-      You. All Rights Reserved.
-    </small>
   </main>
 
   <div id="map"></div>
