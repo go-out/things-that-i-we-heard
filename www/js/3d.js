@@ -1,5 +1,3 @@
-// https://docs.mapbox.com/jp/mapbox-gl-js/example/3d-buildings/
-
 map.on('load', () => {
     // Insert the layer beneath any symbol layer.
     const layers = map.getStyle().layers;

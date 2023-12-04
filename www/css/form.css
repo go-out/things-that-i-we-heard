@@ -5,10 +5,15 @@ form button {
     background: #111;
     color: #fff;
     display: block;
+    font-family: inherit;
 }
 
 #copy {
     color: #111;
+}
+
+form button {
+    font-size: 125%;
 }
 
 form label {
@@ -16,10 +21,8 @@ form label {
     font-style: italic;
 }
 
-form textarea,
-form button {
-    font-size: inherit;
-    font-family: inherit;
+form textarea {
+    font-size: 16px;
 }
 
 form label,

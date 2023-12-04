@@ -5,8 +5,8 @@ let things = {
     'features': []
 }
 
-// localStorageから位置情報を取得
 if (localStorage.getItem("heard")) {
+    // localStorage から あなたが聞いた言葉 を 取得
     const heardJSON = JSON.parse(localStorage.getItem('heard'));
     for (let i = 0; i < heardJSON.length; i++) {
         const thisLongitude = heardJSON[i].longitude;
@@ -16,6 +16,7 @@ if (localStorage.getItem("heard")) {
         const thisTimestamp = heardJSON[i].timestamp;
         const thisCenter = [thisLongitude, thisLatitude];
 
+        // things JSON に あなたが聞いた言葉 を 追加
         let iHeard = {
             'type': 'Feature',
             'geometry': {
@@ -28,17 +29,18 @@ if (localStorage.getItem("heard")) {
                 'address': thisAddress
             }
         }
-        things.features.push(iHeard);
+        things.features.push(iHeard)
     }
 }
 
 document.addEventListener('readystatechange', e => {
     if (e.target.readyState === 'interactive') {
+        // コントロールに現在時刻を設定
         const now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-        document.querySelector('#timestamp').value = now.toISOString().slice(0, -7);
+        document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
     } else if (e.target.readyState === 'complete') {
-        // localStorageから位置情報を取得
+        // localStorage に あなたが聞いた言葉 を 追加
         let array = JSON.parse(localStorage.getItem("heard")) || [];
         const addData = (timestamp, latitude, longitude, address, comment) => {
             array.unshift({
@@ -52,7 +54,8 @@ document.addEventListener('readystatechange', e => {
             return { timestamp, latitude, longitude, address, comment }
         }
 
-        const form = document.querySelector('#form form');
+        // あなたが聞いた言葉 を 投稿する
+        const form = document.querySelector('#form form')
         form.addEventListener('submit', (e) => {
             e.preventDefault()
 
@@ -71,9 +74,9 @@ document.addEventListener('readystatechange', e => {
                 timestamp: thisTime,
                 address: thisAddress,
                 comment: thisComment
-            };
+            }
 
-            // PHPに位置情報を送信
+            // あなたが聞いた言葉 を CSV に 追加
             const weHeard = JSON.stringify(addHeard);
             let response = fetch('submit.php', {
                 method: 'POST',
@@ -89,11 +92,11 @@ document.addEventListener('readystatechange', e => {
                 })
                 .catch(error => {
                     console.log(error)
-                });
+                })
 
             setTimeout(() => {
                 location.reload()
-            }, 1000);
+            }, 1000)
         }, false)
     }
 }, false)

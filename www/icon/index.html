@@ -27,33 +27,6 @@
             left: 0;
         }
     </style>
-    <script>
-        'use strict'
-
-        window.onload = (event) => {
-            const text = document.querySelector('#textHere');
-
-            const canvasAll = document.querySelectorAll('canvas');
-            for (let canvas of canvasAll) {
-                if (canvas.getContext) {
-                    const ctx = canvas.getContext('2d');
-                    const x = (canvas.width / 2);
-                    const y = (canvas.height / 2);
-
-                    ctx.beginPath();
-                    ctx.fillStyle = '#CDCBCC';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                    // テキストのスタイル付け
-                    ctx.font = `italic ${y * 2}px 'Libre Baskerville', serif`;
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-                    ctx.fillStyle = '#fff';
-                    ctx.fillText('i(we)', x, y / 0.8, x * 2);
-                }
-            }
-        };
-    </script>
     <link rel="icon" href="favicon.png">
 </head>
 
@@ -116,6 +89,30 @@
             <canvas id="youtube" width="800" height="800"></canvas>
         </section>
     </main>
+    <script>
+        'use strict'
+        const text = document.querySelector('#textHere');
+
+        const canvasAll = document.querySelectorAll('canvas');
+        for (let canvas of canvasAll) {
+            if (canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+                const x = (canvas.width / 2);
+                const y = (canvas.height / 2);
+
+                ctx.beginPath();
+                ctx.fillStyle = '#CDCBCC';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // テキストのスタイル付け
+                ctx.font = `italic ${y * 1}px 'Libre Baskerville', serif`;
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillStyle = '#fff';
+                ctx.fillText('i(we)', x, y / 0.9, x * 1.75);
+            }
+        }
+    </script>
 </body>
 
 </html>

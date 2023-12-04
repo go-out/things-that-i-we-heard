@@ -11,35 +11,35 @@ async function fetchHTML(url = '', query = '') {
 }
 
 function indexHead() {
-    const head = document.querySelector('head');
-    const googleapis = document.createElement("link");
-    googleapis.setAttribute("rel", "preconnect");
-    googleapis.setAttribute("href", "https://fonts.googleapis.com");
-    head.appendChild(googleapis);
+    const head = document.querySelector('head')
+    const googleapis = document.createElement("link")
+    googleapis.setAttribute("rel", "preconnect")
+    googleapis.setAttribute("href", "https://fonts.googleapis.com")
+    head.appendChild(googleapis)
 
-    const gstatic = document.createElement("link");
-    gstatic.setAttribute("rel", "preconnect");
-    gstatic.setAttribute("href", "https://fonts.gstatic.com");
-    gstatic.setAttribute("crossorigin", "anonymous");
-    head.appendChild(gstatic);
+    const gstatic = document.createElement("link")
+    gstatic.setAttribute("rel", "preconnect")
+    gstatic.setAttribute("href", "https://fonts.gstatic.com")
+    gstatic.setAttribute("crossorigin", "anonymous")
+    head.appendChild(gstatic)
 
-    const fonts = document.createElement("link");
-    fonts.setAttribute("rel", "stylesheet");
-    fonts.setAttribute("href", "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zen+Maru+Gothic&display=swap");
-    head.appendChild(fonts);
+    const fonts = document.createElement("link")
+    fonts.setAttribute("rel", "stylesheet")
+    fonts.setAttribute("href", "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zen+Maru+Gothic&display=swap")
+    head.appendChild(fonts)
 }
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        const title = document.querySelector('#title');
+        const title = document.querySelector('#title')
         title.addEventListener('click', function () {
-            document.body.classList.toggle('enter');
-        }, false);
+            document.body.classList.toggle('enter')
+        }, false)
 
-        let mainBtn = document.querySelector('#changeHidden');
+        let mainBtn = document.querySelector('#changeHidden')
         mainBtn.addEventListener('click', function () {
-            document.body.classList.add('enter');
-            const mainAll = document.querySelectorAll('main');
+            document.body.classList.add('enter')
+            const mainAll = document.querySelectorAll('main')
             mainAll.forEach(main => {
                 if (main.hidden == false) {
                     main.hidden = true;
@@ -52,7 +52,7 @@ document.addEventListener('readystatechange', event => {
         }, false);
     } else if (event.target.readyState === 'complete') {
         for (const marker of things.features) {
-            const el = document.createElement('div');
+            const el = document.createElement('div')
             el.className = 'thing';
             new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
@@ -69,15 +69,16 @@ document.addEventListener('readystatechange', event => {
                         `
                         )
                 )
-                .addTo(map);
+                .addTo(map)
             el.addEventListener('click', () => {
-                flyToStore(marker);
-            });
+                flyToMarker(marker)
+            })
         }
 
-        function flyToStore(e) {
+        function flyToMarker(e) {
             map.flyTo({
                 center: e.geometry.coordinates,
+                essential: true,
                 zoom: 15
             });
         }

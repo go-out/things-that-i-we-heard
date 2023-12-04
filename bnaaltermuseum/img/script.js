@@ -15,7 +15,7 @@ const imgArr = [
 window.setInterval(function () {
     const about = document.querySelector('#about');
     about.style.backgroundImage = `url(${imgArr[i]})`;
-    if (i == imgArr.length -1) {
+    if (i == imgArr.length - 1) {
         i = 0;
     } else {
         i++;

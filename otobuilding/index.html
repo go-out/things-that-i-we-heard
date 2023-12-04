@@ -39,9 +39,9 @@
 
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
-  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/" property="og:url">
-  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/icon/card.png" property="og:image">
-  <meta content="https://go-out.github.io/things-that-i-we-heard/otobuilding/icon/card.png" name="twitter:image:src">
+  <meta content="https://creative-community.space/map/heard/otobuilding/" property="og:url">
+  <meta content="https://creative-community.space/map/heard/otobuilding/card.png" property="og:image">
+  <meta content="https://creative-community.space/map/heard/otobuilding/card.png" name="twitter:image:src">
 
   <link href="../www/css/style.css" rel="stylesheet" />
   <link href="../www/css/title.css" rel="stylesheet" />
@@ -111,7 +111,7 @@
     const bounds = [
       [135.39146702295744, 34.59380194128228], // 南西座標
       [135.5079278126247, 34.6540329633829] // 北東座標
-    ];
+    ]
 
     var map = new mapboxgl.Map({
       container: 'map',
@@ -119,7 +119,7 @@
       center: [135.47306292634534, 34.62458544610712],
       zoom: 13.5,
       maxBounds: bounds
-    });
+    })
 
     var player;
     function onYouTubeIframeAPIReady() {
@@ -128,7 +128,7 @@
         playerVars: {
           'controls': 0
         }
-      });
+      })
     }
   </script>
 </body>
