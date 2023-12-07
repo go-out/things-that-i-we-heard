@@ -69,6 +69,10 @@
     margin: 0;
 }
 
+fieldset img {
+    width: 100%;
+}
+
 @media screen and (max-width: 750px) {
   #about {
     font-size: 3vw;

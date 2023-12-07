@@ -8,11 +8,17 @@ let otobuilAll = {
       },
       properties: {
         title: '空に階段が生えてるみたい',
-        date: '2020年5月23日 17:00頃',
+        date: '2020年 17:00頃',
         address: '住之江区北加賀屋５丁目５−４',
         link: {
           html: 'otobuilding/date/otobuil.html',
-          youtube: "bFWiF1AmcfU"
+          youtube: "bFWiF1AmcfU",
+          img: [
+            "https://64.media.tumblr.com/967ed16b8c4e1f7427e9b76158ea8387/7373d8439bf4de21-e2/s1280x1920/343eeba7ae9758d1340b9367c506abd38f5f3598.jpg",
+            "https://64.media.tumblr.com/057c3e2e17464165ce415db0905fe631/7373d8439bf4de21-3a/s1280x1920/b7bebb4979cb33079c720f51597c678fc29eeb9b.jpg",
+            "https://64.media.tumblr.com/a50772809e15e1c62ca8b829b939e023/7373d8439bf4de21-64/s1280x1920/75533bbcd84f8f8053cec2319d320f367923a24b.jpg",
+            "https://64.media.tumblr.com/307720f2d7f137579fd0940e7141d8b2/7373d8439bf4de21-fb/s1280x1920/dd911e4f1658b78c05e118c1be981ce6e18395fc.jpg"
+          ]
         }
       }
     },
@@ -83,7 +89,7 @@ let otobuilAll = {
         date: '2020年9月12日 21:00頃',
         address: '住之江区北加賀屋５丁目３',
         link: {
-          html: 'otobuilding/date/park.html',
+          html: 'otobuilding/date/kitakagayapark.html',
           youtube: "RR-NcpSkWTw"
         }
       }
@@ -120,7 +126,7 @@ let otobuilAll = {
       },
       properties: {
         title: 'ご予約の3名様',
-        date: '2021年12月30日 20:30頃',
+        date: '2021年12月30日 20:30頃',
         address: '西成区南津守６丁目１−７０'
       }
     },
@@ -169,7 +175,11 @@ let otobuilAll = {
       properties: {
         title: '心清く。目上の人を敬う。',
         date: '2022年2月6日 15:30頃',
-        address: '住吉区住吉２丁目９−８９'
+        address: '住吉区住吉２丁目９−８９',
+        link: {
+          html: 'otobuilding/date/sumiyoshi-taisha.html',
+          youtube: "wbOguTvuV0Q"
+        }
       }
     },
     {
@@ -213,7 +223,28 @@ let otobuilAll = {
       properties: {
         title: 'ションベンするな',
         date: '2022年2月7日 16:18',
-        address: '大正区鶴町５丁目 西福橋'
+        address: '大正区鶴町５丁目 西福橋',
+        link: {
+          html: 'otobuilding/date/dive-needs.html',
+          img: [
+            "https://64.media.tumblr.com/ad6ce5f0029bda2a7e215fc289bec6fa/67092b13a3535916-4a/s540x810/280896746cfc92735d99ad63ca2ba3438ee9e056.pnj",
+            "https://64.media.tumblr.com/d2188a851a8f4e21fd5c4cd2a8dff0aa/67092b13a3535916-9d/s540x810/3c34874a363a34cc799b9b771af056512871c86a.pnj",
+            "https://64.media.tumblr.com/0ca177e18131ffb3715669ca82b3ae6a/67092b13a3535916-29/s540x810/6a274e2106a33f1efb27d8e501f3c450e67e9da8.pnj",
+            "https://64.media.tumblr.com/2cbdf187c33bb3b42af5abc8fb704a9a/67092b13a3535916-3f/s540x810/8e01f8bdadcbefe6793c509614cfe7f1f6988a55.pnj",
+            "https://64.media.tumblr.com/7e31306eb3dfdf359ab09f563f33bec6/67092b13a3535916-5c/s540x810/581626d6ed71752424253a170af6d4773a51dfa7.pnj",
+            "https://64.media.tumblr.com/1335fd5d7d60556ed86dba170e599004/67092b13a3535916-3b/s540x810/74e083cffa503b28eb26a266451975ac3688220c.pnj",
+            "https://64.media.tumblr.com/5dbb9d01628a4ad23b0fb08930ec6e85/67092b13a3535916-d4/s540x810/9f6598b26fc6d08b40f82515ffb4a50bc9901292.pnj",
+            "https://64.media.tumblr.com/edbd201eef0d6cca07dd6fe249c0714e/67092b13a3535916-b9/s540x810/0a3f823880c813a68edd5c2022504b3703c53b0e.pnj",
+            "https://64.media.tumblr.com/a4d07b46915e39181409f90481ff6cd8/c565d609df885877-de/s540x810/594e026c508cb18a470d44a089218dbbcde8d855.pnj",
+            "https://64.media.tumblr.com/5505859410c2556496d191e8c73cb7d4/c565d609df885877-32/s540x810/3e93b747dfe343f78aaf9754be18240e03ce612f.pnj",
+            "https://64.media.tumblr.com/8186b4dcb43f3fb747edff6a83f1f3bc/c565d609df885877-f4/s540x810/e1996f230ebe3281c25fdb3911ca16e0d220f1b8.pnj",
+            "https://64.media.tumblr.com/f07dada4f043a0eaf57db1863cede2e8/c565d609df885877-d1/s540x810/5a4af25f5738ffcbb5892f6c8baeb5b5947b1f3d.pnj",
+            "https://64.media.tumblr.com/c11c0740a0ed99af748cddabecd07bfd/67092b13a3535916-04/s540x810/c4ad2e930c3ee9f891d0cfc3498698193c0e203b.pnj",
+            "https://64.media.tumblr.com/3f109d18bccd4ec45dca1ece8f5dff66/67092b13a3535916-f4/s540x810/537cd5e67eaabdad0ebb3a2063d2ee1687c1689a.pnj",
+            "https://64.media.tumblr.com/99b7b083a76621576355e61485510797/c565d609df885877-95/s540x810/166ca5e96f7ecb3c3c4f79d8b7b000d1fb35c81d.pnj",
+            "https://64.media.tumblr.com/1e092c7b0dc2f062248fdd91d08127d4/c565d609df885877-7b/s540x810/26b57c3d86f76a0f65364ff70e4eaa99bc6cbea2.pnj"
+          ]
+        }
       }
     },
     {
@@ -464,7 +495,10 @@ let otobuilAll = {
       properties: {
         title: '絞めて決めてしもた方が',
         date: '2022年4月28日 19:19',
-        address: '住之江区中加賀屋２丁目７−２４'
+        address: '住之江区中加賀屋２丁目７−２４',
+        link: {
+          html: 'otobuilding/date/kagaya.html'
+        }
       }
     },
     {
@@ -953,7 +987,11 @@ let otobuilAll = {
       properties: {
         title: '鳩おりゃあごい',
         date: '2022年5月3日 12:35',
-        address: '住之江区南港北１丁目３２'
+        address: '住之江区南港北１丁目３２',
+        link: {
+          html: 'otobuilding/date/seaside-cosmo.html',
+          youtube: 'EoFg1eMWADg'
+        }
       }
     },
     {
@@ -989,7 +1027,11 @@ let otobuilAll = {
       properties: {
         title: 'ありがとう〜春〜',
         date: '2022年5月3日 15:10',
-        address: '住之江区南港中５丁目４'
+        address: '住之江区南港中５丁目４',
+        link: {
+          html: 'otobuilding/date/port-town.html',
+          youtube: 'EoFg1eMWADg'
+        }
       }
     },
     {
@@ -1020,12 +1062,32 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.48930246358145, 34.61194391675484]
+        coordinates: [135.48981791139835,34.61321640602924]
       },
       properties: {
         title: 'この子はいつもここにいる',
         date: '2022年5月11日 16:57',
-        address: '住之江区浜口東１丁目１'
+        address: '住之江区浜口東１丁目１',
+        link: {
+          html: 'otobuilding/date/sumiyoshi-park.html',
+          youtube: "gfwP_viCeZg"
+        }
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.48855798817476,34.611384968540435]
+      },
+      properties: {
+        title: '森のくまさん',
+        date: '2022年5月22日 17:30',
+        address: '住之江区浜口東１丁目１',
+        link: {
+          html: 'otobuilding/date/sumiyoshi-shinjiko.html',
+          youtube: "mkioDOspLbs"
+        }
       }
     },
     {
