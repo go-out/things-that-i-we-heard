@@ -7,7 +7,9 @@
   <meta name="format-detection" content="telephone=no" />
   <script src="things.js"></script>
   <script src="../www/js/index.js"></script>
+  <script src="../www/js/youtube.js"></script>
   <script>
+    let directory = "../"
     let things = {
       'type': 'FeatureCollection',
       'features': []
@@ -19,7 +21,20 @@
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        fetchHTML('credit.html', '#about article');
+        const play = document.querySelector('#changeHidden');
+        play.addEventListener('click', function () {
+          if (play.className === 'play') {
+            play.classList.replace('play', 'pause');
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
+            fetchHTML('credit.html', '#about article');
+          } else {
+            play.classList.replace('pause', 'play');
+            const youtube = document.querySelector('#player')
+            youtube.hidden = false;
+            player.pauseVideo();
+          }
+        }, false)
       } else if (event.target.readyState === 'complete') {
         //
       }
@@ -93,7 +108,7 @@
 </head>
 
 <body>
-  <button id="changeHidden" type="button" name="button">?</button>
+  <button id="changeHidden" class="play" type="button" name="button">?</button>
 
   <main id="title">
     <h1>things that i (we) heard around BnA Alter Museum</h1>
@@ -101,6 +116,7 @@
 
   <main id="about" hidden>
     <article></article>
+    <div id="player"></div>
     <small id="copy">Copyright © 2022 You. All Rights Reserved.</small>
   </main>
 

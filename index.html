@@ -8,7 +8,9 @@
   <script src="otobuilding/things.js"></script>
   <script src="bnaaltermuseum/things.js"></script>
   <script src="www/js/index.js"></script>
+  <script src="www/js/youtube.js"></script>
   <script>
+    let directory = ""
     let things = {
       'type': 'FeatureCollection',
       'features': []
@@ -43,11 +45,24 @@
           things.features.push(weHeard)
         })
     }
-    csvtojson()
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        fetchHTML('dear.html', '#readme section')
+        const play = document.querySelector('#changeHidden');
+
+        play.addEventListener('click', function () {
+          if (play.className === 'play') {
+            play.classList.replace('play', 'pause');
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
+            fetchHTML('dear.html', '#readme')
+          } else {
+            play.classList.replace('pause', 'play');
+            const youtube = document.querySelector('#player');
+            youtube.hidden = false;
+            player.pauseVideo();
+          }
+        }, false)
       } else if (event.target.readyState === 'complete') {
         const year = new Date().getFullYear()
         document.querySelector('#copy time').innerHTML = year;
@@ -75,6 +90,7 @@
   <link href="www/css/style.css" rel="stylesheet" />
   <link href="www/css/title.css" rel="stylesheet" />
   <link href="www/css/thing.css" rel="stylesheet" />
+  <link href="www/css/about.css" rel="stylesheet" />
   <link href="www/css/readme.css" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
@@ -89,9 +105,20 @@
       font-size: 2rem;
     }
 
+    #player {
+      width: 100%;
+      height: 550px;
+    }
+
     @media screen and (max-width: 920px) {
       #title h1 {
         font-size: 7.5vw;
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      #player {
+        height: 50vw;
       }
     }
 
@@ -108,17 +135,19 @@
 </head>
 
 <body>
-  <button id="changeHidden" type="button" name="button">?</button>
+  <button id="changeHidden" class="play" type="button" name="button">?</button>
 
   <main id="title">
     <h1>things that i (we) heard</h1>
   </main>
 
-  <main id="readme" hidden>
+  <main id="about" hidden>
     <p id="enter">
       <a href="www/">Submit the thing you heard</a>
     </p>
-    <section></section>
+    <article id="readme"></article>
+    <div id="player"></div>
+    <br>
     <footer id="copy">
       Copyright © 2020 -
       <time></time>

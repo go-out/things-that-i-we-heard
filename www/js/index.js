@@ -33,13 +33,13 @@ document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
         const title = document.querySelector('#title')
         title.addEventListener('click', function () {
-            document.body.classList.toggle('enter')
+            document.body.classList.toggle('enter');
         }, false)
 
-        let mainBtn = document.querySelector('#changeHidden')
+        const mainBtn = document.querySelector('#changeHidden')
         mainBtn.addEventListener('click', function () {
-            document.body.classList.add('enter')
-            const mainAll = document.querySelectorAll('main')
+            document.body.classList.add('enter');
+            const mainAll = document.querySelectorAll('main');
             mainAll.forEach(main => {
                 if (main.hidden == false) {
                     main.hidden = true;
@@ -51,8 +51,9 @@ document.addEventListener('readystatechange', event => {
             })
         }, false);
     } else if (event.target.readyState === 'complete') {
+        // things.features から マーカー・ポップアップを生成
         for (const marker of things.features) {
-            const el = document.createElement('div')
+            const el = document.createElement('div');
             el.className = 'thing';
             new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
@@ -71,6 +72,33 @@ document.addEventListener('readystatechange', event => {
                 )
                 .addTo(map)
             el.addEventListener('click', () => {
+                // JSON に link オブジェクトがある場合
+                if (marker.properties.link) {
+                    const mainBtn = document.querySelector('#changeHidden')
+                    const mainAll = document.querySelectorAll('main');
+                    mainAll.forEach(main => {
+                        if (main.hidden == false) {
+                            main.hidden = true;
+                            mainBtn.textContent = "?";
+                            mainBtn.classList.replace('pause', 'play');
+                        } else {
+                            main.hidden = false;
+                            mainBtn.textContent = "×";
+                            mainBtn.classList.replace('play', 'pause');
+                        }
+                    })
+
+                    if (marker.properties.link.youtube) {
+                        player.loadVideoById({ videoId: marker.properties.link.youtube });
+                    } else {
+                        const youtube = document.querySelector('#player')
+                        youtube.hidden = true;
+                    }
+
+                    let html = directory + marker.properties.link.html;
+                    fetchHTML(html, '#about article');
+                }
+
                 flyToMarker(marker)
             })
         }
@@ -79,7 +107,7 @@ document.addEventListener('readystatechange', event => {
             map.flyTo({
                 center: e.geometry.coordinates,
                 essential: true,
-                zoom: 15
+                zoom: 17.5
             });
         }
     }

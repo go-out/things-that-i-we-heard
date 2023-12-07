@@ -15,6 +15,7 @@
     color: #CDCBCC;
 }
 
+#about,
 #about details summary:hover {
     background: #CDCBCC;
     color: #fff;
@@ -66,4 +67,10 @@
     display: block;
     padding: 0;
     margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  #about {
+    font-size: 3vw;
+  }
 }

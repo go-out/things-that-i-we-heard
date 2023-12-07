@@ -1,10 +1,9 @@
 #readme {
   padding: 1rem;
-  overflow: auto;
 }
 
-#readme a {
-  color: #fff;
+#readme a,
+#enter a {
   text-decoration: none;
   transition: 1s;
 }
@@ -28,11 +27,6 @@
   padding: 0.25rem 1rem;
 }
 
-#readme a:hover {
-  background: #fff;
-  color: #CDCBCC;
-}
-
 #readme [data-ruby]::before {
   content: attr(data-ruby);
   color: #000;
@@ -50,8 +44,7 @@
 }
 
 #readme [data-ruby]::before,
-#readme h3,
-#readme #copy {
+#readme h3 {
   font-size: 75%;
 }
 
@@ -77,11 +70,10 @@
 
 @media screen and (max-width: 750px) {
   #readme {
-    font-size: 3vw;
-    padding: 4.5vw;
+    padding: 2.5vw;
   }
 
   #enter {
-    margin: 2.5vw 0 7.5vw;
+    margin: 2.5vw 0 5vw;
   }
 }
