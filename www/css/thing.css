@@ -8,9 +8,6 @@
 
 .mapboxgl-popup {
   font-size: 0.75rem;
-  width: 400px;
-  min-width: 400px;
-  max-width: 400px;
   filter: invert(90%);
 }
 
@@ -42,8 +39,10 @@
   appearance: none;
   background: transparent;
   border: none;
-  font-size: 200%;
   outline: none;
+  padding: 0 0.25rem;
+  margin: 0;
+  font-size: 200%;
 }
 
 @media screen and (max-width: 550px) {
