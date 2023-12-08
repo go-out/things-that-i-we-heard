@@ -12,13 +12,7 @@ let otobuilAll = {
         address: '住之江区北加賀屋５丁目５−４',
         link: {
           html: 'otobuilding/date/otobuil.html',
-          youtube: "bFWiF1AmcfU",
-          img: [
-            "https://64.media.tumblr.com/967ed16b8c4e1f7427e9b76158ea8387/7373d8439bf4de21-e2/s1280x1920/343eeba7ae9758d1340b9367c506abd38f5f3598.jpg",
-            "https://64.media.tumblr.com/057c3e2e17464165ce415db0905fe631/7373d8439bf4de21-3a/s1280x1920/b7bebb4979cb33079c720f51597c678fc29eeb9b.jpg",
-            "https://64.media.tumblr.com/a50772809e15e1c62ca8b829b939e023/7373d8439bf4de21-64/s1280x1920/75533bbcd84f8f8053cec2319d320f367923a24b.jpg",
-            "https://64.media.tumblr.com/307720f2d7f137579fd0940e7141d8b2/7373d8439bf4de21-fb/s1280x1920/dd911e4f1658b78c05e118c1be981ce6e18395fc.jpg"
-          ]
+          youtube: "bFWiF1AmcfU"
         }
       }
     },
@@ -177,8 +171,7 @@ let otobuilAll = {
         date: '2022年2月6日 15:30頃',
         address: '住吉区住吉２丁目９−８９',
         link: {
-          html: 'otobuilding/date/sumiyoshi-taisha.html',
-          youtube: "wbOguTvuV0Q"
+          html: 'otobuilding/date/sumiyoshi-taisha.html'
         }
       }
     },
@@ -225,25 +218,7 @@ let otobuilAll = {
         date: '2022年2月7日 16:18',
         address: '大正区鶴町５丁目 西福橋',
         link: {
-          html: 'otobuilding/date/dive-needs.html',
-          img: [
-            "https://64.media.tumblr.com/ad6ce5f0029bda2a7e215fc289bec6fa/67092b13a3535916-4a/s540x810/280896746cfc92735d99ad63ca2ba3438ee9e056.pnj",
-            "https://64.media.tumblr.com/d2188a851a8f4e21fd5c4cd2a8dff0aa/67092b13a3535916-9d/s540x810/3c34874a363a34cc799b9b771af056512871c86a.pnj",
-            "https://64.media.tumblr.com/0ca177e18131ffb3715669ca82b3ae6a/67092b13a3535916-29/s540x810/6a274e2106a33f1efb27d8e501f3c450e67e9da8.pnj",
-            "https://64.media.tumblr.com/2cbdf187c33bb3b42af5abc8fb704a9a/67092b13a3535916-3f/s540x810/8e01f8bdadcbefe6793c509614cfe7f1f6988a55.pnj",
-            "https://64.media.tumblr.com/7e31306eb3dfdf359ab09f563f33bec6/67092b13a3535916-5c/s540x810/581626d6ed71752424253a170af6d4773a51dfa7.pnj",
-            "https://64.media.tumblr.com/1335fd5d7d60556ed86dba170e599004/67092b13a3535916-3b/s540x810/74e083cffa503b28eb26a266451975ac3688220c.pnj",
-            "https://64.media.tumblr.com/5dbb9d01628a4ad23b0fb08930ec6e85/67092b13a3535916-d4/s540x810/9f6598b26fc6d08b40f82515ffb4a50bc9901292.pnj",
-            "https://64.media.tumblr.com/edbd201eef0d6cca07dd6fe249c0714e/67092b13a3535916-b9/s540x810/0a3f823880c813a68edd5c2022504b3703c53b0e.pnj",
-            "https://64.media.tumblr.com/a4d07b46915e39181409f90481ff6cd8/c565d609df885877-de/s540x810/594e026c508cb18a470d44a089218dbbcde8d855.pnj",
-            "https://64.media.tumblr.com/5505859410c2556496d191e8c73cb7d4/c565d609df885877-32/s540x810/3e93b747dfe343f78aaf9754be18240e03ce612f.pnj",
-            "https://64.media.tumblr.com/8186b4dcb43f3fb747edff6a83f1f3bc/c565d609df885877-f4/s540x810/e1996f230ebe3281c25fdb3911ca16e0d220f1b8.pnj",
-            "https://64.media.tumblr.com/f07dada4f043a0eaf57db1863cede2e8/c565d609df885877-d1/s540x810/5a4af25f5738ffcbb5892f6c8baeb5b5947b1f3d.pnj",
-            "https://64.media.tumblr.com/c11c0740a0ed99af748cddabecd07bfd/67092b13a3535916-04/s540x810/c4ad2e930c3ee9f891d0cfc3498698193c0e203b.pnj",
-            "https://64.media.tumblr.com/3f109d18bccd4ec45dca1ece8f5dff66/67092b13a3535916-f4/s540x810/537cd5e67eaabdad0ebb3a2063d2ee1687c1689a.pnj",
-            "https://64.media.tumblr.com/99b7b083a76621576355e61485510797/c565d609df885877-95/s540x810/166ca5e96f7ecb3c3c4f79d8b7b000d1fb35c81d.pnj",
-            "https://64.media.tumblr.com/1e092c7b0dc2f062248fdd91d08127d4/c565d609df885877-7b/s540x810/26b57c3d86f76a0f65364ff70e4eaa99bc6cbea2.pnj"
-          ]
+          html: 'otobuilding/date/dive-needs.html'
         }
       }
     },
@@ -712,21 +687,7 @@ let otobuilAll = {
         date: '2022年3月17日 16:50',
         address: '住之江区新北島１丁目２−１',
         link: {
-          html: 'otobuilding/date/20220317.html',
-          img: [
-            "https://64.media.tumblr.com/08c4cfe947c0e844ec8e8c599ace48ed/4227f097c230a898-29/s500x750/21eba08582791397347623f30500cfda1e679415.gifv",
-            "https://64.media.tumblr.com/f8ed939d3a3a37dfcd0f8dc0c673d40f/3841a54f9ca94193-35/s540x810/e9d08d812d79b334acbd7f78520580df440c270e.gifv",
-            "https://64.media.tumblr.com/7afd399f30f4f36e7985b2e76f9747f4/b910b44769ce78fc-73/s1280x1920/fa873564eea3f98b645f3f4f3f2b001c33647de6.jpg",
-            "https://64.media.tumblr.com/b21d5154876394c54d399601dbb318ae/b910b44769ce78fc-8b/s1280x1920/fddad532e675b6b549eefc4dd54f830e2ce29fa1.jpg",
-            "https://64.media.tumblr.com/9f9c4dd259bac5937c9dc3db11b9ef1e/b910b44769ce78fc-cf/s1280x1920/227b8d2e744034893e869d190295d9534badb97c.jpg",
-            "https://64.media.tumblr.com/e97ff0337b26be6f87b2aa3b0687fced/b910b44769ce78fc-dd/s1280x1920/3db22a5fdacb0f1e309fcb9fd957e0f7bf97cb6d.jpg",
-            "https://64.media.tumblr.com/63eb7d0382cfdbca94eb75ae73f2c287/b910b44769ce78fc-4e/s1280x1920/430634a8a89152ce8d3df88f1750f7f2a80f3dd1.jpg",
-            "https://64.media.tumblr.com/42b318ad2a3f3b1d0c0c46bfbd760cec/b910b44769ce78fc-82/s1280x1920/b58bda15877952800a6abe194e39ddb9a8ebb385.jpg",
-            "https://64.media.tumblr.com/adb06b9e63df56f6bcc6c0e9fbf97265/b910b44769ce78fc-94/s1280x1920/8cdaa5a93b9b7d61ad381888195815839bc09caa.jpg",
-            "https://64.media.tumblr.com/bb9c9ddc79286964f9b7933d2c7fac16/b910b44769ce78fc-43/s1280x1920/d4c790c6b4fd43ef7ee2811fca3c34c2e6322ce6.jpg",
-            "https://64.media.tumblr.com/ae7a8bace9d42f6f27a3a88e87808ef9/b910b44769ce78fc-e5/s1280x1920/fffcbd98a9899dd17d48dc1991cb50f91af74b0f.jpg",
-            "https://64.media.tumblr.com/04f63ce388caf72f15de92c7dbe455cf/b910b44769ce78fc-97/s1280x1920/b3c9cb1b4be42aa43da8b125bdeee13f0ad3e06f.jpg"
-          ]
+          html: 'otobuilding/date/20220317.html'
         }
       }
     },

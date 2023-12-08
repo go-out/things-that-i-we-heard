@@ -71,6 +71,7 @@ document.addEventListener('readystatechange', event => {
                         )
                 )
                 .addTo(map)
+
             el.addEventListener('click', () => {
                 // JSON に link オブジェクトがある場合
                 if (marker.properties.link) {

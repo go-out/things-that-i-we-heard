@@ -25,18 +25,35 @@
         play.addEventListener('click', function () {
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
-            const youtube = document.querySelector('#player');
-            youtube.hidden = true;
             fetchHTML('credit.html', '#about article');
+            animBG.play();
           } else {
             play.classList.replace('pause', 'play');
-            const youtube = document.querySelector('#player')
-            youtube.hidden = false;
-            player.pauseVideo();
+            animBG.pause();
           }
         }, false)
+
+        let animBG = document.querySelector("#about").animate(
+          {
+            backgroundImage: [
+              "url(img/001.jpeg)",
+              "url(img/002.jpeg)",
+              "url(img/003.jpeg)",
+              "url(img/004.jpeg)",
+              "url(img/005.jpeg)",
+              "url(img/006.jpeg)",
+              "url(img/007.jpeg)",
+              "url(img/008.jpeg)"
+            ]
+          },
+          {
+            duration: 50000,
+            direction: "alternate"
+          }
+        )
       } else if (event.target.readyState === 'complete') {
-        //
+        const youtube = document.querySelector('#player');
+        youtube.hidden = true;
       }
     });
   </script>
@@ -73,6 +90,11 @@
 
     .enter #title h1 {
       font-size: 2rem;
+    }
+
+    #about {
+      background-position: center;
+      background-size: contain;
     }
 
     @media screen and (max-width: 920px) {
@@ -138,7 +160,6 @@
       maxBounds: bounds
     });
   </script>
-  <script src="img/script.js"></script>
 </body>
 
 </html>

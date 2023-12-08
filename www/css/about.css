@@ -63,7 +63,9 @@
     margin: 0;
 }
 
-#about details img {
+#about img,
+fieldset {
+    border: none;
     display: block;
     padding: 0;
     margin: 0;
