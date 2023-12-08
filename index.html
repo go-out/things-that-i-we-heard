@@ -10,11 +10,22 @@
   <script src="www/js/index.js"></script>
   <script src="www/js/youtube.js"></script>
   <script>
-    let directory = ""
+    let directory = "";
     let things = {
       'type': 'FeatureCollection',
       'features': []
     }
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min) + min)
+    }
+
+    let youtubeID = [
+      "O84LelQJNbA",
+      "tinBEuiKqzU"
+    ]
 
     for (const otobuil of otobuilAll.heard) {
       things.features.push(otobuil);
@@ -53,8 +64,7 @@
         play.addEventListener('click', function () {
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
-            const youtube = document.querySelector('#player');
-            youtube.hidden = true;
+            player.loadVideoById({ videoId: youtubeID[getRandomInt(0, youtubeID.length)] });
             fetchHTML('dear.html', '#readme');
           } else {
             play.classList.replace('pause', 'play');
@@ -163,12 +173,6 @@
     let center,
       zoom,
       userInteracting;
-
-    function getRandomInt(min, max) {
-      min = Math.ceil(min)
-      max = Math.floor(max)
-      return Math.floor(Math.random() * (max - min) + min)
-    }
 
     if (localStorage.getItem('heard')) {
       const geoJSON = JSON.parse(localStorage.getItem('heard'))[0];
