@@ -1066,22 +1066,6 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.48855798817476,34.611384968540435]
-      },
-      properties: {
-        title: '森のくまさん',
-        date: '2022年5月22日 17:30',
-        address: '住之江区浜口東１丁目１',
-        link: {
-          html: 'otobuilding/date/sumiyoshi-shinjiko.html',
-          youtube: "mkioDOspLbs"
-        }
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.48555357409577, 34.61659452344216]
       },
       properties: {
