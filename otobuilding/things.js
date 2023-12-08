@@ -8,7 +8,7 @@ let otobuilAll = {
       },
       properties: {
         title: '空に階段が生えてるみたい',
-        date: '2020年 17:00頃',
+        date: '2020年5月23日 15:30頃',
         address: '住之江区北加賀屋５丁目５−４',
         link: {
           html: 'otobuilding/date/otobuil.html',
@@ -346,7 +346,7 @@ let otobuilAll = {
         date: '2022年2月10日 13:30頃',
         address: '住之江区北加賀屋４丁目６−１５',
         link: {
-          html: 'otobuilding/date/nkdk.html',
+          html: 'otobuilding/date/20220210.html',
           youtube: "oHYcrUsGrKs"
         }
       }
@@ -431,11 +431,7 @@ let otobuilAll = {
       properties: {
         title: 'まだエサあるん？',
         date: '2022年4月28日 18:10',
-        address: '住之江区南港南６丁目９−３',
-        link: {
-          html: 'otobuilding/date/nankou-uotsuri-en.html',
-          youtube: "9DRiQ5CVcjE"
-        }
+        address: '住之江区南港南６丁目９−３'
       }
     },
     {
@@ -497,7 +493,7 @@ let otobuilAll = {
         date: '2022年4月28日 19:19',
         address: '住之江区中加賀屋２丁目７−２４',
         link: {
-          html: 'otobuilding/date/kagaya.html'
+          html: 'otobuilding/date/20220428.html'
         }
       }
     },
@@ -987,11 +983,7 @@ let otobuilAll = {
       properties: {
         title: '鳩おりゃあごい',
         date: '2022年5月3日 12:35',
-        address: '住之江区南港北１丁目３２',
-        link: {
-          html: 'otobuilding/date/seaside-cosmo.html',
-          youtube: 'EoFg1eMWADg'
-        }
+        address: '住之江区南港北１丁目３２'
       }
     },
     {
@@ -1027,11 +1019,7 @@ let otobuilAll = {
       properties: {
         title: 'ありがとう〜春〜',
         date: '2022年5月3日 15:10',
-        address: '住之江区南港中５丁目４',
-        link: {
-          html: 'otobuilding/date/port-town.html',
-          youtube: 'EoFg1eMWADg'
-        }
+        address: '住之江区南港中５丁目４'
       }
     },
     {
