@@ -17,11 +17,11 @@
     }
 
     for (const otobuil of otobuilAll.heard) {
-      things.features.push(otobuil)
+      things.features.push(otobuil);
     }
 
     for (const bna of bnaAll.heard) {
-      things.features.push(bna)
+      things.features.push(bna);
     }
 
     async function csvtojson() {
@@ -42,7 +42,7 @@
               'address': csv[3].replace(/"/g, '')
             }
           }
-          things.features.push(weHeard)
+          things.features.push(weHeard);
         })
     }
 
@@ -55,7 +55,7 @@
             play.classList.replace('play', 'pause');
             const youtube = document.querySelector('#player');
             youtube.hidden = true;
-            fetchHTML('dear.html', '#readme')
+            fetchHTML('dear.html', '#readme');
           } else {
             play.classList.replace('pause', 'play');
             const youtube = document.querySelector('#player');
@@ -64,7 +64,7 @@
           }
         }, false)
       } else if (event.target.readyState === 'complete') {
-        const year = new Date().getFullYear()
+        const year = new Date().getFullYear();
         document.querySelector('#copy time').innerHTML = year;
       }
     });
@@ -164,13 +164,21 @@
       zoom,
       userInteracting;
 
+    function getRandomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min) + min)
+    }
+
     if (localStorage.getItem('heard')) {
       const geoJSON = JSON.parse(localStorage.getItem('heard'))[0];
       center = [geoJSON.longitude, geoJSON.latitude];
       userInteracting = !0;
       zoom = '11.11';
     } else {
-      center = [0, 0];
+      let lng = getRandomInt(-180, 180)
+      let lat = getRandomInt(-90, 90)
+      center = [lng, lat]
       userInteracting = 0;
       zoom = '1';
     }
