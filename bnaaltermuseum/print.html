@@ -7,7 +7,6 @@
     <meta name="format-detection" content="telephone=no" />
     <script src="things.js"></script>
     <script>
-        let directory = "../"
         let things = {
             'type': 'FeatureCollection',
             'features': []
@@ -32,8 +31,6 @@
                     `
                     document.body.appendChild(thing)
                 }
-            } else if (event.target.readyState === 'complete') {
-                //
             }
         });
     </script>
