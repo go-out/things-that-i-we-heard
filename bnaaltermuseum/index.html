@@ -26,35 +26,16 @@
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
             fetchHTML('credit.html', '#about article');
-            animBG.play();
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
           } else {
             play.classList.replace('pause', 'play');
-            animBG.pause();
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
+            player.pauseVideo();
           }
         }, false)
-
-        let animBG = document.querySelector("#about").animate(
-          {
-            backgroundImage: [
-              "url(img/001.jpeg)",
-              "url(img/002.jpeg)",
-              "url(img/003.jpeg)",
-              "url(img/004.jpeg)",
-              "url(img/005.jpeg)",
-              "url(img/006.jpeg)",
-              "url(img/007.jpeg)",
-              "url(img/008.jpeg)"
-            ]
-          },
-          {
-            iterations: Infinity,
-            duration: 50000,
-            direction: "alternate"
-          }
-        )
       } else if (event.target.readyState === 'complete') {
-        const youtube = document.querySelector('#player');
-        youtube.hidden = true;
       }
     });
   </script>

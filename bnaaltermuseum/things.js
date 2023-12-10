@@ -9,7 +9,11 @@ let bnaAll = {
       properties: {
         title: 'アートが第一だから',
         date: '2021-7-21 16:33',
-        address: 'BnA Alter Museum'
+        address: 'BnA Alter Museum',
+        link: {
+          html: 'bnaaltermuseum/date/bna.html',
+          youtube: 'pZrRi_9aMR8'
+        }
       }
     },
     {
@@ -57,7 +61,10 @@ let bnaAll = {
       properties: {
         title: '海苔じゃなくて苔なんです',
         date: '2022-07-24  14:30頃',
-        address: 'Picaro Eis'
+        address: 'Picaro Eis',
+        link: {
+          html: 'bnaaltermuseum/date/picaro-eis.html'
+        }
       }
     },
     {
