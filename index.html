@@ -22,11 +22,6 @@
       return Math.floor(Math.random() * (max - min) + min)
     }
 
-    let youtubeID = [
-      "O84LelQJNbA",
-      "tinBEuiKqzU"
-    ]
-
     for (const otobuil of otobuilAll.heard) {
       things.features.push(otobuil);
     }
@@ -35,26 +30,32 @@
       things.features.push(bna);
     }
 
-    async function csvtojson() {
-      const response = await fetch('www/submit.csv')
-      const text = await response.text()
-      const data = text.trim().split('\n')
-        .map(line => line.split(',').map(x => x.trim()))
-        .map(csv => {
-          let weHeard = {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'Point',
-              'coordinates': [csv[2], csv[1]]
-            },
-            'properties': {
-              'title': csv[4].replace(/"/g, ''),
-              'date': csv[0],
-              'address': csv[3].replace(/"/g, '')
-            }
+    if (localStorage.getItem("heard")) {
+      // localStorage から あなたが聞いた言葉 を 取得
+      const heardJSON = JSON.parse(localStorage.getItem('heard'));
+      for (let i = 0; i < heardJSON.length; i++) {
+        const thisLongitude = heardJSON[i].longitude;
+        const thisLatitude = heardJSON[i].latitude;
+        const thisAddress = heardJSON[i].address;
+        const thisComment = heardJSON[i].comment;
+        const thisTimestamp = heardJSON[i].timestamp;
+        const thisCenter = [thisLongitude, thisLatitude];
+
+        // things JSON に あなたが聞いた言葉 を 追加
+        let iHeard = {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': thisCenter
+          },
+          'properties': {
+            'title': thisComment,
+            'date': thisTimestamp,
+            'address': thisAddress
           }
-          things.features.push(weHeard);
-        })
+        }
+        things.features.push(iHeard)
+      }
     }
 
     document.addEventListener('readystatechange', event => {
@@ -64,7 +65,8 @@
         play.addEventListener('click', function () {
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
-            player.loadVideoById({ videoId: youtubeID[getRandomInt(0, youtubeID.length)] });
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
             fetchHTML('dear.html', '#readme');
           } else {
             play.classList.replace('pause', 'play');
