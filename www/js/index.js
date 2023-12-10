@@ -107,8 +107,7 @@ document.addEventListener('readystatechange', event => {
         function flyToMarker(e) {
             map.flyTo({
                 center: e.geometry.coordinates,
-                essential: true,
-                zoom: 12.345
+                essential: true
             });
         }
     }
