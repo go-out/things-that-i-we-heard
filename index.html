@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no" />
   <script src="otobuilding/things.js"></script>
   <script src="bnaaltermuseum/things.js"></script>
+  <script src="osaka-nantou/things.js"></script>
   <script src="www/js/index.js"></script>
   <script src="www/js/youtube.js"></script>
   <script>
@@ -28,6 +29,10 @@
 
     for (const bna of bnaAll.heard) {
       things.features.push(bna);
+    }
+
+    for (const nantou of osakaNantou.heard) {
+      things.features.push(nantou);
     }
 
     if (localStorage.getItem("heard")) {
@@ -144,7 +149,9 @@
 
   <main id="about" hidden>
     <p id="enter">
-      <a href="www/">Submit the thing you heard</a>
+      <a href="www/">
+        <i>submit the thing you heard</i>
+      </a>
     </p>
     <article id="readme"></article>
     <div id="player"></div>

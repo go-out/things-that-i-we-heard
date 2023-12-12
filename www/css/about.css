@@ -31,13 +31,22 @@
     font-weight: 500;
 }
 
-#about a,
+#enter a,
+#about h3 a,
 #about details summary {
     font-size: 125%;
 }
 
 #about article {
     font-size: 95%;
+}
+
+#about small {
+    font-size: 75%;
+}
+
+#about h2 small {
+    font-size: 55%;
 }
 
 #about p {
@@ -59,15 +68,19 @@
     margin: 1rem auto;
 }
 
-#about a,
+#about h3 a,
 #about u {
     padding: 0.125rem 0.25rem;
     text-decoration: none;
 }
 
-#about details summary,
-#about details p {
+#about details summary {
     padding: 0.5rem;
+    margin: 0;
+}
+
+#about details p {
+    padding: 0.5rem 0 0;
     margin: 0;
 }
 

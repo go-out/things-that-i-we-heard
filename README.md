@@ -1,3 +1,19 @@
+things.js
+```
+{
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [経度(longitude), 緯度(latitude)]
+    },
+    properties: {
+        title: '聞いた言葉',
+        date: 'YYYY年MM月DD日 00:00',
+        address: '住所'
+    }
+}
+```
+
 [マップのパンを指定エリアに制限](https://docs.mapbox.com/jp/mapbox-gl-js/example/restrict-bounds/)
 
 指定エリアの南西・北東座標を指定
