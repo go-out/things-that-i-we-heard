@@ -22,6 +22,11 @@
 }
 
 #about a,
+#about u {
+    text-decoration: none;
+}
+
+#about a,
 #about details summary {
     transition: 1s;
 }
@@ -71,7 +76,6 @@
 #about h3 a,
 #about u {
     padding: 0.125rem 0.25rem;
-    text-decoration: none;
 }
 
 #about details summary {
@@ -102,6 +106,6 @@ fieldset img {
     }
 
     #about iframe {
-        height: 50vw;
+        height: 55vw;
     }
 }

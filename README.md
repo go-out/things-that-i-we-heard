@@ -9,7 +9,11 @@ things.js
     properties: {
         title: '聞いた言葉',
         date: 'YYYY年MM月DD日 00:00',
-        address: '住所'
+        address: '住所',
+        link: {
+          html: 'URL',
+          youtube: '動画ID'
+        }
     }
 }
 ```

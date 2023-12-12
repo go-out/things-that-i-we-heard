@@ -75,8 +75,10 @@ document.addEventListener('readystatechange', event => {
             el.addEventListener('click', () => {
                 // JSON に link オブジェクトがある場合
                 if (marker.properties.link) {
-                    const mainBtn = document.querySelector('#changeHidden')
+                    const mainBtn = document.querySelector('#changeHidden');
                     const mainAll = document.querySelectorAll('main');
+                    const youtube = document.querySelector('#player');
+
                     mainAll.forEach(main => {
                         if (main.hidden == false) {
                             main.hidden = true;
@@ -91,8 +93,8 @@ document.addEventListener('readystatechange', event => {
 
                     if (marker.properties.link.youtube) {
                         player.loadVideoById({ videoId: marker.properties.link.youtube });
+                        youtube.hidden = false;
                     } else {
-                        const youtube = document.querySelector('#player')
                         youtube.hidden = true;
                     }
 

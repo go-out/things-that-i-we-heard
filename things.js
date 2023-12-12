@@ -4,24 +4,12 @@ let submitAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5014052392454, 34.619949431924525]
+        coordinates: [135.45304101089812, 34.5602853215355]
       },
       properties: {
-        title: '優しいドーベルマンやったね',
-        date: '2022年6月19日 18:31',
-        address: '大阪市住吉区帝塚山東2丁目5番18'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.51862000030746, 34.617429478559885]
-      },
-      properties: {
-        title: '次の日学校やったら10時半には寝る',
-        date: '2022年6月19日 21:35',
-        address: '大阪市東住吉区つるが丘温'
+        title: 'トングでお肉持って',
+        date: '2023年12月9日 19:30',
+        address: '日本大阪府堺市西区浜寺石津町西2-3-11セリアハウス'
       }
     }
   ]

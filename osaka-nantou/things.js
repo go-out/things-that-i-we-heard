@@ -25,7 +25,10 @@ let osakaNantou = {
       properties: {
         title: '次の日学校やったら10時半には寝る',
         date: '2022年6月19日 21:35',
-        address: '大阪市東住吉区つるが丘温'
+        address: '大阪市東住吉区つるが丘温',
+        link: {
+          html: 'osaka-nantou/date/tsurugaoka-onsen.html'
+        }
       }
     },
     {
@@ -37,10 +40,7 @@ let osakaNantou = {
       properties: {
         title: 'ワンランク上の串カツ',
         date: '2022年11月23日 17:25',
-        address: '大正五年創業 創作串カツ 串揚げ ぎふや別邸 大阪新世界店',
-        link: {
-          html: 'osaka-nantou/date/gifuya.html'
-        }
+        address: '大正五年創業 創作串カツ 串揚げ ぎふや別邸 大阪新世界店'
       }
     },
     {
@@ -50,8 +50,8 @@ let osakaNantou = {
         coordinates: [135.51974776637041, 34.597437761470644]
       },
       properties: {
-        title: 'サンキュウ～ナイスディ',
-        date: '2023年3月21日 16:50',
+        title: '全員にラッキーデー',
+        date: '2023年3月12日 16:50',
         address: '大阪市住吉区苅田8-10-27 錦温泉',
         link: {
           html: 'osaka-nantou/date/nishiki-onsen.html'
@@ -68,18 +68,6 @@ let osakaNantou = {
         title: '獅子が空を翔ぶ日に',
         date: '2023年3月21日 18:45',
         address: '大阪市住吉区浅香１丁目６'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.45304101089812, 34.5602853215355]
-      },
-      properties: {
-        title: 'トングでお肉持って',
-        date: '2023年12月9日 19:30',
-        address: '日本大阪府堺市西区浜寺石津町西2-3-11セリアハウス'
       }
     },
     {
@@ -139,7 +127,7 @@ let osakaNantou = {
       properties: {
         title: 'え、はぁ？',
         date: '2023年12月11日 17:30',
-        address: '日本大阪府大阪市東住吉区東住吉区矢田6-3-16ふれ愛温泉矢田'
+        address: '日本大阪府大阪市東住吉区東住吉区矢田6-3-16'
       }
     },
     {
@@ -149,7 +137,7 @@ let osakaNantou = {
         coordinates: [135.51350641040267, 34.612407962355476]
       },
       properties: {
-        title: 'fuckin terrible',
+        title: 'awful, fuckin terrible',
         date: '2023年12月11日 20:00',
         address: '日本大阪府大阪市住吉区長居東4丁目6番3'
       }
