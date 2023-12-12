@@ -6,8 +6,8 @@ $source_file = "submit.csv";
 $data = json_decode(file_get_contents("php://input"), true);
 $output = array(
     $data["timestamp"],
-    $data["latitude"],
     $data["longitude"],
+    $data["latitude"],
     '"' . $data["address"] . '"',
     '"' . $data["comment"] . '"',
     $_SERVER["REMOTE_ADDR"]

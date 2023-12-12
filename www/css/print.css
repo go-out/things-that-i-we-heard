@@ -14,7 +14,7 @@ body {
     float: left;
     text-align: center;
     place-content: center;
-    width: calc(100vw / 3);
+    width: calc(100% / 3);
     height: calc(100vh / 3);
 }
 
