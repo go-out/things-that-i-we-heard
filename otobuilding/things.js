@@ -393,7 +393,7 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49227968288875, 34.605819819360846]
+        coordinates: [135.49068595424097, 34.6054515878714]
       },
       properties: {
         title: '私、初恋時代は絶対忘れへん！一生！',
