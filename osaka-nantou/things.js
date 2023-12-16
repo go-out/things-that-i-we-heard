@@ -25,7 +25,7 @@ let osakaNantou = {
       properties: {
         title: '次の日学校やったら10時半には寝る',
         date: '2022年6月19日 21:35',
-        address: '大阪市東住吉区つるが丘温',
+        address: '大阪市東住吉区つるが丘温泉',
         link: {
           html: 'osaka-nantou/date/tsurugaoka-onsen.html'
         }
