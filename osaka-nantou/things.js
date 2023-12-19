@@ -11,7 +11,6 @@ let osakaNantou = {
         date: '2022年6月19日 18:31',
         address: '大阪市住吉区帝塚山東2丁目5番18',
         link: {
-          html: 'osaka-nantou/date/mandaiike.html',
           youtube: '-7DEl_jxuW8'
         }
       }
@@ -25,10 +24,7 @@ let osakaNantou = {
       properties: {
         title: '次の日学校やったら10時半には寝る',
         date: '2022年6月19日 21:35',
-        address: '大阪市東住吉区つるが丘温泉',
-        link: {
-          html: 'osaka-nantou/date/tsurugaoka-onsen.html'
-        }
+        address: '大阪市東住吉区つるが丘温泉'
       }
     },
     {
@@ -52,10 +48,7 @@ let osakaNantou = {
       properties: {
         title: '全員にラッキーデー',
         date: '2023年3月12日 16:50',
-        address: '大阪市住吉区苅田8-10-27 錦温泉',
-        link: {
-          html: 'osaka-nantou/date/nishiki-onsen.html'
-        }
+        address: '大阪市住吉区苅田8-10-27 錦温泉'
       }
     },
     {

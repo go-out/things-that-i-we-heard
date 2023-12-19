@@ -183,7 +183,7 @@ let otobuilAll = {
         date: '2022年2月6日 15:30頃',
         address: '住吉区住吉２丁目９−８９',
         link: {
-          html: 'otobuilding/date/sumiyoshi-taisha.html'
+          html: 'otobuilding/date/sumiyoshitaisha.html'
         }
       }
     },

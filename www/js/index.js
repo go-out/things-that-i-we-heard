@@ -91,15 +91,17 @@ document.addEventListener('readystatechange', event => {
                         }
                     })
 
+                    if (marker.properties.link.html) {
+                        let html = directory + marker.properties.link.html;
+                        fetchHTML(html, '#about article');
+                    }
+
                     if (marker.properties.link.youtube) {
                         player.loadVideoById({ videoId: marker.properties.link.youtube });
                         youtube.hidden = false;
                     } else {
                         youtube.hidden = true;
                     }
-
-                    let html = directory + marker.properties.link.html;
-                    fetchHTML(html, '#about article');
                 }
 
                 flyToMarker(marker)
