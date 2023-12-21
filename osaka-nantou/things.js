@@ -142,9 +142,21 @@ let osakaNantou = {
         coordinates: [135.49707133910726, 34.63296276964418]
       },
       properties: {
-        title: '天下茶屋公園',
+        title: '「冷房ちゃうか暖房か」<br>「冷房はここや」',
         date: '2023年12月21日 15:31',
         address: '日本大阪府大阪市西成区岸里東1丁目23番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49912454390272, 34.627992219353274]
+      },
+      properties: {
+        title: '毎月第1・第3日曜日のみ公開',
+        date: '2023年12月21日 17:50',
+        address: '阿部野神社 中今亭庭園'
       }
     },
     {
@@ -155,7 +167,7 @@ let osakaNantou = {
       },
       properties: {
         title: '痛いよー痛いよー',
-        date: '2023年12月21日 15:30',
+        date: '2023年12月21日 16:30',
         address: '日本大阪府大阪市阿倍野区北畠2丁目11番63'
       }
     },
@@ -167,7 +179,7 @@ let osakaNantou = {
       },
       properties: {
         title: 'ここ通れないですわ',
-        date: '2023年12月21日 15:32',
+        date: '2023年12月21日 16:32',
         address: '日本大阪府大阪市阿倍野区北畠2丁目11番23'
       }
     },
@@ -179,7 +191,7 @@ let osakaNantou = {
       },
       properties: {
         title: 'いつ来んのかな',
-        date: '2023年12月21日 15:48',
+        date: '2023年12月21日 16:48',
         address: '日本大阪府大阪市住吉区帝塚山西1丁目3番21'
       }
     },
@@ -191,7 +203,7 @@ let osakaNantou = {
       },
       properties: {
         title: '車より速いっていうこと？',
-        date: '2023年12月21日 15:50',
+        date: '2023年12月21日 16:50',
         address: '日本大阪府大阪市住吉区帝塚山西1丁目12番1'
       }
     }
