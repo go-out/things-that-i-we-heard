@@ -35,34 +35,6 @@
       things.features.push(osaka2nd);
     }
 
-    if (localStorage.getItem("heard")) {
-      // localStorage から あなたが聞いた言葉 を 取得
-      const heardJSON = JSON.parse(localStorage.getItem('heard'));
-      for (let i = 0; i < heardJSON.length; i++) {
-        const thisLongitude = heardJSON[i].longitude;
-        const thisLatitude = heardJSON[i].latitude;
-        const thisAddress = heardJSON[i].address;
-        const thisComment = heardJSON[i].comment;
-        const thisTimestamp = heardJSON[i].timestamp;
-        const thisCenter = [thisLongitude, thisLatitude];
-
-        // things JSON に あなたが聞いた言葉 を 追加
-        let iHeard = {
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': thisCenter
-          },
-          'properties': {
-            'title': thisComment,
-            'date': thisTimestamp,
-            'address': thisAddress
-          }
-        }
-        things.features.push(iHeard)
-      }
-    }
-
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const play = document.querySelector('#changeHidden');
