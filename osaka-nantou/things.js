@@ -115,10 +115,10 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5304018866546, 34.6000647402028]
+        coordinates: [135.53046702063426, 34.600094129291094]
       },
       properties: {
-        title: 'え、はぁ？',
+        title: '本日はご来館いただき誠にありがとうございます。え、はぁ？',
         date: '2023年12月11日 17:30',
         address: '日本大阪府大阪市東住吉区東住吉区矢田6-3-16'
       }
@@ -127,7 +127,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.51350641040267, 34.612407962355476]
+        coordinates: [135.51346957273296, 34.609585511640404]
       },
       properties: {
         title: 'awful, fuckin terrible',
@@ -142,7 +142,7 @@ let osakaNantou = {
         coordinates: [135.49707133910726, 34.63296276964418]
       },
       properties: {
-        title: '「冷房の暖房の効いたとこ行って」<br>「冷房ちゃうで」',
+        title: '「冷房の効いたとこ行って」<br>「冷房ちゃうで」',
         date: '2023年12月21日 15:31',
         address: '日本大阪府大阪市西成区岸里東1丁目23番1'
       }
@@ -205,6 +205,198 @@ let osakaNantou = {
         title: '車より速いっていうこと？',
         date: '2023年12月21日 16:50',
         address: '日本大阪府大阪市住吉区帝塚山西1丁目12番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.58924486201022,34.59667441534168]
+      },
+      properties: {
+        title: '飛んで蹴ってー',
+        date: '2023年12月31日 11:02',
+        address: '日本大阪府八尾市南木の本8丁目132'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.58089201667116,34.59475773438241]
+      },
+      properties: {
+        title: 'また来年お願いします',
+        date: '2023年12月31日 11:45',
+        address: '日本大阪府八尾市若林町3丁目124'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.58134986625367,34.59639300190359]
+      },
+      properties: {
+        title: 'きっとモデルさんとか<br>ダイエットしてる人とかね',
+        date: '2023年12月31日 12:07',
+        address: '日本大阪府八尾市若林町1-87モスバーガー 八尾南店'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.56619575885298,34.60886465896537]
+      },
+      properties: {
+        title: 'こっちこっち危な',
+        date: '2023年12月31日 12:30',
+        address: '日本大阪府大阪市平野区平野区長吉長原西1-1-10出戸駅'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.56075519492583,34.60565453709334]
+      },
+      properties: {
+        title: '今日の3時が最後',
+        date: '2023年12月31日 13:00',
+        address: '日本大阪府大阪市平野区瓜破東4丁目1番25'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.56198347922384,34.602778845715974]
+      },
+      properties: {
+        title: '落っこちていくような 心地がしたのは',
+        date: '2023年12月31日 13:45',
+        address: '日本大阪府大阪市平野区瓜破東4丁目4番146'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.56779693427097,34.60186678245877]
+      },
+      properties: {
+        title: '「寝てまうかもしれんけど」<br>「後半やからな」',
+        date: '2023年12月31日 14:20',
+        address: '日本大阪府大阪市平野区長吉長原西3丁目4番18'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50381664169254,34.61625696634064]
+      },
+      properties: {
+        title: 'こころの健康総合センターやって',
+        date: '2024年1月6日 15:25',
+        address: '日本大阪府大阪市住吉区万代東3丁目1番50'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5094163837236,34.616169273301836]
+      },
+      properties: {
+        title: 'こんなに同じ建物ばっかりで恥ずかしくないんかな',
+        date: '2024年1月6日 15:30',
+        address: '日本大阪府大阪市住吉区長居西1丁目2番9'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51111385576877,34.61576238026825]
+      },
+      properties: {
+        title: '凸凹団地',
+        date: '2024年1月6日 15:35',
+        address: '日本大阪府大阪市住吉区長居西1丁目1番7'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51548552725984,34.6175878511999]
+      },
+      properties: {
+        title: 'ジュースありやな',
+        date: '2024年1月6日 16:00',
+        address: '日本大阪府大阪市阿倍野区西田辺町2丁目2番24'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52466268112016,34.61796573855915]
+      },
+      properties: {
+        title: '地震もあって飛行機事故もあって大変な一年になりそう',
+        date: '2024年1月6日 16:30',
+        address: '日本大阪府大阪市東住吉区南田辺5丁目9番8'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52650988260336,34.61816964482337]
+      },
+      properties: {
+        title: 'モールやもん',
+        date: '2024年1月6日 16:45',
+        address: '日本大阪府大阪市東住吉区南田辺5丁目7番14'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.53178056430107,34.61645501534474]
+      },
+      properties: {
+        title: 'けっこう人多い',
+        date: '2024年1月6日 17:00',
+        address: '日本大阪府大阪市東住吉区鷹合2丁目1番11'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5162721169935,34.612571055863086]
+      },
+      properties: {
+        title: '「うがった」って初めて聞いたし言ったことない',
+        date: '2024年1月6日 18:45',
+        address: '日本大阪府大阪市東住吉区長居公園1-32臨南寺墓苑'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5125034242053,34.6115568792988]
+      },
+      properties: {
+        title: 'ほんまに今年は厳しく、適当に外食しない',
+        date: '2024年1月6日 19:30',
+        address: '日本大阪府大阪市住吉区長居3丁目2番2'
       }
     }
   ]
