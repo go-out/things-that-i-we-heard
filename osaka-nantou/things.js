@@ -398,6 +398,30 @@ let osakaNantou = {
         date: '2024年1月6日 19:30',
         address: '日本大阪府大阪市住吉区長居3丁目2番2'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.4965092134321,34.62836585504155]
+      },
+      properties: {
+        title: '椿と南天',
+        date: '2024年1月7日 10:25',
+        address: '日本大阪府大阪市西成区岸里東2丁目6番7'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49514768263066,34.62924816310985]
+      },
+      properties: {
+        title: 'めっちゃいい曲',
+        date: '2024年1月7日 10:30',
+        address: '日本大阪府大阪市西成区玉出東1丁目3番21'
+      }
     }
   ]
 };
