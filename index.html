@@ -86,6 +86,15 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
   <style>
+    #title,
+    #changeHidden {
+      mix-blend-mode: exclusion;
+    }
+
+    .thing.mapboxgl-marker {
+      filter: invert(0.9);
+    }
+
     #title h1 {
       font-size: 3.5rem;
     }
@@ -157,12 +166,12 @@
       toppage = 1.23;
     }
 
-    let zoomIn = 12.345;
+    let zoomIn = 15.5;
 
     const map = new mapboxgl.Map({
       container: 'map',
       center: center,
-      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+      style: 'mapbox://styles/mapbox/light-v10',
       zoom: toppage,
       attributionControl: false
     });
@@ -202,6 +211,7 @@
     map.on("moveend", () => { spinGlobe() })
     spinGlobe()
   </script>
+  <script src="../www/js/3d.js"></script>
 </body>
 
 </html>

@@ -32,18 +32,6 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50592420684535, 34.651366241594744]
-      },
-      properties: {
-        title: 'ワンランク上の串カツ',
-        date: '2022年11月23日 17:25',
-        address: '大正五年創業 創作串カツ 串揚げ ぎふや別邸 大阪新世界店'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.51974776637041, 34.597437761470644]
       },
       properties: {
@@ -674,6 +662,18 @@ let osakaNantou = {
         title: 'でもさぁカードがないから',
         date: '2024年1月11日 16:31',
         address: '日本大阪府大阪市住吉区帝塚山中4丁目1番14'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49727323735715, 34.621232988711526]
+      },
+      properties: {
+        title: '何時何分何秒地球が何回回った時？',
+        date: '2024年1月11日 16:37',
+        address: '日本大阪府大阪市住吉区帝塚山西2丁目8番8'
       }
     }
   ]
