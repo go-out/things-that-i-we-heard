@@ -9,8 +9,9 @@ let osakaNantou = {
       properties: {
         title: '優しいドーベルマンやったね',
         date: '2022年6月19日 18:31',
-        address: '大阪市住吉区帝塚山東2丁目5番18',
+        address: '大阪市住吉区帝塚山東2丁目7',
         link: {
+          html: 'osaka-nantou/date/mandaiike.html',
           youtube: '-7DEl_jxuW8'
         }
       }

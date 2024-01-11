@@ -471,18 +471,6 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50391050613052, 34.64546789712162]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年2月26日 13:44',
-        address: '西成区太子２丁目３−１０'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.4796960670957, 34.614665866352524]
       },
       properties: {
@@ -726,18 +714,6 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.4875474720384, 34.63374890837616]
-      },
-      properties: {
-        title: 'やるぞ ‼︎',
-        date: '2021年12月5日 11:07',
-        address: '西成区千本中２丁目３ー１'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.47856187287965, 34.62529785418573]
       },
       properties: {
@@ -876,78 +852,6 @@ let otobuilAll = {
         title: '末は社長や',
         date: '2022年4月10日 12:00頃',
         address: '住之江区南加賀屋１丁目１−１１７'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.48680727044314, 34.635939323277086]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 15:22',
-        address: '西成区千本北２丁目２０−２３'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.488939135542, 34.635929166387655]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 15:28',
-        address: '西成区千本北２丁目１８−２６'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.49303368254732, 34.64092310084271]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 16:04',
-        address: '西成区松１丁目１０−３０'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.49745783743867, 34.64085942695837]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 16:07',
-        address: '西成区花園南１丁目１１−１'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.49882913537078, 34.635158017385336]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 16:40',
-        address: '西成区天下茶屋３丁目９−２１'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.4960245179385, 34.627339317979306]
-      },
-      properties: {
-        title: 'やるぞ ‼',
-        date: '2022年5月2日 16:50',
-        address: '西成区玉出東１丁目６−１０'
       }
     },
     {
