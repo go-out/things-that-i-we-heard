@@ -211,7 +211,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.58924486201022,34.59667441534168]
+        coordinates: [135.58924486201022, 34.59667441534168]
       },
       properties: {
         title: '飛んで蹴ってー',
@@ -223,7 +223,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.58089201667116,34.59475773438241]
+        coordinates: [135.58089201667116, 34.59475773438241]
       },
       properties: {
         title: 'また来年お願いします',
@@ -235,7 +235,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.58134986625367,34.59639300190359]
+        coordinates: [135.58134986625367, 34.59639300190359]
       },
       properties: {
         title: 'きっとモデルさんとか<br>ダイエットしてる人とかね',
@@ -247,7 +247,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.56619575885298,34.60886465896537]
+        coordinates: [135.56619575885298, 34.60886465896537]
       },
       properties: {
         title: 'こっちこっち危な',
@@ -259,7 +259,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.56075519492583,34.60565453709334]
+        coordinates: [135.56075519492583, 34.60565453709334]
       },
       properties: {
         title: '今日の3時が最後',
@@ -271,7 +271,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.56198347922384,34.602778845715974]
+        coordinates: [135.56198347922384, 34.602778845715974]
       },
       properties: {
         title: '落っこちていくような 心地がしたのは',
@@ -283,7 +283,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.56779693427097,34.60186678245877]
+        coordinates: [135.56779693427097, 34.60186678245877]
       },
       properties: {
         title: '「寝てまうかもしれんけど」<br>「後半やからな」',
@@ -295,7 +295,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50381664169254,34.61625696634064]
+        coordinates: [135.50381664169254, 34.61625696634064]
       },
       properties: {
         title: 'こころの健康総合センターやって',
@@ -307,7 +307,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5094163837236,34.616169273301836]
+        coordinates: [135.5094163837236, 34.616169273301836]
       },
       properties: {
         title: '同じ建物ばっかりで恥ずかしくないんかな',
@@ -319,7 +319,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.51111385576877,34.61576238026825]
+        coordinates: [135.51111385576877, 34.61576238026825]
       },
       properties: {
         title: '凸凹団地',
@@ -331,7 +331,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.51548552725984,34.6175878511999]
+        coordinates: [135.51548552725984, 34.6175878511999]
       },
       properties: {
         title: 'ジュースありやな',
@@ -343,7 +343,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.52466268112016,34.61796573855915]
+        coordinates: [135.52466268112016, 34.61796573855915]
       },
       properties: {
         title: '地震もあって飛行機事故もあって<br>大変な一年になりそう',
@@ -355,7 +355,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.52650988260336,34.61816964482337]
+        coordinates: [135.52650988260336, 34.61816964482337]
       },
       properties: {
         title: 'モールやもん',
@@ -367,7 +367,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.53178056430107,34.61645501534474]
+        coordinates: [135.53178056430107, 34.61645501534474]
       },
       properties: {
         title: 'けっこう人多い',
@@ -379,7 +379,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5162721169935,34.612571055863086]
+        coordinates: [135.5162721169935, 34.612571055863086]
       },
       properties: {
         title: '「うがった」って初めて聞いたし言ったことない',
@@ -391,7 +391,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5125034242053,34.6115568792988]
+        coordinates: [135.5125034242053, 34.6115568792988]
       },
       properties: {
         title: 'ほんまに今年は厳しく、適当に外食しない',
@@ -403,7 +403,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.4965092134321,34.62836585504155]
+        coordinates: [135.4965092134321, 34.62836585504155]
       },
       properties: {
         title: '椿と南天',
@@ -415,12 +415,264 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49514768263066,34.62924816310985]
+        coordinates: [135.49514768263066, 34.62924816310985]
       },
       properties: {
         title: 'めっちゃいい曲',
         date: '2024年1月7日 10:30',
         address: '日本大阪府大阪市西成区玉出東1丁目3番21'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5090182335756, 34.62612559635885]
+      },
+      properties: {
+        title: '「めっちゃ見られる」<br>「流石にたまたま」',
+        date: '2024年1月11日 14:02',
+        address: '日本大阪府大阪市阿倍野区阿倍野区王子町4-1-56'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51207480691585, 34.627104989628904]
+      },
+      properties: {
+        title: '嫌だ',
+        date: '2024年1月11日 14:05',
+        address: '日本大阪府大阪市阿倍野区阪南町3丁目41番14'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51564544043435, 34.62521791926903]
+      },
+      properties: {
+        title: 'ただいま田中石油が灯油の販売にお伺いしております',
+        date: '2024年1月11日 14:10',
+        address: '日本大阪府大阪市阿倍野区阪南町4丁目13番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51087250948586, 34.62722775317175]
+      },
+      properties: {
+        title: '二つね',
+        date: '2024年1月11日 14:20',
+        address: '日本大阪府大阪市阿倍野区阪南町3丁目40番10'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5110375007705, 34.628553750661624]
+      },
+      properties: {
+        title: '冬は嵩張るから',
+        date: '2024年1月11日 14:22',
+        address: '日本大阪府大阪市阿倍野区阪南町3丁目30番15'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51047393466416, 34.63080954273103]
+      },
+      properties: {
+        title: '「気をつけて」「わー」「大丈夫？」',
+        date: '2024年1月11日 14:28',
+        address: '日本大阪府大阪市阿倍野区王子町3丁目1番22'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50363514290223,34.63538955479521]
+      },
+      properties: {
+        title: 'どうでもいいですよ',
+        date: '2024年1月11日 15:00',
+        address: '日本大阪府大阪市阿倍野区松虫通3丁目2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50536451646855, 34.634339770434906]
+      },
+      properties: {
+        title: '先生さよなら皆さんさようなら',
+        date: '2024年1月11日 15:12',
+        address: '日本大阪府大阪市阿倍野区松虫通3丁目5番6'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5122212944334, 34.6327593571411]
+      },
+      properties: {
+        title: 'ここ上手いことやってるのよ。いつも',
+        date: '2024年1月11日 15:25',
+        address: '日本大阪府大阪市阿倍野区阪南町2丁目12番3'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5135890968574, 34.63172836619319]
+      },
+      properties: {
+        title: '「がんばれー」「がんばれー」',
+        date: '2024年1月11日 15:31',
+        address: '日本大阪府大阪市阿倍野区阪南町2丁目18番17'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51798590366366, 34.631938383312175]
+      },
+      properties: {
+        title: 'ママたちはすごい',
+        date: '2024年1月11日 15:33',
+        address: '日本大阪府大阪市阿倍野区昭和町2丁目5番27'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51966289394016, 34.6346755694931]
+      },
+      properties: {
+        title: 'むらおかさん',
+        date: '2024年1月11日 15:36',
+        address: '日本大阪府大阪市阿倍野区文の里4丁目1番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52164435538486, 34.630439913781515]
+      },
+      properties: {
+        title: '女の子、おばあちゃんです',
+        date: '2024年1月11日 15:42',
+        address: '日本大阪府大阪市阿倍野区桃ケ池町1丁目8番6'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52088489853668, 34.62858671720953]
+      },
+      properties: {
+        title: 'でも頭って重たいからね',
+        date: '2024年1月11日 15:55',
+        address: '日本大阪府大阪市阿倍野区桃ケ池町1丁目13番4'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52042491228883, 34.6276818143795]
+      },
+      properties: {
+        title: '「バイバーイ」「バイバーイ」',
+        date: '2024年1月11日 16:00',
+        address: '日本大阪府大阪市阿倍野区桃ケ池町2丁目4番5'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52175073901276, 34.62572586640431]
+      },
+      properties: {
+        title: '行きます行きます<br>ありがとうございます',
+        date: '2024年1月11日 16:05',
+        address: '日本大阪府大阪市東住吉区山坂2丁目2番9'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51891569756816, 34.623206707643604]
+      },
+      properties: {
+        title: '2日前に入ってきたんで、もうすぐです',
+        date: '2024年1月11日 16:09',
+        address: '日本大阪府大阪市阿倍野区長池町19長池運動場野球場'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51704936495406, 34.621888587162545]
+      },
+      properties: {
+        title: 'すばるくんが三年やろ？',
+        date: '2024年1月11日 16:11',
+        address: '日本大阪府大阪市阿倍野区長池町20番26'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51259460015473, 34.62216846630413]
+      },
+      properties: {
+        title: '「なんで？」「知らん」',
+        date: '2024年1月11日 16:18',
+        address: '日本大阪府大阪市阿倍野区阪南町5丁目21番18'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51009126372156, 34.62166766472241]
+      },
+      properties: {
+        title: 'あ〜！赤になった！',
+        date: '2024年1月11日 16:21',
+        address: '日本大阪府大阪市阿倍野区播磨町2丁目1番18'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49907029745486, 34.61977672089424]
+      },
+      properties: {
+        title: 'でもさぁカードがないから',
+        date: '2024年1月11日 16:31',
+        address: '日本大阪府大阪市住吉区帝塚山中4丁目1番14'
       }
     }
   ]

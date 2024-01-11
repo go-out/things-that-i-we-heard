@@ -73,7 +73,7 @@ document.addEventListener('readystatechange', e => {
                 longitude: thisLng,
                 timestamp: thisTime,
                 address: thisAddress,
-                comment: thisComment
+                comment: thisComment.replace(/\r?\n/g, '<br>')
             }
 
             // あなたが聞いた言葉 を CSV に 追加
