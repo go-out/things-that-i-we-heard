@@ -10,6 +10,7 @@
   <script src="osaka-nantou/things.js"></script>
   <script src="www/js/index.js"></script>
   <script src="www/js/youtube.js"></script>
+  <script src="www/js/csvtojson.js"></script>
   <script>
     let directory = "";
     let things = {
@@ -34,6 +35,8 @@
     for (const osaka2nd of osakaNantou.heard) {
       things.features.push(osaka2nd);
     }
+    
+    csvtojson('www/submit.csv');
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
