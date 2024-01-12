@@ -431,7 +431,7 @@ let osakaNantou = {
         coordinates: [135.51207480691585, 34.627104989628904]
       },
       properties: {
-        title: '嫌だ',
+        title: 'ちーがーうー',
         date: '2024年1月11日 14:05',
         address: '日本大阪府大阪市阿倍野区阪南町3丁目41番14'
       }
@@ -482,6 +482,18 @@ let osakaNantou = {
         title: '「気をつけて」「わー」「大丈夫？」',
         date: '2024年1月11日 14:28',
         address: '日本大阪府大阪市阿倍野区王子町3丁目1番22'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.508756727001, 34.631141209179646]
+      },
+      properties: {
+        title: 'じゃあねバイバイ',
+        date: '2024年1月11日 14:35',
+        address: '日本大阪府大阪市阿倍野区阿倍野元町9番27'
       }
     },
     {
