@@ -500,7 +500,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50363514290223,34.63538955479521]
+        coordinates: [135.50363514290223, 34.63538955479521]
       },
       properties: {
         title: 'どうでもいいですよ',
@@ -686,6 +686,30 @@ let osakaNantou = {
         title: '何時何分何秒地球が何回回った時？',
         date: '2024年1月11日 16:37',
         address: '日本大阪府大阪市住吉区帝塚山西2丁目8番8'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49766705318683, 34.61944401710029]
+      },
+      properties: {
+        title: 'お兄ちゃんくもん行ってます？',
+        date: '2024年1月16日 15:10',
+        address: '日本大阪府大阪市住吉区帝塚山西3丁目1番11'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50230760203067, 34.62266776479656]
+      },
+      properties: {
+        title: 'あいつ最近適当にYouTubeに動画あげとんねん',
+        date: '2024年1月16日 15:45',
+        address: '日本大阪府大阪市住吉区日本CAFÉ CUBIC POINT'
       }
     }
   ]
