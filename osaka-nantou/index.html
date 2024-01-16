@@ -67,6 +67,15 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
   <style>
+    #title,
+    #changeHidden {
+      mix-blend-mode: exclusion;
+    }
+
+    .thing.mapboxgl-marker {
+      filter: invert(1);
+    }
+
     #title h1 {
       font-size: 3.21rem;
     }
@@ -108,7 +117,7 @@
   <main id="about" hidden>
     <article></article>
     <div id="player"></div>
-    <small id="copy">Copyright © 2023 You. All Rights Reserved.</small>
+    <small id="copy">Copyright © 2023 - 2024 You. All Rights Reserved.</small>
   </main>
 
   <div id="map"></div>
@@ -124,7 +133,7 @@
 
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+      style: 'mapbox://styles/mapbox/light-v10',
       center: [135.5384520595759, 34.620920838437655],
       zoom: 12.5,
       maxBounds: bounds

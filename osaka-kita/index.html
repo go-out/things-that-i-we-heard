@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="things.js"></script>
+    <script src="../www/js/index.js"></script>
+    <script src="../www/js/youtube.js"></script>
+    <script>
+        let directory = "../"
+        let things = {
+            'type': 'FeatureCollection',
+            'features': []
+        }
+
+        for (const osaka4rd of osaka4rd.heard) {
+            things.features.push(osaka4rd);
+        }
+
+        document.addEventListener('readystatechange', event => {
+            if (event.target.readyState === 'interactive') {
+                const play = document.querySelector('#changeHidden');
+                play.addEventListener('click', function () {
+                    if (play.className === 'play') {
+                        play.classList.replace('play', 'pause');
+                        fetchHTML('credit.html', '#about article');
+                        const youtube = document.querySelector('#player');
+                        youtube.hidden = true;
+                    } else {
+                        play.classList.replace('pause', 'play');
+                        const youtube = document.querySelector('#player');
+                        youtube.hidden = true;
+                        player.pauseVideo();
+                    }
+                }, false)
+            } else if (event.target.readyState === 'complete') {
+                //
+            }
+        });
+    </script>
+
+    <!--og:meta-->
+    <meta content="website" property="og:type">
+    <title>things that i (we) heard in osaka bay area</title>
+    <meta content="things that i (we) heard in osaka bay area" property="og:title">
+    <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="description">
+    <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="og:description">
+
+    <link rel="icon" href="../www/icon/favicon.png">
+    <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
+
+    <!--for Twitter-->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="https://creative-community.space/map/heard/osaka-nantou/" property="og:url">
+    <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" property="og:image">
+    <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" name="twitter:image:src">
+
+    <link href="../www/css/style.css" rel="stylesheet" />
+    <link href="../www/css/title.css" rel="stylesheet" />
+    <link href="../www/css/thing.css" rel="stylesheet" />
+    <link href="../www/css/about.css" rel="stylesheet" />
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+    <style>
+        #title h1 {
+            font-size: 3.21rem;
+        }
+
+        .enter #title h1 {
+            font-size: 2rem;
+        }
+
+        #about {
+            background-position: center;
+            background-size: contain;
+        }
+
+        @media screen and (max-width: 920px) {
+            #title h1 {
+                font-size: 10vw;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            #title h1 {
+                font-size: 15vw;
+            }
+
+            .enter #title h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="changeHidden" class="play" type="button" name="button">?</button>
+
+    <main id="title">
+        <h1>things that i (we) heard in osaka bay area</h1>
+    </main>
+
+    <main id="about" hidden>
+        <article></article>
+        <div id="player"></div>
+        <small id="copy">Copyright © 2024 You. All Rights Reserved.</small>
+    </main>
+
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+        const bounds = [
+            [135.4066799794195, 34.670617726125215], // 南西座標
+            [135.58439852201138, 34.75939737782922] // 北東座標
+        ],
+            zoomIn = 14.5;
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [135.49582669666256, 34.70236986879824],
+            zoom: 12.5,
+            maxBounds: bounds
+        });
+    </script>
+</body>
+
+</html>
