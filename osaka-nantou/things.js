@@ -723,6 +723,162 @@ let osakaNantou = {
         date: '2024年1月16日 15:45',
         address: '日本大阪府大阪市住吉区日本CAFÉ CUBIC POINT'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49324142724566,34.60879281251984]
+      },
+      properties: {
+        title: 'たわしは持ってきた？',
+        date: '2024年1月17日 15:39',
+        address: '日本大阪府大阪市住吉区墨江3丁目1番4'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49029470271932,34.600828131045745]
+      },
+      properties: {
+        title: '咲いた咲いたチューリップの花が',
+        date: '2024年1月17日 15:50',
+        address: '日本大阪府大阪市住吉区清水丘2丁目30番2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.48949066235713,34.598218987435345]
+      },
+      properties: {
+        title: '会話終了',
+        date: '2024年1月17日 15:54',
+        address: '日本大阪府大阪市住吉区清水丘3丁目9番14'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49057954507776,34.5974132074806]
+      },
+      properties: {
+        title: '続き説明してや',
+        date: '2024年1月17日 15:56',
+        address: '日本大阪府大阪市住吉区清水丘3丁目4番2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49581149262133,34.59673760240294]
+      },
+      properties: {
+        title: 'これ拾っていいかな。やめとこ',
+        date: '2024年1月17日 16:04',
+        address: '日本大阪府大阪市住吉区遠里小野2丁目12番14'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49960041792212,34.593107753893875]
+      },
+      properties: {
+        title: '今何分？10分？',
+        date: '2024年1月17日 16:10',
+        address: '日本大阪府大阪市住吉区遠里小野3丁目13番9'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50060636452065,34.59311123602275]
+      },
+      properties: {
+        title: '長くてきれい',
+        date: '2024年1月17日 16:12',
+        address: '日本大阪府大阪市住吉区山之内3丁目17番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50059036314997,34.59004564695084]
+      },
+      properties: {
+        title: '全然いつでもウェルカム<br>もっかい40歳しよか',
+        date: '2024年1月17日 16:14',
+        address: '日本大阪府大阪市住吉区山之内5丁目3番25'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5024648039264,34.59201344392588]
+      },
+      properties: {
+        title: 'どんだけナショナル信用してんねん',
+        date: '2024年1月17日 16:24',
+        address: '日本大阪府大阪市住吉区山之内4丁目1番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50140897583333,34.60366189805377]
+      },
+      properties: {
+        title: '一位の人には一枚あげて<br>二位と三位には半分あげる',
+        date: '2024年1月17日 16:42',
+        address: '日本大阪府大阪市住吉区南住吉4丁目16番32'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5010336045233,34.60453364341788]
+      },
+      properties: {
+        title: '何をしてんだー',
+        date: '2024年1月17日 16:45',
+        address: '日本大阪府大阪市住吉区住吉区南住吉3-15-57'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49469933760486,34.60657372275769]
+      },
+      properties: {
+        title: 'ファイトーがんばろー',
+        date: '2024年1月17日 16:54',
+        address: '日本大阪府大阪市住吉区墨江4丁目15番4'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49163019989294,34.60866818356379]
+      },
+      properties: {
+        title: '黒にちょっと青みがかった感じ',
+        date: '2024年1月17日 16:57',
+        address: '日本大阪府大阪市住吉区墨江3丁目23番6'
+      }
     }
   ]
 };
