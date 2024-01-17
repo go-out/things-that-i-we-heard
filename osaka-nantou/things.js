@@ -692,6 +692,18 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [135.4938773694078, 34.61417589120913]
+      },
+      properties: {
+        title: '私転けるとこやったやん',
+        date: '2024年1月16日 14:50',
+        address: '日本大阪府大阪市住吉区住吉2丁目6番'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [135.49766705318683, 34.61944401710029]
       },
       properties: {
