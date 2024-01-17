@@ -32,6 +32,18 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [135.50201258666482,34.60066664910711]
+      },
+      properties: {
+        title: '聖地巡礼',
+        date: '2023年3月12日 16:00',
+        address: '大阪市住吉区山之内1丁目20番22'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [135.51974776637041, 34.597437761470644]
       },
       properties: {
@@ -44,11 +56,23 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
+        coordinates: [135.5028395509824,34.598392651312295]
+      },
+      properties: {
+        title: '切磋してから琢磨する',
+        date: '2023年3月12日 18:00',
+        address: '大阪市住吉区山之内2丁目1番20'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
         coordinates: [135.5094782, 34.5913334]
       },
       properties: {
         title: '獅子が空を翔ぶ日に',
-        date: '2023年3月21日 18:45',
+        date: '2023年3月21日 17:45',
         address: '大阪市住吉区浅香１丁目６'
       }
     },
