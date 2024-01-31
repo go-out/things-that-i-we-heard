@@ -233,7 +233,7 @@
 
     let center
     if (localStorage.getItem('heard')) {
-      const yourHeard = JSON.parse(localStorage.getItem('heard')).features
+      const yourHeard = JSON.parse(localStorage.getItem('heard'));
       center = `[${yourHeard[0].latitude}, ${yourHeard[0].longitude}]`;
     } else {
       center = "[0, 0]";
