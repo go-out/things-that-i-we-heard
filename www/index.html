@@ -229,16 +229,27 @@
   <div id="map"></div>
 
   <script>
+    function getRandomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min) + min)
+    }
+
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
-    let center
+    let center,
+      lng,
+      lat;
+
     if (localStorage.getItem('heard')) {
       const latestHeard = JSON.parse(localStorage.getItem('heard'))[0];
-      const thisLongitude = latestHeard.longitude;
-      const thisLatitude = latestHeard.latitude;
-      center = [thisLongitude, thisLatitude];
+      lng = latestHeard.longitude;
+      lat = latestHeard.latitude;
+      center = [lng, lat];
     } else {
-      center = [0, 0];
+      lng = getRandomInt(-180, 180)
+      lat = getRandomInt(-90, 90)
+      center = [lng, lat];
     }
 
     const map = new mapboxgl.Map({
