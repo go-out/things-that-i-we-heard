@@ -231,10 +231,18 @@
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
+    let center
+    if (localStorage.getItem('heard')) {
+      const yourHeard = JSON.parse(localStorage.getItem('heard'))
+      center = yourHeard.features[0].geometry.coordinates;
+    } else {
+      center = "[0, 0]";
+    }
+
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v10',
-      center: [0, 0],
+      center: center,
       zoom: 13.5,
       pitch: 40
     });
