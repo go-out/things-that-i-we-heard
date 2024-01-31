@@ -76,18 +76,16 @@
 
 
           el.addEventListener('click', () => {
-            flyToMarker(marker[i])
-          })
-
-          function deleteThis(i) {
             const yourHeard = JSON.parse(localStorage.getItem('heard'))
-            let result = window.confirm('この言葉をコレクションから削除します。 \r\n Remove This from Your Collection.')
+            let result = window.confirm(marker[i].properties.title + '\r\n\r\n この言葉をコレクションから削除します。 \r\n Remove This from Your Collection.')
             if (result) {
               yourHeard.splice(i, 1)
               localStorage.setItem('heard', JSON.stringify(yourHeard))
               location.reload()
+            } else {
+              flyToMarker(marker[i])
             }
-          }
+          })
         }
 
         function flyToMarker(e) {
