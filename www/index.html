@@ -64,7 +64,7 @@
                 offset: 12.5
               })
                 .setHTML(`
-                <h3>${marker[i].properties.title}</h3>
+                <h3 onclick="deleteThis(i)">${marker[i].properties.title}</h3>
                 <p class="date">
                   ${marker[i].properties.date}</br>
                   ${marker[i].properties.address}
@@ -74,17 +74,20 @@
             )
             .addTo(map)
 
+
           el.addEventListener('click', () => {
             flyToMarker(marker[i])
+          })
 
+          function deleteThis(e) {
             const yourHeard = JSON.parse(localStorage.getItem('heard'))
             let result = window.confirm('この言葉をコレクションから削除します。 \r\n Remove This from Your Collection.')
             if (result) {
-              yourHeard.splice(i, 1)
+              yourHeard.splice(e, 1)
               localStorage.setItem('heard', JSON.stringify(yourHeard))
               location.reload()
             }
-          })
+          }
         }
 
         function flyToMarker(e) {
