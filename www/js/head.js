@@ -16,6 +16,13 @@ async function fetchText(url = '', query = '') {
         });
 }
 
+for (const jsEach of indexThis.things) {
+    let heardArr = jsEach.arr;
+    for (const eachHeard of heardArr.heard) {
+        things.features.push(eachHeard)
+    }
+}
+
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
@@ -75,19 +82,13 @@ switch (document.readyState) {
             })
         }, false);
 
-        for (const jsEach of indexThis.things) {
-            let heardArr = jsEach.arr;
-            for (const eachHeard of heardArr.heard) {
-                things.features.push(eachHeard)
-            }
-        }
-
         break;
     }
     case "complete":
         // ページが完全に読み込み完了。
 
         let allThings = things.features[length];
+
         for (const marker of things.features) {
             const pin = document.createElement('div');
             pin.className = 'thing';
