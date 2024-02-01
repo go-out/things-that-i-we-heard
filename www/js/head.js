@@ -3,7 +3,7 @@
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
-
+        const head = document.querySelector('head')
 
         if (indexThis) {
             document.title = indexThis.title;
