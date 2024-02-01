@@ -22,14 +22,14 @@ switch (document.readyState) {
                 head.appendChild(script)
             }
 
-            const description = document.head.querySelector("[name=description][content]").content;
-            description = `私（わたしたち）が ${indexThis.area}で聞いた言葉`;
+            const description = document.head.querySelector("[name=description][content]");
+            description.content = `私（わたしたち）が ${indexThis.area}で聞いた言葉`;
             const ogDescription = document.createElement("meta")
             const twDescription = document.createElement("meta")
             ogDescription.setAttribute("property", "og:description")
             twDescription.setAttribute("name", "twitter:description")
-            ogDescription.setAttribute("content", description)
-            twDescription.setAttribute("content", description)
+            ogDescription.setAttribute("content", description.content)
+            twDescription.setAttribute("content", description.content)
             head.appendChild(ogDescription)
             head.appendChild(twDescription)
 
