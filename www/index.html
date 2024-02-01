@@ -31,10 +31,9 @@
 
     function removeThis(e) {
       const yourHeard = JSON.parse(localStorage.getItem('heard'));
-      let no = e.dateset.no;
       let result = window.confirm('この言葉をコレクションから削除します。\r\nRemove This from Your Collection.');
       if (result) {
-        yourHeard.splice(no, 1);
+        yourHeard.splice(e, 1);
         localStorage.setItem('heard', JSON.stringify(yourHeard));
         location.reload();
       }
@@ -234,7 +233,7 @@
             offset: 12.5
           })
             .setHTML(`
-            <h3 data-no="${i}" onclick="removeThis()">${marker[i].properties.title}</h3>
+            <h3 data-no="${i}" onclick="removeThis(${i})">${marker[i].properties.title}</h3>
             <p class="date">
               ${marker[i].properties.date}</br>
               ${marker[i].properties.address}
