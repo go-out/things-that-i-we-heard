@@ -58,13 +58,13 @@ if (!location.hash) {
     } else if (location.hash === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
-            area: "大阪市港区・西区・此花区・浪速区・大正区・西成区",
+            area: "大阪市港区・西区と此花区・大正区・西成区・浪速区の一部",
             things: [
                 "bayarea/things.js"
             ],
             bounds: [
                 [135.3730315262652, 34.64093264180789], // 南西座標
-                [135.5003690854324, 34.675365502276776] // 北東座標
+                [135.501081, 34.695037] // 北東座標
             ],
             center: [135.44506011560367, 34.661156093480756],
             zoom: 12.5,
