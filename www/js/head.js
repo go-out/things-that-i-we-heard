@@ -77,9 +77,9 @@ switch (document.readyState) {
 
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
-            heardArr.heard.forEach((thisAll)
-                => things.features.push(thisAll)
-            )
+            for (const eachHeard of heardArr.heard) {
+                things.features.push(eachHeard)
+            }
         }
 
         break;

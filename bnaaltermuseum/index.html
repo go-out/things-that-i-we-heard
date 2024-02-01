@@ -32,7 +32,8 @@
       things: [
         {
           "js": "things.js",
-          "arr": "bnaAll"
+          "arr": "bnaAll",
+          "push": "bna"
         }
       ],
       bounds: [
@@ -45,6 +46,7 @@
     }
   </script>
 
+  <script src="../www/js/index.js"></script>
   <script src="../www/js/head.js"></script>
 
   <script>
@@ -69,11 +71,6 @@
   <link rel="icon" href="../www/icon/favicon.png">
   <link rel="icon" href="../www/icon/android.png" sizes="192x192">
   <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Zen+Maru+Gothic&amp;display=swap">
 
   <link href="../www/css/style.css" rel="stylesheet" />
   <link href="../www/css/title.css" rel="stylesheet" />
@@ -131,6 +128,8 @@
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+    let zoomIn = indexThis.zoomIn;
 
     const map = new mapboxgl.Map({
       container: 'map',
