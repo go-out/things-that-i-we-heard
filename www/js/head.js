@@ -104,7 +104,7 @@ document.addEventListener('readystatechange', event => {
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
 
-        if (things.features.length === allThings) {
+        if (things.features.length === allThings - 1) {
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
