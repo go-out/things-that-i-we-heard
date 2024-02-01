@@ -91,7 +91,7 @@ document.addEventListener('readystatechange', event => {
             const h1 = document.querySelector('#title h1')
             h1.textContent = indexThis.title;
             const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた <b id="allThings"></b> の 言葉`;
+            h2.innerHTML = `私（わたしたち）が ${indexThis.area}で聞いた <b id="allThings"></b> の 言葉`;
         }
 
         if (indexThis.html) {
