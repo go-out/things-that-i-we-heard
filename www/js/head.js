@@ -89,7 +89,13 @@ switch (document.readyState) {
     case "complete":
         // ページが完全に読み込み完了
 
-        if (things.features.length === allThings) {
+        const h1 = document.querySelector('#title h1')
+        h1.textContent = indexThis.title;
+
+        const h2 = document.querySelector('#about h2')
+        h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
+
+        if (things.features.length - 1 === allThings) {
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
@@ -111,29 +117,6 @@ switch (document.readyState) {
                     .addTo(map)
 
                 el.addEventListener('click', () => {
-                    // JSON に link オブジェクトがある場合
-                    if (marker.properties.link) {
-                        const mainBtn = document.querySelector('#changeHidden');
-                        const mainAll = document.querySelectorAll('main');
-
-                        mainAll.forEach(main => {
-                            if (main.hidden == false) {
-                                main.hidden = true;
-                                mainBtn.textContent = "?";
-                                mainBtn.classList.replace('pause', 'play');
-                            } else {
-                                main.hidden = false;
-                                mainBtn.textContent = "×";
-                                mainBtn.classList.replace('play', 'pause');
-                            }
-                        })
-
-                        if (marker.properties.link.html) {
-                            let html = directory + marker.properties.link.html;
-                            fetchHTML(html, '#about article');
-                        }
-                    }
-
                     flyToMarker(marker)
                 })
             }
