@@ -104,9 +104,9 @@ document.addEventListener('readystatechange', event => {
             for (const heardEach of jsEach.arr) {
                 things.features.push(heardEach)
                 allThings++;
+                const h2 = document.querySelector('#about h2')
+                h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
             }
-            const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
         }
 
         if (indexThis) {
