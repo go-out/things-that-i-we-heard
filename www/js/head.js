@@ -16,13 +16,6 @@ async function fetchText(url = '', query = '') {
         });
 }
 
-for (const jsEach of indexThis.things) {
-    let heardArr = jsEach.arr;
-    for (const eachHeard of heardArr.heard) {
-        things.features.push(eachHeard)
-    }
-}
-
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
@@ -54,6 +47,13 @@ switch (document.readyState) {
                 const script = document.createElement("script")
                 script.src = jsEach.js;
                 head.appendChild(script)
+            }
+
+            for (const jsEach of indexThis.things) {
+                let heardArr = jsEach.arr;
+                for (const eachHeard of heardArr.heard) {
+                    things.features.push(eachHeard)
+                }
             }
         }
 
