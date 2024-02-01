@@ -1,22 +1,3 @@
-let indexThis = {
-  title: "things that i (we) heard around BnA Alter Museum",
-  area: "京都・河原町周辺",
-  things: [
-    {
-      "js": "things.js",
-      "arr": "bnaAll",
-      "push": "bna"
-    }
-  ],
-  bounds: [
-    [135.75972724537672, 34.9950251407263], // 南西座標
-    [135.772916683571, 35.00535650888111] // 北東座標
-  ],
-  center: [135.76842457873613, 35.00022238171323],
-  zoom: 15.5,
-  zoomIn: 17
-}
-
 let bnaAll = {
   heard: [
     {
