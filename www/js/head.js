@@ -75,65 +75,68 @@ switch (document.readyState) {
             })
         }, false);
 
-        break;
-    }
-    case "complete":
-        // ページが完全に読み込み完了。
-
+        let allThings = 0;
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
             for (const eachHeard of heardArr.heard) {
                 things.features.push(eachHeard)
+                allThings + 1;
             }
         }
 
-        let allThings = things.features[length];
-        for (const marker of things.features) {
-            const pin = document.createElement('div');
-            pin.className = 'thing';
-            new mapboxgl.Marker(pin)
-                .setLngLat(marker.geometry.coordinates)
-                .setPopup(
-                    new mapboxgl.Popup({
-                        offset: 12.5
-                    })
-                        .setHTML(`
-                        <h3>${marker.properties.title}</h3>
-                        <p class="date">
-                        ${marker.properties.date}</br>
-                        ${marker.properties.address}
-                        </p>
-                        `
-                        )
-                )
-                .addTo(map)
+        break;
+    }
+    case "complete":
+        // ページが完全に読み込み完了
 
-            pin.addEventListener('click', () => {
-                // JSON に link オブジェクトがある場合
-                if (marker.properties.link) {
-                    const mainBtn = document.querySelector('#changeHidden');
-                    const mainAll = document.querySelectorAll('main');
+        if (things.features[length] === allThings) {
+            for (const marker of things.features) {
+                const el = document.createElement('div');
+                el.className = 'thing';
+                new mapboxgl.Marker(el)
+                    .setLngLat(marker.geometry.coordinates)
+                    .setPopup(
+                        new mapboxgl.Popup({
+                            offset: 12.5
+                        })
+                            .setHTML(`
+                            <h3>${marker.properties.title}</h3>
+                            <p class="date">
+                            ${marker.properties.date}</br>
+                            ${marker.properties.address}
+                            </p>
+                            `
+                            )
+                    )
+                    .addTo(map)
 
-                    mainAll.forEach(main => {
-                        if (main.hidden == false) {
-                            main.hidden = true;
-                            mainBtn.textContent = "?";
-                            mainBtn.classList.replace('pause', 'play');
-                        } else {
-                            main.hidden = false;
-                            mainBtn.textContent = "×";
-                            mainBtn.classList.replace('play', 'pause');
+                el.addEventListener('click', () => {
+                    // JSON に link オブジェクトがある場合
+                    if (marker.properties.link) {
+                        const mainBtn = document.querySelector('#changeHidden');
+                        const mainAll = document.querySelectorAll('main');
+
+                        mainAll.forEach(main => {
+                            if (main.hidden == false) {
+                                main.hidden = true;
+                                mainBtn.textContent = "?";
+                                mainBtn.classList.replace('pause', 'play');
+                            } else {
+                                main.hidden = false;
+                                mainBtn.textContent = "×";
+                                mainBtn.classList.replace('play', 'pause');
+                            }
+                        })
+
+                        if (marker.properties.link.html) {
+                            let html = directory + marker.properties.link.html;
+                            fetchHTML(html, '#about article');
                         }
-                    })
-
-                    if (marker.properties.link.html) {
-                        let html = directory + marker.properties.link.html;
-                        fetchHTML(html, '#about article');
                     }
-                }
 
-                flyToMarker(marker)
-            })
+                    flyToMarker(marker)
+                })
+            }
         }
 
         function flyToMarker(e) {
