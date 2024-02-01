@@ -16,6 +16,8 @@ async function fetchText(url = '', query = '') {
         });
 }
 
+let allThings = 0;
+
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
@@ -51,7 +53,7 @@ switch (document.readyState) {
         }
 
         break;
-    case "interactive":
+    case "interactive": {
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
 
@@ -75,7 +77,6 @@ switch (document.readyState) {
             })
         }, false);
 
-        let allThings = 0;
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
             for (const eachHeard of heardArr.heard) {
@@ -84,18 +85,28 @@ switch (document.readyState) {
             }
         }
 
+        if (indexThis.html) {
+            fetchHTML(indexThis.html, '#credit');
+        }
+
+        if (indexThis.text) {
+            fetchText(indexThis.text, '#credit');
+        }
+
         break;
-
+    }
     case "complete":
-        // ページが完全に読み込み完了
+        // ページが完全に読み込み完了。
 
-        const h1 = document.querySelector('#title h1')
-        h1.textContent = indexThis.title;
+        if (indexThis) {
+            const h1 = document.querySelector('#title h1')
+            h1.textContent = indexThis.title;
 
-        const h2 = document.querySelector('#about h2')
-        h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
+        }
 
-        if (things.features.length - 1 === allThings) {
+        if (things.features.length === allThings) {
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
@@ -122,12 +133,5 @@ switch (document.readyState) {
             }
         }
 
-        function flyToMarker(e) {
-            map.flyTo({
-                center: e.geometry.coordinates,
-                essential: true,
-                zoom: indexThis.zoomIn
-            });
-        }
         break;
 }

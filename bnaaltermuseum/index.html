@@ -26,9 +26,12 @@
       'features': []
     }
 
+    let directory = "../";
+
     let indexThis = {
       title: "things that i (we) heard around BnA Alter Museum",
       area: "京都・河原町周辺",
+      html: "credit.html",
       things: [
         {
           "js": "things.js",
@@ -48,25 +51,6 @@
 
   <script src="../www/js/index.js"></script>
   <script src="../www/js/head.js"></script>
-
-  <script>
-    let directory = "../"
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
-        const play = document.querySelector('#changeHidden');
-        play.addEventListener('click', function () {
-          if (play.className === 'play') {
-            play.classList.replace('play', 'pause');
-            fetchHTML('credit.html', '#credit');
-          } else {
-            play.classList.replace('pause', 'play');
-          }
-        }, false)
-      } else if (event.target.readyState === 'complete') {
-        //
-      }
-    });
-  </script>
 
   <link rel="icon" href="../www/icon/favicon.png">
   <link rel="icon" href="../www/icon/android.png" sizes="192x192">
@@ -141,6 +125,14 @@
       zoom: indexThis.zoom,
       maxBounds: indexThis.bounds
     });
+
+    function flyToMarker(e) {
+      map.flyTo({
+        center: e.geometry.coordinates,
+        essential: true,
+        zoom: indexThis.zoomIn
+      });
+    }
   </script>
 </body>
 
