@@ -97,26 +97,26 @@ document.addEventListener('readystatechange', event => {
         if (indexThis.text) {
             fetchText(indexThis.text, '#credit');
         }
+    } else if (event.target.readyState === 'complete') {
+        // ページが完全に読み込み完了
 
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
-            for (const eachHeard of heardArr) {
-                things.features.push(eachHeard)
+            for (const heardEach of heardArr) {
+                things.features.push(heardEach)
                 allThings + 1;
             }
         }
-    } else if (event.target.readyState === 'complete') {
-        // ページが完全に読み込み完了
 
         if (indexThis) {
             const h1 = document.querySelector('#title h1')
             h1.textContent = indexThis.title;
-
-            const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
         }
 
         if (things.features.length === allThings) {
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
+
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
