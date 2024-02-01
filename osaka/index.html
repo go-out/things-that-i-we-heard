@@ -34,6 +34,15 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 
   <style>
+    #title,
+    #changeHidden {
+      mix-blend-mode: exclusion;
+    }
+
+    .thing.mapboxgl-marker {
+      filter: invert(0.9);
+    }
+    
     #title h1 {
       font-size: 3.21rem;
     }
