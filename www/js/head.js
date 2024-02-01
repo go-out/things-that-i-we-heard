@@ -51,7 +51,7 @@ switch (document.readyState) {
         }
 
         break;
-    case "interactive": {
+    case "interactive":
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
 
@@ -85,8 +85,8 @@ switch (document.readyState) {
         }
 
         break;
-    }
-    case "complete": {
+
+    case "complete":
         // ページが完全に読み込み完了
 
         const h1 = document.querySelector('#title h1')
@@ -130,5 +130,4 @@ switch (document.readyState) {
             });
         }
         break;
-    }
 }
