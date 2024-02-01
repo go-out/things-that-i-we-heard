@@ -45,6 +45,15 @@ switch (document.readyState) {
             head.appendChild(ogDescription)
             head.appendChild(twDescription)
 
+            const ogURL = document.createElement("meta")
+            const twURL = document.createElement("meta")
+            ogURL.setAttribute("property", "og:url")
+            twURL.setAttribute("name", "twitter:url")
+            ogURL.setAttribute("content", location.href)
+            twURL.setAttribute("content", location.href)
+            head.appendChild(ogURL)
+            head.appendChild(twURL)
+
             for (const jsEach of indexThis.things) {
                 const script = document.createElement("script")
                 script.src = jsEach.js;
@@ -53,7 +62,7 @@ switch (document.readyState) {
         }
 
         break;
-    case "interactive": {
+    case "interactive":
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
 
@@ -94,7 +103,7 @@ switch (document.readyState) {
         }
 
         break;
-    }
+
     case "complete":
         // ページが完全に読み込み完了。
 
