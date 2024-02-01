@@ -930,7 +930,7 @@ let otobuilAll = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.48981791139835,34.61321640602924]
+        coordinates: [135.48981791139835, 34.61321640602924]
       },
       properties: {
         title: 'この子はいつもここにいる',
@@ -958,4 +958,8 @@ let otobuilAll = {
       }
     }
   ]
-};
+}
+
+for (let otobuil of otobuilAll.heard) {
+  things.features.push(otobuil);
+}

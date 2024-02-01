@@ -28,27 +28,15 @@
   <script src="www/js/youtube.js"></script>
   <script src="www/js/csvtojson.js"></script>
 
-  <script src="otobuilding/things.js"></script>
-  <script src="bnaaltermuseum/things.js"></script>
-  <script src="osaka/nantou/things.js"></script>
+  <script src="otobuilding/things.all.js"></script>
+  <script src="bnaaltermuseum/things.all.js"></script>
+  <script src="osaka/nantou/things.v2.js"></script>
 
   <script>
     let directory = "";
     let things = {
       'type': 'FeatureCollection',
       'features': []
-    }
-
-    for (const otobuil of otobuilAll.heard) {
-      things.features.push(otobuil);
-    }
-
-    for (const bna of bnaAll.heard) {
-      things.features.push(bna);
-    }
-
-    for (const osaka2nd of osakaNantou.heard) {
-      things.features.push(osaka2nd);
     }
 
     csvtojson('www/submit.csv');

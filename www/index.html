@@ -8,27 +8,6 @@
   <script src="../www/js/findme.js"></script>
   <script src="../www/js/submit.js"></script>
   <script>
-    indexHead()
-
-    function indexHead() {
-      const head = document.querySelector('head')
-      const googleapis = document.createElement("link")
-      googleapis.setAttribute("rel", "preconnect")
-      googleapis.setAttribute("href", "https://fonts.googleapis.com")
-      head.appendChild(googleapis)
-
-      const gstatic = document.createElement("link")
-      gstatic.setAttribute("rel", "preconnect")
-      gstatic.setAttribute("href", "https://fonts.gstatic.com")
-      gstatic.setAttribute("crossorigin", "anonymous")
-      head.appendChild(gstatic)
-
-      const fonts = document.createElement("link")
-      fonts.setAttribute("rel", "stylesheet")
-      fonts.setAttribute("href", "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zen+Maru+Gothic&display=swap")
-      head.appendChild(fonts)
-    }
-
     function removeThis(e) {
       const yourHeard = JSON.parse(localStorage.getItem('heard'));
       let result = window.confirm('この言葉をコレクションから削除します。\r\nRemove This from Your Collection.');
@@ -66,15 +45,20 @@
   <meta content="submit the things that you heard" name="description">
   <meta content="submit the things that you heard" name="og:description">
 
-  <link rel="icon" href="../www/icon/favicon.png">
-  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
-
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
   <meta content="https://creative-community.space/map/heard/www/" property="og:url">
   <meta content="https://creative-community.space/map/heard/www/icon/card.png" property="og:image">
   <meta content="https://creative-community.space/map/heard/www/icon/card.png" name="twitter:image:src">
+
+  <link rel="icon" href="../www/icon/favicon.png">
+  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Zen+Maru+Gothic&amp;display=swap">
 
   <link href="../www/css/style.css" rel="stylesheet" />
   <link href="../www/css/title.css" rel="stylesheet" />

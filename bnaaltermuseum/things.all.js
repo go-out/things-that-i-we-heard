@@ -665,3 +665,7 @@ let bnaAll = {
     }
   ]
 }
+
+for (let bna of bnaAll.heard) {
+  things.features.push(bna)
+}

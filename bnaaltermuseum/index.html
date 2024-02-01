@@ -9,31 +9,17 @@
   <title>things that i (we) heard</title>
   <meta name="description" content="私（わたしたち）が聞いた言葉">
 
-  <!-- Facebook Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://creative-community.space/map/heard/www/icon/card.png">
-
-  <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="creative-community.space">
-  <meta name="twitter:image" content="https://creative-community.space/map/heard/www/icon/card.png">
 
   <script>
-    let things = {
-      'type': 'FeatureCollection',
-      'features': []
-    }
-
-    let directory = "../";
-    let allThings = 0;
-
     let indexThis = {
       title: "things that i (we) heard around BnA Alter Museum",
       area: "京都・河原町周辺",
-      html: "credit.html",
       things: [
         {
-          "js": "things.js"
+          "js": "things.all.js"
         }
       ],
       bounds: [
@@ -42,17 +28,10 @@
       ],
       center: [135.76842457873613, 35.00022238171323],
       zoom: 15.5,
-      zoomIn: 17
+      zoomIn: 17,
+      card: "https://creative-community.space/map/heard/bnaaltermuseum/img/card.png",
+      html: "credit.html"
     }
-
-    window.addEventListener("load", (event) => {
-      for (const heardEach of bnaAll.heard) {
-        things.features.push(heardEach)
-        allThings++;
-
-        document.querySelector('#allThings').textContent = allThings;
-      }
-    });
   </script>
 
   <script src="../www/js/head.js"></script>

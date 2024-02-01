@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.js"></script>
+  <script src="things.all.js"></script>
   <script src="../www/js/index.js"></script>
   <script src="../www/js/youtube.js"></script>
   <script>
@@ -13,10 +13,6 @@
     let things = {
       'type': 'FeatureCollection',
       'features': []
-    }
-
-    for (const otobuil of otobuilAll.heard) {
-      things.features.push(otobuil);
     }
 
     document.addEventListener('readystatechange', event => {

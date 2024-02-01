@@ -1,5 +1,10 @@
 'use strict'
 
+let things = {
+    'type': 'FeatureCollection',
+    'features': []
+}
+
 async function fetchHTML(url = '', query = '') {
     fetch(url)
         .then(response => response.text())
@@ -52,6 +57,15 @@ switch (document.readyState) {
             head.appendChild(ogURL)
             head.appendChild(twURL)
 
+            const ogIMG = document.createElement("meta")
+            const twIMG = document.createElement("meta")
+            ogIMG.setAttribute("property", "og:image")
+            twIMG.setAttribute("name", "twitter:image")
+            ogIMG.setAttribute("content", indexThis.card)
+            twIMG.setAttribute("content", indexThis.card)
+            head.appendChild(ogIMG)
+            head.appendChild(twIMG)
+
             for (const jsEach of indexThis.things) {
                 const script = document.createElement("script")
                 script.src = jsEach.js;
@@ -87,13 +101,6 @@ document.addEventListener('readystatechange', event => {
             })
         }, false);
 
-        if (indexThis) {
-            const h1 = document.querySelector('#title h1')
-            h1.textContent = indexThis.title;
-            const h2 = document.querySelector('#about h2')
-            h2.innerHTML = `私（わたしたち）が ${indexThis.area}で聞いた <b id="allThings"></b> の 言葉`;
-        }
-
         if (indexThis.html) {
             fetchHTML(indexThis.html, '#credit');
         }
@@ -104,31 +111,37 @@ document.addEventListener('readystatechange', event => {
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
 
-        if (things.features.length === allThings) {
-            for (const marker of things.features) {
-                const el = document.createElement('div');
-                el.className = 'thing';
-                new mapboxgl.Marker(el)
-                    .setLngLat(marker.geometry.coordinates)
-                    .setPopup(
-                        new mapboxgl.Popup({
-                            offset: 12.5
-                        })
-                            .setHTML(`
-                            <h3>${marker.properties.title}</h3>
-                            <p class="date">
-                            ${marker.properties.date}</br>
-                            ${marker.properties.address}
-                            </p>
-                            `
-                            )
-                    )
-                    .addTo(map)
+        if (indexThis) {
+            const h1 = document.querySelector('#title h1')
+            h1.textContent = indexThis.title;
 
-                el.addEventListener('click', () => {
-                    flyToMarker(marker)
-                })
-            }
+            const h2 = document.querySelector('#about h2')
+            h2.innerHTML = `私（わたしたち）が ${indexThis.area}で聞いた ${things.features.length} の 言葉`;
+        }
+
+        for (const marker of things.features) {
+            const el = document.createElement('div');
+            el.className = 'thing';
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({
+                        offset: 12.5
+                    })
+                        .setHTML(`
+                < h3 > ${marker.properties.title}</h3 >
+                    <p class="date">
+                        ${marker.properties.date}</br>
+                            ${marker.properties.address}
+                            </p >
+                `
+                        )
+                )
+                .addTo(map)
+
+            el.addEventListener('click', () => {
+                flyToMarker(marker)
+            })
         }
     }
 });
