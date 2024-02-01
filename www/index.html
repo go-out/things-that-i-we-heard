@@ -81,7 +81,7 @@
           const thingAll = document.querySelectorAll('.mapboxgl-popup-content h3')
           thingAll.forEach(thing => {
             thing.addEventListener('click', () => {
-              let no = thing.dateset.no
+              let no = thing.dateset.no;
               const yourHeard = JSON.parse(localStorage.getItem('heard'))
               let result = window.confirm(marker[no].properties.title + '\r\n\r\n この言葉をコレクションから削除します。 \r\n Remove This from Your Collection.');
               if (result) {
@@ -89,7 +89,7 @@
                 localStorage.setItem('heard', JSON.stringify(yourHeard));
                 location.reload();
               }
-            }
+            }, false)
           })
         }
 
