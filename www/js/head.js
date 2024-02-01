@@ -101,8 +101,7 @@ document.addEventListener('readystatechange', event => {
         let allThings = 0;
 
         for (const jsEach of indexThis.things) {
-            let heardArr = jsEach.arr = '';
-            for (const heardEach of heardArr) {
+            for (const heardEach of jsEach.arr = "") {
                 things.features.push(heardEach)
                 allThings++;
             }
