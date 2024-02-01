@@ -233,7 +233,9 @@
             offset: 12.5
           })
             .setHTML(`
-            <h3 data-no="${i}" onclick="removeThis(${i})">${marker[i].properties.title}</h3>
+            <h3 onclick="removeThis(${i})">
+              ${marker[i].properties.title}
+            </h3>
             <p class="date">
               ${marker[i].properties.date}</br>
               ${marker[i].properties.address}
