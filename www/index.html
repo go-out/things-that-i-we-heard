@@ -29,9 +29,9 @@
       head.appendChild(fonts)
     }
 
-    function removeThis() {
+    function removeThis(e) {
       const yourHeard = JSON.parse(localStorage.getItem('heard'));
-      let no = this.dateset.no;
+      let no = e.dateset.no;
       let result = window.confirm('この言葉をコレクションから削除します。\r\nRemove This from Your Collection.');
       if (result) {
         yourHeard.splice(no, 1);
