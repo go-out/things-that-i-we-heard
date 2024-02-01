@@ -64,8 +64,6 @@ switch (document.readyState) {
 
 
 document.addEventListener('readystatechange', event => {
-    let allThings = 0;
-
     if (event.target.readyState === 'interactive') {
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
@@ -100,15 +98,16 @@ document.addEventListener('readystatechange', event => {
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
 
-        const h2 = document.querySelector('#about h2')
+        let allThings = 0;
 
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
             for (const heardEach of heardArr) {
                 things.features.push(heardEach)
                 allThings++;
-                h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
             }
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
         }
 
         if (indexThis) {
