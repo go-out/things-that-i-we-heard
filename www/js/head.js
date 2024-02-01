@@ -111,12 +111,12 @@ document.addEventListener('readystatechange', event => {
         if (indexThis) {
             const h1 = document.querySelector('#title h1')
             h1.textContent = indexThis.title;
-
-            const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
         }
 
         if (things.features.length === allThings) {
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
+
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
