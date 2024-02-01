@@ -48,13 +48,6 @@ switch (document.readyState) {
                 script.src = jsEach.js;
                 head.appendChild(script)
             }
-
-            for (const jsEach of indexThis.things) {
-                let heardArr = jsEach.arr;
-                for (const eachHeard of heardArr.heard) {
-                    things.features.push(eachHeard)
-                }
-            }
         }
 
         break;
@@ -87,8 +80,14 @@ switch (document.readyState) {
     case "complete":
         // ページが完全に読み込み完了。
 
-        let allThings = things.features[length];
+        for (const jsEach of indexThis.things) {
+            let heardArr = jsEach.arr;
+            for (const eachHeard of heardArr.heard) {
+                things.features.push(eachHeard)
+            }
+        }
 
+        let allThings = things.features[length];
         for (const marker of things.features) {
             const pin = document.createElement('div');
             pin.className = 'thing';
