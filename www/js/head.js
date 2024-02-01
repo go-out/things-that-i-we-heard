@@ -90,14 +90,6 @@ document.addEventListener('readystatechange', event => {
             })
         }, false);
 
-        for (const jsEach of indexThis.things) {
-            let heardArr = jsEach.arr;
-            for (const eachHeard of heardArr.heard) {
-                things.features.push(eachHeard)
-                allThings + 1;
-            }
-        }
-
         if (indexThis.html) {
             fetchHTML(indexThis.html, '#credit');
         }
@@ -107,6 +99,14 @@ document.addEventListener('readystatechange', event => {
         }
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
+
+        for (const jsEach of indexThis.things) {
+            let heardArr = jsEach.arr;
+            for (const eachHeard of heardArr.heard) {
+                things.features.push(eachHeard)
+                allThings + 1;
+            }
+        }
 
         if (indexThis) {
             const h1 = document.querySelector('#title h1')
