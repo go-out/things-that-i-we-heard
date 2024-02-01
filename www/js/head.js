@@ -100,11 +100,14 @@ document.addEventListener('readystatechange', event => {
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
 
+        const h2 = document.querySelector('#about h2')
+
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
             for (const heardEach of heardArr) {
                 things.features.push(heardEach)
-                allThings + 1;
+                allThings++;
+                h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
             }
         }
 
@@ -114,9 +117,6 @@ document.addEventListener('readystatechange', event => {
         }
 
         if (things.features.length === allThings) {
-            const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
-
             for (const marker of things.features) {
                 const el = document.createElement('div');
                 el.className = 'thing';
