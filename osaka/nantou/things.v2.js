@@ -1,4 +1,4 @@
-let osakaNantou = {
+let osaka2nd = {
   heard: [
     {
       type: 'Feature',
@@ -918,3 +918,7 @@ let osakaNantou = {
     }
   ]
 };
+
+for (let nantou of osaka2nd.heard) {
+  things.features.push(nantou)
+}

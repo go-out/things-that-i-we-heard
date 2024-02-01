@@ -68,7 +68,7 @@ switch (document.readyState) {
 
             for (const jsEach of indexThis.things) {
                 const script = document.createElement("script")
-                script.src = jsEach.js;
+                script.src = jsEach;
                 head.appendChild(script)
             }
         }
