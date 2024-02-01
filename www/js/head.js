@@ -16,8 +16,6 @@ async function fetchText(url = '', query = '') {
         });
 }
 
-let allThings = 0;
-
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
@@ -62,7 +60,13 @@ switch (document.readyState) {
         }
 
         break;
-    case "interactive":
+}
+
+
+document.addEventListener('readystatechange', event => {
+    let allThings = 0;
+
+    if (event.target.readyState === 'interactive') {
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
 
@@ -101,11 +105,8 @@ switch (document.readyState) {
         if (indexThis.text) {
             fetchText(indexThis.text, '#credit');
         }
-
-        break;
-
-    case "complete":
-        // ページが完全に読み込み完了。
+    } else if (event.target.readyState === 'complete') {
+        // ページが完全に読み込み完了
 
         if (indexThis) {
             const h1 = document.querySelector('#title h1')
@@ -141,6 +142,5 @@ switch (document.readyState) {
                 })
             }
         }
-
-        break;
-}
+    }
+});
