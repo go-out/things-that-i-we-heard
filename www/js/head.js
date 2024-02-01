@@ -4,8 +4,8 @@ switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
         const head = document.querySelector('head')
-        if (head) {
-            document.title = head.title;
+        if (indexHead) {
+            document.title = indexHead.title;
             const ogTitle = document.createElement("meta")
             const twTitle = document.createElement("meta")
             ogTitle.setAttribute("property", "og:title")
@@ -16,7 +16,7 @@ switch (document.readyState) {
             head.appendChild(twTitle)
 
             let allThings = 0;
-            for (const jsEach of head.things) {
+            for (const jsEach of indexHead.things) {
                 const script = document.createElement("script")
                 script.src = jsEach.js;
 
@@ -31,7 +31,7 @@ switch (document.readyState) {
             }
 
             const description = document.head.querySelector("[name=description][content]").content;
-            description = `私（わたしたち）が ${head.area}で聞いた ${allThings} の 言葉`;
+            description = `私（わたしたち）が ${indexHead.area}で聞いた ${allThings} の 言葉`;
             const ogDescription = document.createElement("meta")
             const twDescription = document.createElement("meta")
             ogDescription.setAttribute("property", "og:description")
@@ -41,10 +41,10 @@ switch (document.readyState) {
             head.appendChild(ogDescription)
             head.appendChild(twDescription)
 
-            const bounds = head.bounds;
-            const center = head.center;
-            const zoom = head.zoom;
-            const zoomIn = head.zoomIn;
+            const bounds = indexHead.bounds;
+            const center = indexHead.center;
+            const zoom = indexHead.zoom;
+            const zoomIn = indexHead.zoomIn;
         }
         break;
     case "interactive": {

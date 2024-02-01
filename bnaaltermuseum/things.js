@@ -1,4 +1,4 @@
-let head = {
+let indexHead = {
   title: "things that i (we) heard around BnA Alter Museum",
   area: "京都・河原町周辺",
   things: [
