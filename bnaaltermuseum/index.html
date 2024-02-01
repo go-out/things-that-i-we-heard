@@ -25,6 +25,7 @@
     }
 
     let directory = "../";
+    let allThings = 0;
 
     let indexThis = {
       title: "things that i (we) heard around BnA Alter Museum",
@@ -44,12 +45,12 @@
       zoomIn: 17
     }
 
-
-    let allThings = 0;
-    for (const heardEach of bnaAll.heard) {
-      things.features.push(heardEach)
-      allThings++;
-    }
+    window.addEventListener("load", (event) => {
+      for (const heardEach of bnaAll.heard) {
+        things.features.push(heardEach)
+        allThings++;
+      }
+    });
   </script>
 
   <script src="../www/js/head.js"></script>
