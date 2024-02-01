@@ -41,7 +41,7 @@ if (!location.hash) {
     } else if (location.hash === "#2nd") {
         indexThis = {
             title: "things that i (we) heard in southeast osaka",
-            area: "大阪市南東部",
+            area: "阿倍野区・住吉区・東住吉区・平野区全域と西成区・平野市の一部",
             things: [
                 "nantou/things.v2.js"
             ],
