@@ -21,7 +21,7 @@ if (!location.hash) {
         text: "README.md"
     }
 } else {
-    if (location.hash = "#1st") {
+    if (location.hash === "#1st") {
         indexThis = {
             title: "things that i (we) heard in southwest osaka",
             area: "大阪市住之江区全域と大正区・西成区の一部",
@@ -38,7 +38,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "../otobuilding/README.md"
         }
-    } else if (location.hash = "#2nd") {
+    } else if (location.hash === "#2nd") {
         indexThis = {
             title: "things that i (we) heard in southeast osaka",
             area: "大阪市南東部",
@@ -55,7 +55,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "nantou/README.md"
         }
-    } else if (location.hash = "#3th") {
+    } else if (location.hash === "#3th") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
             area: "大阪市港区・西区・此花区・浪速区・大正区・西成区",
@@ -72,7 +72,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "bayarea/README.md"
         }
-    } else if (location.hash = "#4th") {
+    } else if (location.hash === "#4th") {
         indexThis = {
             title: "things that i (we) heard in osaka center area",
             area: "大阪市中央",
@@ -89,7 +89,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "chuo/README.md"
         }
-    } else if (location.hash = "#5th") {
+    } else if (location.hash === "#5th") {
         indexThis = {
             title: "things that i (we) heard in osaka kita area",
             area: "大阪市北",
@@ -106,7 +106,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "kita/README.md"
         }
-    } else if (location.hash = "#6th") {
+    } else if (location.hash === "#6th") {
         indexThis = {
             title: "things that i (we) heard in osaka higashi area",
             area: "大阪市東",
