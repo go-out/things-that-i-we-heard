@@ -15,8 +15,8 @@
             'features': []
         }
 
-        for (const osaka3rd of osaka3rd.heard) {
-            things.features.push(osaka3rd);
+        for (const osaka6th of osakaHigashi.heard) {
+            things.features.push(osaka6th);
         }
 
         document.addEventListener('readystatechange', event => {
@@ -43,8 +43,8 @@
 
     <!--og:meta-->
     <meta content="website" property="og:type">
-    <title>things that i (we) heard in osaka bay area</title>
-    <meta content="things that i (we) heard in osaka bay area" property="og:title">
+    <title>things that i (we) heard in osaka</title>
+    <meta content="things that i (we) heard in osaka" property="og:title">
     <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="description">
     <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="og:description">
 
@@ -102,7 +102,7 @@
     <button id="changeHidden" class="play" type="button" name="button">?</button>
 
     <main id="title">
-        <h1>things that i (we) heard in osaka bay area</h1>
+        <h1>things that i (we) heard in osaka</h1>
     </main>
 
     <main id="about" hidden>
@@ -117,15 +117,15 @@
         mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
         const bounds = [
-            [135.3730315262652,34.64093264180789], // 南西座標
-            [135.5003690854324,34.675365502276776] // 北東座標
+            [135.49653974944692, 34.63678725920704], // 南西座標
+            [135.59230541598112, 34.696820639620825] // 北東座標
         ],
             zoomIn = 14.5;
 
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/light-v10',
-            center: [135.44506011560367,34.661156093480756],
+            center: [135.52999876256695, 34.660350423722264],
             zoom: 12.5,
             maxBounds: bounds
         });

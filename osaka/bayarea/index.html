@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <script src="things.js"></script>
-    <script src="../www/js/index.js"></script>
-    <script src="../www/js/youtube.js"></script>
+    <script src="../../www/js/index.js"></script>
+    <script src="../../www/js/youtube.js"></script>
     <script>
-        let directory = "../"
+        let directory = "../../"
         let things = {
             'type': 'FeatureCollection',
             'features': []
         }
 
-        for (const osaka4rd of osaka4rd.heard) {
-            things.features.push(osaka4rd);
+        for (const osaka3rd of osakaBayarea.heard) {
+            things.features.push(osaka3rd);
         }
 
         document.addEventListener('readystatechange', event => {
@@ -25,7 +25,7 @@
                 play.addEventListener('click', function () {
                     if (play.className === 'play') {
                         play.classList.replace('play', 'pause');
-                        fetchHTML('credit.html', '#about article');
+                        fetchText('README.md', '#about article');
                         const youtube = document.querySelector('#player');
                         youtube.hidden = true;
                     } else {
@@ -43,25 +43,25 @@
 
     <!--og:meta-->
     <meta content="website" property="og:type">
-    <title>things that i (we) heard in osaka</title>
-    <meta content="things that i (we) heard in osaka" property="og:title">
+    <title>things that i (we) heard in osaka bay area</title>
+    <meta content="things that i (we) heard in osaka bay area" property="og:title">
     <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="description">
     <meta content="私（わたしたち）が 大阪市港区・西区・此花区・浪速区・大正区・西成区で聞いた 言葉" name="og:description">
 
-    <link rel="icon" href="../www/icon/favicon.png">
-    <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+    <link rel="icon" href="../../www/icon/favicon.png">
+    <link rel="icon" href="../../www/icon/android.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
 
     <!--for Twitter-->
     <meta content="summary_large_image" name="twitter:card">
-    <meta content="https://creative-community.space/map/heard/osaka-nantou/" property="og:url">
-    <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" property="og:image">
-    <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" name="twitter:image:src">
+    <meta content="https://creative-community.space/map/heard/osaka/nantou/" property="og:url">
+    <meta content="https://creative-community.space/map/heard/osaka/nantou/card.png" property="og:image">
+    <meta content="https://creative-community.space/map/heard/osaka/nantou/card.png" name="twitter:image:src">
 
-    <link href="../www/css/style.css" rel="stylesheet" />
-    <link href="../www/css/title.css" rel="stylesheet" />
-    <link href="../www/css/thing.css" rel="stylesheet" />
-    <link href="../www/css/about.css" rel="stylesheet" />
+    <link href="../../www/css/style.css" rel="stylesheet" />
+    <link href="../../www/css/title.css" rel="stylesheet" />
+    <link href="../../www/css/thing.css" rel="stylesheet" />
+    <link href="../../www/css/about.css" rel="stylesheet" />
 
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
@@ -102,7 +102,7 @@
     <button id="changeHidden" class="play" type="button" name="button">?</button>
 
     <main id="title">
-        <h1>things that i (we) heard in osaka</h1>
+        <h1>things that i (we) heard in osaka bay area</h1>
     </main>
 
     <main id="about" hidden>
@@ -117,15 +117,15 @@
         mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
         const bounds = [
-            [135.49653974944692, 34.63678725920704], // 南西座標
-            [135.59230541598112, 34.696820639620825] // 北東座標
+            [135.3730315262652, 34.64093264180789], // 南西座標
+            [135.5003690854324, 34.675365502276776] // 北東座標
         ],
             zoomIn = 14.5;
 
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/light-v10',
-            center: [135.52999876256695, 34.660350423722264],
+            center: [135.44506011560367, 34.661156093480756],
             zoom: 12.5,
             maxBounds: bounds
         });

@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.js"></script>
+  <script src="../otobuilding/things.js"></script>
+  <script src="nantou/things.js"></script>
   <script src="../www/js/index.js"></script>
   <script src="../www/js/youtube.js"></script>
   <script>
@@ -13,6 +14,10 @@
     let things = {
       'type': 'FeatureCollection',
       'features': []
+    }
+
+    for (const otobuil of otobuilAll.heard) {
+      things.features.push(otobuil);
     }
 
     for (const osaka2nd of osakaNantou.heard) {
@@ -25,7 +30,7 @@
         play.addEventListener('click', function () {
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
-            fetchHTML('credit.html', '#about article');
+            fetchText('README.md', '#about article');
             const youtube = document.querySelector('#player');
             youtube.hidden = true;
           } else {
@@ -43,10 +48,10 @@
 
   <!--og:meta-->
   <meta content="website" property="og:type">
-  <title>things that i (we) heard in southeast osaka</title>
-  <meta content="things that i (we) heard in southeast osaka" property="og:title">
-  <meta content="私（わたしたち）が 大阪市南東部で聞いた 言葉" name="description">
-  <meta content="私（わたしたち）が 大阪市南東部で聞いた 言葉" name="og:description">
+  <title>things that i (we) heard in osaka</title>
+  <meta content="things that i (we) heard in osaka" property="og:title">
+  <meta content="私（わたしたち）が 大阪で聞いた 言葉" name="description">
+  <meta content="私（わたしたち）が 大阪で聞いた 言葉" name="og:description">
 
   <link rel="icon" href="../www/icon/favicon.png">
   <link rel="icon" href="../www/icon/android.png" sizes="192x192">
@@ -54,9 +59,9 @@
 
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
-  <meta content="https://creative-community.space/map/heard/osaka-nantou/" property="og:url">
-  <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" property="og:image">
-  <meta content="https://creative-community.space/map/heard/osaka-nantou/card.png" name="twitter:image:src">
+  <meta content="https://creative-community.space/map/heard/osaka/" property="og:url">
+  <meta content="https://creative-community.space/map/heard/osaka/card.png" property="og:image">
+  <meta content="https://creative-community.space/map/heard/osaka/card.png" name="twitter:image:src">
 
   <link href="../www/css/style.css" rel="stylesheet" />
   <link href="../www/css/title.css" rel="stylesheet" />
@@ -102,13 +107,17 @@
   <button id="changeHidden" class="play" type="button" name="button">?</button>
 
   <main id="title">
-    <h1>things that i (we) heard in southeast osaka</h1>
+    <h1>things that i (we) heard in osaka</h1>
   </main>
 
   <main id="about" hidden>
     <article></article>
     <div id="player"></div>
-    <small id="copy">Copyright © 2022 - 2024 You. All Rights Reserved.</small>
+    <small id="copy">
+      Copyright © 2022 -
+      <time></time>
+      You. All Rights Reserved.
+    </small>
   </main>
 
   <div id="map"></div>
@@ -117,16 +126,16 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
     const bounds = [
-      [135.4800000, 34.5876], // 南西座標
-      [135.59876, 34.645] // 北東座標
+      [135.0590791040609, 34.256820829045935], // 南西座標
+      [135.78320173410242, 35.061027592581866] // 北東座標
     ],
       zoomIn = 14.5;
 
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-      center: [135.5384520595759, 34.620920838437655],
-      zoom: 12.5,
+      center: [135.5020763952882, 34.69376772507822],
+      zoom: 9.87654321,
       maxBounds: bounds
     });
   </script>

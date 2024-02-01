@@ -11,7 +11,7 @@ let osakaNantou = {
         date: '2022年6月19日 18:31',
         address: '大阪市住吉区帝塚山東2丁目7',
         link: {
-          html: 'osaka-nantou/date/mandaiike.html',
+          html: 'osaka/nantou/mandaiike.html',
           youtube: '-7DEl_jxuW8'
         }
       }
@@ -32,7 +32,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50201258666482,34.60066664910711]
+        coordinates: [135.50201258666482, 34.60066664910711]
       },
       properties: {
         title: '聖地巡礼',
@@ -56,11 +56,11 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5028395509824,34.598392651312295]
+        coordinates: [135.5028395509824, 34.598392651312295]
       },
       properties: {
-        title: '切磋してから琢磨する',
-        date: '2023年3月12日 18:00',
+        title: '切磋して琢磨して',
+        date: '2023年3月12日 18:30',
         address: '大阪市住吉区山之内2丁目1番20'
       }
     },
@@ -752,7 +752,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49324142724566,34.60879281251984]
+        coordinates: [135.49324142724566, 34.60879281251984]
       },
       properties: {
         title: 'たわしは持ってきた？',
@@ -764,7 +764,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49029470271932,34.600828131045745]
+        coordinates: [135.49029470271932, 34.600828131045745]
       },
       properties: {
         title: '咲いた咲いたチューリップの花が',
@@ -776,7 +776,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.48949066235713,34.598218987435345]
+        coordinates: [135.48949066235713, 34.598218987435345]
       },
       properties: {
         title: '会話終了',
@@ -788,7 +788,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49057954507776,34.5974132074806]
+        coordinates: [135.49057954507776, 34.5974132074806]
       },
       properties: {
         title: '続き説明してや',
@@ -800,7 +800,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49581149262133,34.59673760240294]
+        coordinates: [135.49581149262133, 34.59673760240294]
       },
       properties: {
         title: 'これ拾っていいかな。やめとこ',
@@ -812,7 +812,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49960041792212,34.593107753893875]
+        coordinates: [135.49960041792212, 34.593107753893875]
       },
       properties: {
         title: '今何分？10分？',
@@ -824,7 +824,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50060636452065,34.59311123602275]
+        coordinates: [135.50060636452065, 34.59311123602275]
       },
       properties: {
         title: '長くてきれい',
@@ -836,7 +836,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50059036314997,34.59004564695084]
+        coordinates: [135.50059036314997, 34.59004564695084]
       },
       properties: {
         title: '全然いつでもウェルカム<br>もっかい40歳しよか',
@@ -848,7 +848,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5024648039264,34.59201344392588]
+        coordinates: [135.5024648039264, 34.59201344392588]
       },
       properties: {
         title: 'どんだけナショナル信用してんねん',
@@ -860,7 +860,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.50140897583333,34.60366189805377]
+        coordinates: [135.50140897583333, 34.60366189805377]
       },
       properties: {
         title: '一位の人には一枚あげて<br>二位と三位には半分あげる',
@@ -872,7 +872,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5010336045233,34.60453364341788]
+        coordinates: [135.5010336045233, 34.60453364341788]
       },
       properties: {
         title: '何をしてんだー',
@@ -884,7 +884,7 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49469933760486,34.60657372275769]
+        coordinates: [135.49469933760486, 34.60657372275769]
       },
       properties: {
         title: 'ファイトーがんばろー',
@@ -896,12 +896,24 @@ let osakaNantou = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.49163019989294,34.60866818356379]
+        coordinates: [135.49163019989294, 34.60866818356379]
       },
       properties: {
         title: '黒にちょっと青みがかった感じ',
         date: '2024年1月17日 16:57',
         address: '日本大阪府大阪市住吉区墨江3丁目23番6'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.528882534618, 34.61087072925561]
+      },
+      properties: {
+        title: '鰻の炙りと牡蠣',
+        date: '2024年1月21日 13:30',
+        address: '日本大阪府大阪市東住吉区鷹合3丁目6番13'
       }
     }
   ]

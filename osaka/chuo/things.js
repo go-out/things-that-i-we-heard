@@ -1,4 +1,4 @@
-let osaka3rd = {
+let osakaChuo = {
   heard: [
   ]
 };

@@ -5,23 +5,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="otobuilding/things.js"></script>
-  <script src="bnaaltermuseum/things.js"></script>
-  <script src="osaka-nantou/things.js"></script>
+
+  <title>私（わたしたち）が聞いた言葉</title>
+  <meta name="description" content="things that i (we) heard | Inspired by Sarah Marshall">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://creative-community.space/map/heard/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="私（わたしたち）が聞いた言葉">
+  <meta property="og:description" content="things that i (we) heard | Inspired by Sarah Marshall">
+  <meta property="og:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="creative-community.space">
+  <meta property="twitter:url" content="https://creative-community.space/map/heard/">
+  <meta name="twitter:title" content="私（わたしたち）が聞いた言葉">
+  <meta name="twitter:description" content="things that i (we) heard | Inspired by Sarah Marshall">
+  <meta name="twitter:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
   <script src="www/js/index.js"></script>
   <script src="www/js/youtube.js"></script>
   <script src="www/js/csvtojson.js"></script>
+
+  <script src="otobuilding/things.js"></script>
+  <script src="bnaaltermuseum/things.js"></script>
+  <script src="osaka/nantou/things.js"></script>
+
   <script>
     let directory = "";
     let things = {
       'type': 'FeatureCollection',
       'features': []
-    }
-
-    function getRandomInt(min, max) {
-      min = Math.ceil(min)
-      max = Math.floor(max)
-      return Math.floor(Math.random() * (max - min) + min)
     }
 
     for (const otobuil of otobuilAll.heard) {
@@ -35,7 +50,7 @@
     for (const osaka2nd of osakaNantou.heard) {
       things.features.push(osaka2nd);
     }
-    
+
     csvtojson('www/submit.csv');
 
     document.addEventListener('readystatechange', event => {
@@ -60,24 +75,17 @@
         document.querySelector('#copy time').innerHTML = year;
       }
     });
-  </script>
 
-  <!--og:meta-->
-  <meta content="website" property="og:type">
-  <title>私（わたしたち）が聞いた言葉</title>
-  <meta content="私（わたしたち）が聞いた言葉" property="og:title">
-  <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="description">
-  <meta content="things that i (we) heard | Inspired by Sarah Marshall" name="og:description">
+    function getRandomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min) + min)
+    }
+  </script>
 
   <link rel="icon" href="www/icon/favicon.png">
   <link rel="icon" href="www/icon/android.png" sizes="192x192">
   <link rel="apple-touch-icon-precomposed" href="www/icon/ios.png" sizes="180x180">
-
-  <!--for Twitter-->
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="https://creative-community.space/map/heard/" property="og:url">
-  <meta content="https://creative-community.space/map/heard/www/icon/card.png" property="og:image">
-  <meta content="https://creative-community.space/map/heard/www/icon/card.png" name="twitter:image:src">
 
   <link href="www/css/style.css" rel="stylesheet" />
   <link href="www/css/title.css" rel="stylesheet" />

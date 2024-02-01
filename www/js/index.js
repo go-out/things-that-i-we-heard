@@ -10,6 +10,14 @@ async function fetchHTML(url = '', query = '') {
         });
 }
 
+async function fetchText(url = '', query = '') {
+    fetch(url)
+        .then(response => response.text())
+        .then(innerText => {
+            document.querySelector(query).innerText = innerText;
+        });
+}
+
 function indexHead() {
     const head = document.querySelector('head')
     const googleapis = document.createElement("link")

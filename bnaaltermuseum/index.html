@@ -5,20 +5,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.js"></script>
-  <script src="../www/js/index.js"></script>
-  <script src="../www/js/youtube.js"></script>
+
+  <title>things that i (we) heard</title>
+  <meta name="description" content="私（わたしたち）が聞いた言葉">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://creative-community.space/map/heard/">
+  <meta property="og:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="creative-community.space">
+  <meta property="twitter:url" content="https://creative-community.space/map/heard/">
+  <meta name="twitter:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
   <script>
-    let directory = "../"
     let things = {
       'type': 'FeatureCollection',
       'features': []
     }
+  </script>
 
-    for (const bna of bnaAll.heard) {
-      things.features.push(bna);
-    }
+  <script src="../www/js/index.js"></script>
+  <script src="../www/js/head.js"></script>
 
+  <script>
+    let directory = "../"
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const play = document.querySelector('#changeHidden');
@@ -26,13 +39,8 @@
           if (play.className === 'play') {
             play.classList.replace('play', 'pause');
             fetchHTML('credit.html', '#about article');
-            const youtube = document.querySelector('#player');
-            youtube.hidden = true;
           } else {
             play.classList.replace('pause', 'play');
-            const youtube = document.querySelector('#player');
-            youtube.hidden = true;
-            player.pauseVideo();
           }
         }, false)
       } else if (event.target.readyState === 'complete') {
@@ -41,22 +49,9 @@
     });
   </script>
 
-  <!--og:meta-->
-  <meta content="website" property="og:type">
-  <title>things that i (we) heard around BnA Alter Museum</title>
-  <meta content="things that i (we) heard around BnA Alter Museum" property="og:title">
-  <meta content="私（わたしたち）が 京都・河原町周辺で聞いた 55 の言葉" name="description">
-  <meta content="私（わたしたち）が 京都・河原町周辺で聞いた 55 の言葉" name="og:description">
-
   <link rel="icon" href="../www/icon/favicon.png">
   <link rel="icon" href="../www/icon/android.png" sizes="192x192">
   <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
-
-  <!--for Twitter-->
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/" property="og:url">
-  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/img/card.png" property="og:image">
-  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/img/card.png" name="twitter:image:src">
 
   <link href="../www/css/style.css" rel="stylesheet" />
   <link href="../www/css/title.css" rel="stylesheet" />
@@ -107,7 +102,6 @@
 
   <main id="about" hidden>
     <article></article>
-    <div id="player"></div>
     <small id="copy">Copyright © 2022 You. All Rights Reserved.</small>
   </main>
 
@@ -116,17 +110,11 @@
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
-    const bounds = [
-      [135.75972724537672, 34.9950251407263], // 南西座標
-      [135.772916683571, 35.00535650888111] // 北東座標
-    ],
-      zoomIn = 17;
-
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-      center: [135.76842457873613, 35.00022238171323],
-      zoom: 15.5,
+      center: center,
+      zoom: zoom,
       maxBounds: bounds
     });
   </script>
