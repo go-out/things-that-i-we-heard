@@ -49,6 +49,7 @@ switch (document.readyState) {
                 head.appendChild(script)
             }
         }
+
         break;
     case "interactive": {
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
@@ -76,8 +77,6 @@ switch (document.readyState) {
 
         for (const jsEach of indexThis.things) {
             let heardArr = jsEach.arr;
-            let pushArr = jsEach.push;
-
             heardArr.heard.forEach((thisAll)
                 => things.features.push(thisAll)
             )
