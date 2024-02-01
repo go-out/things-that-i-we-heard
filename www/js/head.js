@@ -86,7 +86,7 @@ switch (document.readyState) {
 
         break;
     }
-    case "complete":
+    case "complete": {
         // ページが完全に読み込み完了
 
         const h1 = document.querySelector('#title h1')
@@ -130,4 +130,5 @@ switch (document.readyState) {
             });
         }
         break;
+    }
 }
