@@ -16,12 +16,6 @@ switch (document.readyState) {
             head.appendChild(ogTitle)
             head.appendChild(twTitle)
 
-            for (const jsEach of indexThis.things) {
-                const script = document.createElement("script")
-                script.src = jsEach.js;
-                head.appendChild(script)
-            }
-
             const description = document.head.querySelector("[name=description][content]");
             description.content = `私（わたしたち）が ${indexThis.area}で聞いた言葉`;
             const ogDescription = document.createElement("meta")
@@ -33,17 +27,16 @@ switch (document.readyState) {
             head.appendChild(ogDescription)
             head.appendChild(twDescription)
 
-            const bounds = indexThis.bounds;
-            const center = indexThis.center;
-            const zoom = indexThis.zoom;
-            const zoomIn = indexThis.zoomIn;
+            for (const jsEach of indexThis.things) {
+                const script = document.createElement("script")
+                script.src = jsEach.js;
+                head.appendChild(script)
+            }
         }
         break;
     case "interactive": {
         // この文書は読み込みが終了した。 DOM 要素にアクセスできるようになった。
         // しかし、画像、スタイルシート、フレームなどの副リソースはまだ読み込み中。
-
-        let allThings = things.features[length];
 
         for (const jsEach of indexThis.things) {
             const script = document.createElement("script")
@@ -63,5 +56,6 @@ switch (document.readyState) {
     case "complete":
         // ページが完全に読み込み完了。
 
+        let allThings = things.features[length];
         break;
 }
