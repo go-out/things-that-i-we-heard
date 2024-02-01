@@ -41,7 +41,7 @@ if (!location.hash) {
     } else if (location.hash === "#2nd") {
         indexThis = {
             title: "things that i (we) heard in southeast osaka",
-            area: "阿倍野区・住吉区・東住吉区・平野区全域と西成区・平野市の一部",
+            area: "住吉区・東住吉区・平野区全域と阿倍野区・西成区・平野市の一部",
             things: [
                 "nantou/things.v2.js"
             ],
@@ -55,7 +55,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "nantou/README.md"
         }
-    } else if (location.hash === "#3th") {
+    } else if (location.hash === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
             area: "大阪市港区・西区・此花区・浪速区・大正区・西成区",
