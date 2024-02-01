@@ -129,13 +129,11 @@ document.addEventListener('readystatechange', event => {
                         offset: 12.5
                     })
                         .setHTML(`
-                < h3 > ${marker.properties.title}</h3 >
-                    <p class="date">
+                        <h3>${marker.properties.title}</h3>
+                        <p class="date">
                         ${marker.properties.date}</br>
-                            ${marker.properties.address}
-                            </p >
-                `
-                        )
+                        ${marker.properties.address}
+                        </p>`)
                 )
                 .addTo(map)
 
