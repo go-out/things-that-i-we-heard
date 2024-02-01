@@ -49,6 +49,8 @@
       for (const heardEach of bnaAll.heard) {
         things.features.push(heardEach)
         allThings++;
+
+        document.querySelector('#allThings').textContent = allThings;
       }
     });
   </script>

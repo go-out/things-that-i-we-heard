@@ -87,6 +87,13 @@ document.addEventListener('readystatechange', event => {
             })
         }, false);
 
+        if (indexThis) {
+            const h1 = document.querySelector('#title h1')
+            h1.textContent = indexThis.title;
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた <b id="allThings"></b> の 言葉`;
+        }
+
         if (indexThis.html) {
             fetchHTML(indexThis.html, '#credit');
         }
@@ -96,13 +103,6 @@ document.addEventListener('readystatechange', event => {
         }
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
-
-        if (indexThis) {
-            const h1 = document.querySelector('#title h1')
-            h1.textContent = indexThis.title;
-            const h2 = document.querySelector('#about h2')
-            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
-        }
 
         if (things.features.length === allThings) {
             for (const marker of things.features) {
