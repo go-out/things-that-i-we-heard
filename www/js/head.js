@@ -58,7 +58,6 @@ switch (document.readyState) {
                 head.appendChild(script)
             }
         }
-
         break;
 }
 
@@ -98,20 +97,11 @@ document.addEventListener('readystatechange', event => {
     } else if (event.target.readyState === 'complete') {
         // ページが完全に読み込み完了
 
-        let allThings = 0;
-
-        for (const jsEach of indexThis.things) {
-            for (const heardEach of jsEach.arr) {
-                things.features.push(heardEach)
-                allThings++;
-                const h2 = document.querySelector('#about h2')
-                h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
-            }
-        }
-
         if (indexThis) {
             const h1 = document.querySelector('#title h1')
             h1.textContent = indexThis.title;
+            const h2 = document.querySelector('#about h2')
+            h2.textContent = `私（わたしたち）が ${indexThis.area}で聞いた ${allThings} の 言葉`;
         }
 
         if (things.features.length === allThings) {
