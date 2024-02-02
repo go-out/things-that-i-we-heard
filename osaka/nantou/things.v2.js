@@ -104,7 +104,7 @@ let osaka2nd = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.5302670831062, 34.610097655088026]
+        coordinates: [135.53042850962555,34.61008406820031]
       },
       properties: {
         title: '壁もみどりでいい感じ',
@@ -410,18 +410,6 @@ let osaka2nd = {
         title: 'ほんまに今年は厳しく、適当に外食しない',
         date: '2024年1月6日 19:30',
         address: '日本大阪府大阪市住吉区長居3丁目2番2'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [135.4965092134321, 34.62836585504155]
-      },
-      properties: {
-        title: '椿と南天',
-        date: '2024年1月7日 10:25',
-        address: '日本大阪府大阪市西成区岸里東2丁目6番7'
       }
     },
     {
@@ -908,7 +896,7 @@ let osaka2nd = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.528882534618, 34.61087072925561]
+        coordinates: [135.52892850404623,34.61037086739316]
       },
       properties: {
         title: '鰻の炙りと牡蠣',
