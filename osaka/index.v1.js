@@ -26,7 +26,8 @@ if (!location.hash) {
             title: "things that i (we) heard in southwest osaka",
             area: "大阪市住之江区と大正区・西成区の一部",
             things: [
-                "../otobuilding/things.all.js"
+                "../otobuilding/things.all.js",
+                "nansei/things.js"
             ],
             bounds: [
                 [135.39146702295744, 34.59380194128228], // 南西座標
@@ -36,7 +37,7 @@ if (!location.hash) {
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
-            text: "../otobuilding/README.md"
+            text: "nansei/README.md"
         }
     } else if (location.hash === "#2nd") {
         indexThis = {
@@ -49,7 +50,7 @@ if (!location.hash) {
                 [135.48000, 34.5876], // 南西座標
                 [135.625511, 34.650] // 北東座標
             ],
-            center: [135.5384520595759, 34.620920838437655],
+            center: [135.5488778130033, 34.62302874171973],
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
@@ -58,15 +59,15 @@ if (!location.hash) {
     } else if (location.hash === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
-            area: "大阪市港区と此花区・西区・大正区・浪速区・西成区の一部",
+            area: "大阪市港区・此花区と・大正区・西区の一部",
             things: [
                 "bayarea/things.js"
             ],
             bounds: [
                 [135.3730315262652, 34.64093264180789], // 南西座標
-                [135.48835016768209, 34.693099572727924] // 北東座標
+                [135.4816906204446, 34.713781222782764] // 北東座標
             ],
-            center: [135.44506011560367, 34.661156093480756],
+            center: [135.43853775007025, 34.66772792145631],
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
@@ -75,15 +76,15 @@ if (!location.hash) {
     } else if (location.hash === "#4th") {
         indexThis = {
             title: "things that i (we) heard in osaka center area",
-            area: "大阪市中央区・天王寺区と西区・浪速区の一部",
+            area: "大阪市中央区・浪速区・天王寺区と西区の一部",
             things: [
                 "chuo/things.js"
             ],
             bounds: [
-                [135.485745, 34.643613], // 南西座標
+                [135.475455, 34.645457], // 南西座標
                 [135.536279, 34.698345] // 北東座標
             ],
-            center: [135.5230066175426, 34.67986867749417],
+            center: [135.50033494029185, 34.67196397647884],
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
@@ -100,7 +101,7 @@ if (!location.hash) {
                 [135.4066799794195, 34.670617726125215], // 南西座標
                 [135.5629861101545, 34.77421451454586] // 北東座標
             ],
-            center: [135.49582669666256, 34.70236986879824],
+            center: [135.4993531599966, 34.70351079682028],
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
@@ -109,15 +110,15 @@ if (!location.hash) {
     } else if (location.hash === "#6th") {
         indexThis = {
             title: "things that i (we) heard in osaka higashi area",
-            area: "大阪市鶴見区・城東区・東成区・生野区と東大阪市の一部",
+            area: "大阪市鶴見区・城東区・東成区・生野区と東大阪・守口市・大東市・門真市・八尾市の一部",
             things: [
                 "higashi/things.js"
             ],
             bounds: [
                 [135.51687809235827, 34.63269505296771], // 南西座標
-                [135.62000337557598, 34.74362655725813] // 北東座標
+                [135.64909374681636, 34.73249747918041] // 北東座標
             ],
-            center: [135.52999876256695, 34.660350423722264],
+            center: [135.57260618884538, 34.67878080305437],
             zoom: 12.5,
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
