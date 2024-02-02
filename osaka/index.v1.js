@@ -9,6 +9,7 @@ if (!location.hash) {
         things: [
             "../otobuilding/things.all.js",
             "nantou/things.v2.js",
+            "chuo/things.js",
             "higashi/things.js",
             "sakai/things.js"
         ],
