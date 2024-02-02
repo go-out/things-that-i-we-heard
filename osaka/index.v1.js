@@ -21,7 +21,7 @@ if (!location.hash) {
         zoom: 9.87654321,
         zoomIn: 14.5,
         card: "https://creative-community.space/map/heard/",
-        text: "README.md"
+        html: "area.html"
     }
 } else {
     if (location.hash === "#1st") {
@@ -62,7 +62,7 @@ if (!location.hash) {
     } else if (location.hash === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
-            area: "大阪市港区・此花区と・大正区・西区の一部",
+            area: "大阪市港区・此花区と大正区・西区の一部",
             things: [
                 "bayarea/things.js"
             ],
