@@ -8,7 +8,9 @@ if (!location.hash) {
         area: "大阪",
         things: [
             "../otobuilding/things.all.js",
-            "nantou/things.v2.js"
+            "nantou/things.v2.js",
+            "higashi/things.js",
+            "sakai/things.js"
         ],
         bounds: [
             [135.0590791040609, 34.256820829045935], // 南西座標
@@ -123,6 +125,23 @@ if (!location.hash) {
             zoomIn: 14.5,
             card: "https://creative-community.space/map/heard/",
             text: "higashi/README.md"
+        }
+    } else if (location.hash === "#sakai") {
+        indexThis = {
+            title: "things that i (we) heard in sakai, osaka",
+            area: "大阪府堺市",
+            things: [
+                "sakai/things.js"
+            ],
+            bounds: [
+                [135.41198975111797, 34.41793027889753], // 南西座標
+                [135.57458389988736, 34.61841500845924] // 北東座標
+            ],
+            center: [135.50012524849802, 34.5239972993108],
+            zoom: 12.5,
+            zoomIn: 14.5,
+            card: "https://creative-community.space/map/heard/",
+            text: "sakai/README.md"
         }
     }
 }
