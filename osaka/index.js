@@ -58,7 +58,7 @@ if (!location.hash) {
     } else if (location.hash === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
-            area: "大阪市港区・西区と此花区・大正区・西成区・浪速区の一部",
+            area: "大阪市港区と此花区・西区・大正区・西成区・浪速区の一部",
             things: [
                 "bayarea/things.js"
             ],
@@ -75,13 +75,13 @@ if (!location.hash) {
     } else if (location.hash === "#4th") {
         indexThis = {
             title: "things that i (we) heard in osaka center area",
-            area: "大阪市中央",
+            area: "大阪市中央区と西区・浪速区・天王寺区・生野区・城東区・東成区の一部",
             things: [
                 "chuo/things.js"
             ],
             bounds: [
-                [135.48843787902314, 34.659672342893856], // 南西座標
-                [135.53627857909413, 34.69834467476561] // 北東座標
+                [135.484597, 34.651360], // 南西座標
+                [135.536279, 34.698345] // 北東座標
             ],
             center: [135.5230066175426, 34.67986867749417],
             zoom: 12.5,
@@ -92,13 +92,13 @@ if (!location.hash) {
     } else if (location.hash === "#5th") {
         indexThis = {
             title: "things that i (we) heard in osaka kita area",
-            area: "大阪市北",
+            area: "大阪市北区・福島区・都島区・旭区・淀川区・東淀川区・西淀川区",
             things: [
                 "kita/things.js"
             ],
             bounds: [
                 [135.4066799794195, 34.670617726125215], // 南西座標
-                [135.58439852201138, 34.75939737782922] // 北東座標
+                [135.5629861101545, 34.77421451454586] // 北東座標
             ],
             center: [135.49582669666256, 34.70236986879824],
             zoom: 12.5,
@@ -109,13 +109,13 @@ if (!location.hash) {
     } else if (location.hash === "#6th") {
         indexThis = {
             title: "things that i (we) heard in osaka higashi area",
-            area: "大阪市東",
+            area: "大阪市鶴見区・城東区・東成区と東大阪市の一部",
             things: [
                 "higashi/things.js"
             ],
             bounds: [
-                [135.49653974944692, 34.63678725920704], // 南西座標
-                [135.59230541598112, 34.696820639620825] // 北東座標
+                [135.5234068509283, 34.64778907534833], // 南西座標
+                [135.62000337557598, 34.74362655725813] // 北東座標
             ],
             center: [135.52999876256695, 34.660350423722264],
             zoom: 12.5,
