@@ -86,7 +86,11 @@
       <h2>私（わたしたち）が聞いた言葉</h2>
       <section id="credit"></section>
     </article>
-    <small id="copy">Copyright © 2022 You. All Rights Reserved.</small>
+    <small id="copy">
+      Copyright © 2022 -
+      <time></time>
+      You. (Not) All Rights Reserved.
+    </small>
   </main>
 
   <div id="map"></div>
@@ -111,6 +115,9 @@
         zoom: indexThis.zoomIn
       });
     }
+
+    const year = new Date().getFullYear();
+    document.querySelector('#copy time').innerHTML = year;
   </script>
 </body>
 

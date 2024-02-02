@@ -5,16 +5,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <script src="things.all.js"></script>
-  <script src="../www/js/index.js"></script>
-  <script src="../www/js/youtube.js"></script>
+
   <script>
-    let directory = "../"
+    let directory = "";
     let things = {
       'type': 'FeatureCollection',
       'features': []
     }
+  </script>
+  <script src="things.all.js"></script>
 
+  <script>
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const play = document.querySelector('#changeHidden');
@@ -36,6 +37,8 @@
       }
     });
   </script>
+  <script src="../www/js/index.js"></script>
+  <script src="../www/js/youtube.js"></script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -99,7 +102,7 @@
   <main id="about" hidden>
     <article></article>
     <div id="player"></div>
-    <small id="copy">Copyright © 2020 - 2022 You. All Rights Reserved.</small>
+    <small id="copy">Copyright © 2020 - 2022 You. (Not) All Rights Reserved.</small>
   </main>
 
   <div id="map"></div>
