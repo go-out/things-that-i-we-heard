@@ -24,23 +24,23 @@
   <meta name="twitter:description" content="things that i (we) heard | Inspired by Sarah Marshall">
   <meta name="twitter:image" content="https://creative-community.space/map/heard/www/icon/card.png">
 
-  <script src="www/js/index.js"></script>
-  <script src="www/js/youtube.js"></script>
-  <script src="www/js/csvtojson.js"></script>
-
-  <script src="otobuilding/things.all.js"></script>
-  <script src="bnaaltermuseum/things.all.js"></script>
-  <script src="osaka/nantou/things.v2.js"></script>
-
   <script>
     let directory = "";
     let things = {
       'type': 'FeatureCollection',
       'features': []
     }
+  </script>
 
-    csvtojson('www/submit.csv');
+  <script src="otobuilding/things.all.js"></script>
+  <script src="bnaaltermuseum/things.all.js"></script>
+  <script src="osaka/chuo/things.js"></script>
+  <script src="osaka/higashi/things.js"></script>
+  <script src="osaka/nantou/things.v2.js"></script>
+  <script src="osaka/sakai/things.js"></script>
+  <script src="www/js/csvtojson.js"></script>
 
+  <script>
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
         const play = document.querySelector('#changeHidden');
@@ -70,6 +70,9 @@
       return Math.floor(Math.random() * (max - min) + min)
     }
   </script>
+
+  <script src="www/js/index.js"></script>
+  <script src="www/js/youtube.js"></script>
 
   <link rel="icon" href="www/icon/favicon.png">
   <link rel="icon" href="www/icon/android.png" sizes="192x192">

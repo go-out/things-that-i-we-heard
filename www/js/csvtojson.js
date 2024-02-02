@@ -1,5 +1,7 @@
 'use strict'
 
+csvtojson('www/submit.csv')
+
 async function csvtojson(csv) {
     const response = await fetch(csv);
     const text = await response.text();
