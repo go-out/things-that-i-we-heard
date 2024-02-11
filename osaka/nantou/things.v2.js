@@ -903,6 +903,18 @@ let osaka2nd = {
         date: '2024年1月21日 13:30',
         address: '日本大阪府大阪市東住吉区鷹合3丁目6番13'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51144213015306,34.64590446901492]
+      },
+      properties: {
+        title: 'シュウマイはぜひ食べて',
+        date: '2024年2月10日 17:30',
+        address: '日本大阪府大阪市阿倍野区阿倍野筋1-6-1 明治屋'
+      }
     }
   ]
 };
