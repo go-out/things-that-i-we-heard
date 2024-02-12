@@ -4,7 +4,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.57206908278266,34.664323093089465]
+        coordinates: [135.57206908278266, 34.664323093089465]
       },
       properties: {
         title: 'なんで90990？',
@@ -16,7 +16,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.56862927459872,34.66456155197923]
+        coordinates: [135.56862927459872, 34.66456155197923]
       },
       properties: {
         title: '入って即ロウリュウ',
@@ -28,7 +28,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.58951319459118,34.66375531909105]
+        coordinates: [135.58951319459118, 34.66375531909105]
       },
       properties: {
         title: 'いっこいしょ',
@@ -40,7 +40,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.641694726592,34.66078514339348]
+        coordinates: [135.641694726592, 34.66078514339348]
       },
       properties: {
         title: 'ひょこタンひょこタンひょこタンタン',
@@ -52,7 +52,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.6418948778076,34.66077879962873]
+        coordinates: [135.6418948778076, 34.66077879962873]
       },
       properties: {
         title: 'この後はプリズム八尾で',
@@ -64,7 +64,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.64003491139442,34.66345651521239]
+        coordinates: [135.64003491139442, 34.66345651521239]
       },
       properties: {
         title: '上ハラミ200g',
@@ -76,7 +76,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.6399750826638,34.66452319443347]
+        coordinates: [135.6399750826638, 34.66452319443347]
       },
       properties: {
         title: 'チーズブール',
@@ -88,7 +88,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.6345042905067,34.66760724454545]
+        coordinates: [135.6345042905067, 34.66760724454545]
       },
       properties: {
         title: '太陽浴びてるんちゃうんかい',
@@ -100,7 +100,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.63511604994824,34.672687158283935]
+        coordinates: [135.63511604994824, 34.672687158283935]
       },
       properties: {
         title: '東大阪市新町17番3',
@@ -112,7 +112,7 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [__135.59150274179535,34.67892751879245_]
+        coordinates: [135.59150274179535, 34.67892751879245]
       },
       properties: {
         title: '長田までが「けいはんな」じゃなくて<br>長田からが「中央線」な',
