@@ -32,7 +32,7 @@ let osaka6th = {
       },
       properties: {
         title: 'いっこいしょ',
-        date: '2024年2月12日 9:40',
+        date: '2024年2月12日 10:10',
         address: '東大阪市小阪3-1-1八戸ノ里駅'
       }
     },
