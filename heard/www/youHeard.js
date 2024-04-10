@@ -58,12 +58,12 @@ document.addEventListener('readystatechange', e => {
                 const thing = document.createElement('section');
                 thing.className = 'thing';
                 thing.innerHTML = `
-                <input type="button" onclick="removeThis(${i})" value="×">
                 <h3>${marker[i].properties.title}</h3>
                 <p class="date">
                     ${marker[i].properties.date}</br>
                     ${marker[i].properties.address}
                 </p>
+                <input type="button" onclick="removeThis(${i})" value="×">
                 `;
                 article.appendChild(thing)
             }

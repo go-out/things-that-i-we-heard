@@ -38,8 +38,9 @@
 
 #things .thing input {
     color: #fff;
+    font-size: 125%;
     position: absolute;
-    top: 0.5rem;
+    bottom: 0.5rem;
     right: 0.5rem;
 }
 
