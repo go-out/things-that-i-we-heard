@@ -1,9 +1,9 @@
 #things {
+    color: #fff;
     font-size: 0.75vw;
 }
 
 #things .thing {
-    color: #fff;
     display: grid;
     float: left;
     text-align: center;
