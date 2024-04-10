@@ -33,6 +33,16 @@ if (localStorage.getItem("heard")) {
     }
 }
 
+function removeThis(e) {
+    const yourHeard = JSON.parse(localStorage.getItem('heard'));
+    let result = window.confirm('この言葉をコレクションから削除します。\r\nRemove This from Your Collection.');
+    if (result) {
+        yourHeard.splice(e, 1);
+        localStorage.setItem('heard', JSON.stringify(yourHeard));
+        location.reload();
+    }
+}
+
 document.addEventListener('readystatechange', e => {
     if (e.target.readyState === 'interactive') {
         // コントロールに現在時刻を設定
@@ -40,19 +50,29 @@ document.addEventListener('readystatechange', e => {
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
+        const thing = document.createElement('section');
         // things.features から マーカー・ポップアップを生成
-        for (const marker of things.features) {
-            const thing = document.createElement('section');
-            thing.className = 'thing';
-            thing.innerHTML = `
-            <h3>${marker.properties.title}</h3>
-            <p class="date">
-                ${marker.properties.date}</br>
-                ${marker.properties.address}
-            </p>
-            `;
-            const article = document.querySelector('#things')
-            article.appendChild(thing)
+        if (localStorage.getItem("heard")) {
+            let marker = things.features;
+            for (let i = 0; i < marker.length; i++) {
+                thing.className = 'thing';
+                thing.innerHTML = `
+                <input type="button" onclick=" onclick="removeThis(${i})" value="×">
+                <h3>${marker[i].properties.title}</h3>
+                <p class="date">
+                    ${marker[i].properties.date}</br>
+                    ${marker[i].properties.address}
+                </p>
+                `;
+                const article = document.querySelector('#things')
+                article.appendChild(thing)
+            }
+        } else {
+            fetch("README.md")
+                .then(response => response.text())
+                .then(innerText => {
+                    document.querySelector("#things").innerText = innerText;
+                });
         }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加
@@ -80,8 +100,7 @@ document.addEventListener('readystatechange', e => {
             const thisComment = document.querySelector('#comment').value;
             const timestamp = document.querySelector('#timestamp').value;
             const thisTime = new Date(timestamp).toLocaleString();
-
-            addData(thisTime, thisLat, thisLng, thisAddress, thisComment)
+            addData(thisTime, thisLat, thisLng, thisAddress, thisComment.replace(/\r?\n/g, '<br>'));
 
             const addHeard = {
                 latitude: thisLat,

@@ -16,6 +16,7 @@ form button {
 }
 
 dialog[open] {
+    border: none;
     display: grid;
     padding: 0;
     place-items: center;
