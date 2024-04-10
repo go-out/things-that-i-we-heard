@@ -14,7 +14,7 @@ main {
     position: relative;
     width: 100%;
     height: calc(100vh - 3.21rem);
-    max-height: 123vw;
+    max-height: 111vw;
 }
 
 main h1,
