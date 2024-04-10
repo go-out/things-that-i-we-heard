@@ -15,7 +15,7 @@ form button {
     font-family: inherit;
 }
 
-dialog {
+dialog[open] {
     display: grid;
     padding: 0;
     place-items: center;
