@@ -28,7 +28,7 @@ dialog input[type="button"] {
     color: #fff;
     font-size: 200%;
     padding: 0;
-    margin: 0;
+    margin: 0.25rem;
     place-self: start end;
 }
 
