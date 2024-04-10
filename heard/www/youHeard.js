@@ -50,28 +50,28 @@ document.addEventListener('readystatechange', e => {
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
-        const thing = document.createElement('section');
+        const article = document.querySelector('#things')
         // things.features から マーカー・ポップアップを生成
         if (localStorage.getItem("heard")) {
             let marker = things.features;
             for (let i = 0; i < marker.length; i++) {
+                const thing = document.createElement('section');
                 thing.className = 'thing';
                 thing.innerHTML = `
-                <input type="button" onclick=" onclick="removeThis(${i})" value="×">
+                <input type="button" onclick="removeThis(${i})" value="×">
                 <h3>${marker[i].properties.title}</h3>
                 <p class="date">
                     ${marker[i].properties.date}</br>
                     ${marker[i].properties.address}
                 </p>
                 `;
-                const article = document.querySelector('#things')
                 article.appendChild(thing)
             }
         } else {
             fetch("README.md")
                 .then(response => response.text())
                 .then(innerText => {
-                    document.querySelector("#things").innerText = innerText;
+                    article.innerText = innerText;
                 });
         }
     } else if (e.target.readyState === 'complete') {
