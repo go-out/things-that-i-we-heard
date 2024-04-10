@@ -163,7 +163,7 @@ let osaka4th = {
         coordinates: [135.51362782709396, 34.669054701230465]
       },
       properties: {
-        title: 'すごすぎ龍',
+        title: 'すごすぎ龍<br>SNS拡散POWER!',
         date: '2024年4月6日 13:30',
         address: '大阪市中央区瓦屋町3丁目1番4'
       }
