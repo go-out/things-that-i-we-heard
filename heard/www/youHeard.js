@@ -50,29 +50,21 @@ document.addEventListener('readystatechange', e => {
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
-        const article = document.querySelector('#things')
         // things.features から マーカー・ポップアップを生成
-        if (localStorage.getItem("heard")) {
-            let marker = things.features;
-            for (let i = 0; i < marker.length; i++) {
-                const thing = document.createElement('section');
-                thing.className = 'thing';
-                thing.innerHTML = `
-                <h3>${marker[i].properties.title}</h3>
-                <p class="date">
-                    ${marker[i].properties.date}</br>
-                    ${marker[i].properties.address}
-                </p>
-                <input type="button" onclick="removeThis(${i})" value="×">
-                `;
-                article.appendChild(thing)
-            }
-        } else {
-            fetch("README.md")
-                .then(response => response.text())
-                .then(innerText => {
-                    article.innerText = innerText;
-                });
+        let marker = things.features;
+        for (let i = 0; i < marker.length; i++) {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker[i].properties.title}</h3>
+            <p class="date">
+                ${marker[i].properties.date}</br>
+                ${marker[i].properties.address}
+            </p>
+            <input type="button" onclick="removeThis(${i})" value="×">
+            `;
+            const article = document.querySelector('#things')
+            article.appendChild(thing)
         }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加
