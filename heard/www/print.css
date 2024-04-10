@@ -8,6 +8,7 @@
     float: left;
     text-align: center;
     padding: 1rem;
+    position: relative;
     place-content: center;
     width: calc(100% / 3);
     height: calc(100vh / 3);
@@ -24,7 +25,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     #things {
         font-size: 2.25vw;
     }
@@ -36,7 +37,10 @@
 }
 
 #things .thing input {
-    place-self: start end;
+    color: #fff;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
 #things .thing h3 {
