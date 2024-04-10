@@ -2,29 +2,19 @@
 
 let indexThis;
 
-if (!location.hash) {
-    indexThis = {
-        title: "things that i (we) heard in osaka",
-        area: "大阪",
-        things: [
-            "../otobuilding/things.all.js",
-            "nantou/things.v2.js",
-            "chuo/things.js",
-            "higashi/things.js",
-            "sakai/things.js"
-        ],
-        bounds: [
-            [135.0590791040609, 34.256820829045935], // 南西座標
-            [135.78320173410242, 35.061027592581866] // 北東座標
-        ],
-        center: [135.5020763952882, 34.69376772507822],
-        zoom: 9.87654321,
-        zoomIn: 14.5,
-        card: "https://creative-community.space/map/heard/",
-        html: "area.html"
+// ?id=ID&area=エリア
+const urlParam = location.search.substring(1)
+let json;
+
+if (urlParam) {
+    let paramArr = [],
+        param = urlParam.split('&')
+    for (arr = 0; arr < param.length; arr++) {
+        var paramItem = param[arr].split('=')
+        paramArr[paramItem[0]] = paramItem[1];
     }
-} else {
-    if (location.hash === "#1st") {
+
+    if (paramArr.area === "1st") {
         indexThis = {
             title: "things that i (we) heard in southwest osaka",
             area: "大阪市住之江区と大正区・西成区の一部",
@@ -42,12 +32,12 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "nansei/README.md"
         }
-    } else if (location.hash === "#2nd") {
+    } else if (paramArr.area === "#2nd") {
         indexThis = {
             title: "things that i (we) heard in southeast osaka",
             area: "大阪市住吉区・東住吉区・阿倍野区・平野区と西成区・八尾市の一部",
             things: [
-                "nantou/things.v2.js"
+                "nantou/things.v3.js"
             ],
             bounds: [
                 [135.48000, 34.5876], // 南西座標
@@ -59,7 +49,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "nantou/README.md"
         }
-    } else if (location.hash === "#3rd") {
+    } else if (paramArr.area === "#3rd") {
         indexThis = {
             title: "things that i (we) heard in osaka bay area",
             area: "大阪市港区・此花区と大正区・西区の一部",
@@ -76,12 +66,12 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "bayarea/README.md"
         }
-    } else if (location.hash === "#4th") {
+    } else if (paramArr.area === "#4th") {
         indexThis = {
             title: "things that i (we) heard in osaka center area",
             area: "大阪市中央区・浪速区・天王寺区と西区の一部",
             things: [
-                "chuo/things.js"
+                "chuo/things.v2.js"
             ],
             bounds: [
                 [135.475455, 34.645457], // 南西座標
@@ -93,7 +83,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "chuo/README.md"
         }
-    } else if (location.hash === "#5th") {
+    } else if (paramArr.area === "#5th") {
         indexThis = {
             title: "things that i (we) heard in osaka kita area",
             area: "大阪市北区・福島区・都島区・旭区・淀川区・東淀川区・西淀川区",
@@ -110,7 +100,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "kita/README.md"
         }
-    } else if (location.hash === "#6th") {
+    } else if (paramArr.area === "#6th") {
         indexThis = {
             title: "things that i (we) heard in osaka higashi area",
             area: "大阪市鶴見区・城東区・東成区・生野区と東大阪・守口市・大東市・門真市・八尾市の一部",
@@ -127,7 +117,7 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "higashi/README.md"
         }
-    } else if (location.hash === "#sakai") {
+    } else if (paramArr.area === "#sakai") {
         indexThis = {
             title: "things that i (we) heard in sakai, osaka",
             area: "大阪府堺市",
@@ -144,5 +134,26 @@ if (!location.hash) {
             card: "https://creative-community.space/map/heard/",
             text: "sakai/README.md"
         }
+    }
+} else {
+    indexThis = {
+        title: "things that i (we) heard in osaka",
+        area: "大阪",
+        things: [
+            "../otobuilding/things.all.js",
+            "nantou/things.v3.js",
+            "chuo/things.v2.js",
+            "higashi/things.js",
+            "sakai/things.js"
+        ],
+        bounds: [
+            [135.0590791040609, 34.256820829045935], // 南西座標
+            [135.78320173410242, 35.061027592581866] // 北東座標
+        ],
+        center: [135.5020763952882, 34.69376772507822],
+        zoom: 9.87654321,
+        zoomIn: 14.5,
+        card: "https://creative-community.space/map/heard/",
+        html: "area.html"
     }
 }
