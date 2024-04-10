@@ -5,6 +5,12 @@ form textarea,
 form button {
     background: #111;
     color: #fff;
+}
+
+form label,
+form input,
+form textarea,
+form button {
     display: block;
     font-family: inherit;
 }
