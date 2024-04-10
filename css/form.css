@@ -15,9 +15,18 @@ form button {
     font-family: inherit;
 }
 
-form input[type="button"] {
+dialog {
+    display: grid;
+    padding: 0;
+    place-items: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+dialog input[type="button"] {
+    color: #fff;
     font-size: 150%;
-    float: right;
+    place-self: start end;
 }
 
 form button {
@@ -53,13 +62,7 @@ form button {
     padding: 1rem;
 }
 
-form {
-    display: grid;
-    place-items: center;
-    width: 90%;
-    max-width: 500px;
-}
-
+form,
 form label,
 form input,
 form textarea,
