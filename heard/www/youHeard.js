@@ -39,6 +39,21 @@ document.addEventListener('readystatechange', e => {
         const now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
+
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker.properties.title}</h3>
+            <p class="date">
+                ${marker.properties.date}</br>
+                ${marker.properties.address}
+            </p>
+            `;
+            const article = document.querySelector('#things')
+            article.appendChild(thing)
+        }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加
         let array = JSON.parse(localStorage.getItem("heard")) || [];
