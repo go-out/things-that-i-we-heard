@@ -55,7 +55,7 @@ document.addEventListener('readystatechange', e => {
         }
 
         // あなたが聞いた言葉 を 投稿する
-        const form = document.querySelector('#form form')
+        const form = document.querySelector('#submit')
         form.addEventListener('submit', (e) => {
             e.preventDefault()
 
@@ -77,13 +77,13 @@ document.addEventListener('readystatechange', e => {
             }
 
             // あなたが聞いた言葉 を CSV に 追加
-            const weHeard = JSON.stringify(addHeard);
+            const thisHeard = JSON.stringify(addHeard);
             let response = fetch('submit.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 },
-                body: weHeard
+                body: thisHeard
             })
 
                 .then(response => response.json())
@@ -100,3 +100,11 @@ document.addEventListener('readystatechange', e => {
         }, false)
     }
 }, false)
+
+function dialogOpen() {
+    document.querySelector("dialog").showModal();
+}
+
+function dialogClose() {
+    document.querySelector("dialog").close();
+}

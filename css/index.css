@@ -1,0 +1,75 @@
+#changeHidden,
+main h1,
+main h2 {
+    mix-blend-mode: exclusion;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    max-height: 111vw;
+}
+
+main h1,
+main h2 {
+    color: #fff;
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    margin: 0.25rem;
+    z-index: 5;
+}
+
+main h1 {
+    top: 0;
+    left: 0;
+}
+
+main h2 {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.thing.mapboxgl-marker {
+    filter: invert(1);
+}
+
+main h1 {
+    font-size: 1.5rem;
+}
+
+main h1 strong,
+main h2 {
+    font-size: 100%;
+}
+
+main h1 small {
+    font-size: 55%;
+}
+
+main h1,
+main h2,
+main strong {
+    font-weight: 500;
+}
+
+main h1 small,
+main h2 u {
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    padding: 0.25rem;
+}
+
+@media screen and (max-width: 550px) {
+    main h1 {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <title>私（わたしたち）が聞いた言葉</title>
+  <meta name="description" content="things that i (we) heard | Inspired by Sarah Marshall">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://creative-community.space/map/heard/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="私（わたしたち）が聞いた言葉">
+  <meta property="og:description" content="things that i (we) heard | Inspired by Sarah Marshall">
+  <meta property="og:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="creative-community.space">
+  <meta property="twitter:url" content="https://creative-community.space/map/heard/">
+  <meta name="twitter:title" content="私（わたしたち）が聞いた言葉">
+  <meta name="twitter:description" content="things that i (we) heard | Inspired by Sarah Marshall">
+  <meta name="twitter:image" content="https://creative-community.space/map/heard/www/icon/card.png">
+
+  <script>
+    let directory = "";
+    let things = {
+      'type': 'FeatureCollection',
+      'features': []
+    }
+  </script>
+  <script src="otobuilding/things.all.js"></script>
+  <script src="bnaaltermuseum/things.all.js"></script>
+  <script src="osaka/chuo/things.v2.js"></script>
+  <script src="osaka/higashi/things.js"></script>
+  <script src="osaka/nantou/things.v3.js"></script>
+  <script src="osaka/sakai/things.js"></script>
+  <script src="www/js/csvtojson.js"></script>
+
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        const play = document.querySelector('#changeHidden');
+
+        play.addEventListener('click', function () {
+          if (play.className === 'play') {
+            play.classList.replace('play', 'pause');
+            const youtube = document.querySelector('#player');
+            youtube.hidden = true;
+            fetchHTML('dear.html', '#readme');
+          } else {
+            play.classList.replace('pause', 'play');
+            const youtube = document.querySelector('#player');
+            youtube.hidden = false;
+            player.pauseVideo();
+          }
+        }, false)
+      } else if (event.target.readyState === 'complete') {
+        const year = new Date().getFullYear();
+        document.querySelector('#copy time').innerHTML = year;
+      }
+    });
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min) + min)
+    }
+  </script>
+  <script src="www/js/index.js"></script>
+  <script src="www/js/youtube.js"></script>
+
+  <link rel="icon" href="www/icon/favicon.png">
+  <link rel="icon" href="www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="www/icon/ios.png" sizes="180x180">
+
+  <link href="www/css/style.css" rel="stylesheet" />
+  <link href="www/css/title.css" rel="stylesheet" />
+  <link href="www/css/thing.css" rel="stylesheet" />
+  <link href="www/css/about.css" rel="stylesheet" />
+  <link href="www/css/readme.css" rel="stylesheet" />
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+  <style>
+    #title,
+    #changeHidden {
+      mix-blend-mode: exclusion;
+    }
+
+    .thing.mapboxgl-marker {
+      filter: invert(0.9);
+    }
+
+    #title h1 {
+      font-size: 3.5rem;
+    }
+
+    .enter #title h1 {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 920px) {
+      #title h1 {
+        font-size: 7.5vw;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      #title h1 {
+        font-size: 10vw;
+      }
+
+      .enter #title h1 {
+        font-size: 5.5vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button id="changeHidden" class="play" type="button" name="button">?</button>
+
+  <main id="title">
+    <h1>things that i (we) heard</h1>
+  </main>
+
+  <main id="about" hidden>
+    <p id="enter">
+      <a href="www/">
+        <i>submit the thing you heard</i>
+      </a>
+    </p>
+    <article id="readme"></article>
+    <div id="player"></div>
+    <br>
+    <footer id="copy">
+      Copyright © 2020 -
+      <time></time>
+      You. (Not) All Rights Reserved.
+    </footer>
+  </main>
+
+  <div id="map"></div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
+
+    let center,
+      toppage,
+      userInteracting;
+
+    if (localStorage.getItem('heard')) {
+      const geoJSON = JSON.parse(localStorage.getItem('heard'))[0];
+      center = [geoJSON.longitude, geoJSON.latitude];
+      userInteracting = !0;
+      toppage = 11.11;
+    } else {
+      let lng = getRandomInt(-180, 180)
+      let lat = getRandomInt(-90, 90)
+      center = [lng, lat]
+      userInteracting = 0;
+      toppage = 1.23;
+    }
+
+    let zoomIn = 15.5;
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      center: center,
+      style: 'mapbox://styles/mapbox/light-v10',
+      zoom: toppage,
+      attributionControl: false
+    });
+
+    // 回転する地球儀を作成
+    function spinGlobe() {
+      const zoom = map.getZoom();
+      if (!userInteracting && zoom < 5) {
+        let speed = 1;
+        if (zoom > 3) {
+          speed *= (5 - zoom) / 2
+        }
+        const lng = map.getCenter();
+        lng.lng -= speed,
+          map.easeTo({
+            center: lng,
+            easing: zoom => zoom
+          })
+      }
+    }
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        // デバイスの位置の変更に応じて位置情報を更新
+        trackUserLocation: true,
+        // デバイスが向いている方向を矢印で描画
+        showUserHeading: true
+      }), 'bottom-right'
+    )
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
+
+    map.on("mousedown", () => { userInteracting = !0 })
+    map.on("dragstart", () => { userInteracting = !0 })
+    map.on("moveend", () => { spinGlobe() })
+    spinGlobe()
+  </script>
+  <script src="www/js/3d.js"></script>
+</body>
+
+</html>
