@@ -1,3 +1,9 @@
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 3vw;
+    }
+}
+
 #changeHidden,
 main h1,
 main h2 {
@@ -17,19 +23,21 @@ main h2 {
     position: absolute;
     pointer-events: none;
     user-select: none;
-    margin: 0.25rem;
     z-index: 5;
 }
 
 main h1 {
     top: 0;
     left: 0;
+    margin: 0.25rem;
 }
 
 main h2 {
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
 }
 
 #map {
@@ -42,7 +50,7 @@ main h2 {
 }
 
 main h1 {
-    font-size: 1.5rem;
+    font-size: 150%;
 }
 
 main h1 strong,
@@ -66,10 +74,4 @@ main h2 u {
     color: #111;
     text-decoration: none;
     padding: 0.25rem;
-}
-
-@media screen and (max-width: 550px) {
-    main h1 {
-        font-size: 4vw;
-    }
 }
