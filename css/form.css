@@ -1,3 +1,4 @@
+dialog,
 form label,
 form input,
 form textarea,
@@ -8,8 +9,9 @@ form button {
     font-family: inherit;
 }
 
-#copy {
-    color: #111;
+form input[type="button"] {
+    font-size: 150%;
+    float: right;
 }
 
 form button {
@@ -46,6 +48,8 @@ form button {
 }
 
 form {
+    display: grid;
+    place-items: center;
     width: 90%;
     max-width: 500px;
 }

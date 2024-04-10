@@ -7,8 +7,8 @@ main h2 {
 main {
     position: relative;
     width: 100%;
-    height: calc(100vh - 5rem);
-    max-height: 111vw;
+    height: calc(100vh - 3.21rem);
+    max-height: 123vw;
 }
 
 main h1,

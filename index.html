@@ -29,12 +29,12 @@
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
   <meta content="https://creative-community.space/map/" property="og:url">
-  <meta content="https://creative-community.space/map/www/icon/card.png" property="og:image">
-  <meta content="https://creative-community.space/map/www/icon/card.png" name="twitter:image:src">
+  <meta content="https://creative-community.space/map/heard/www/icon/card.png" property="og:image">
+  <meta content="https://creative-community.space/map/heard/www/icon/card.png" name="twitter:image:src">
 
-  <link rel="icon" href="www/icon/favicon.png">
-  <link rel="icon" href="www/icon/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="www/icon/ios.png" sizes="180x180">
+  <link rel="icon" href="heard/www/icon/favicon.png">
+  <link rel="icon" href="heard/www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="heard/www/icon/ios.png" sizes="180x180">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -43,6 +43,7 @@
 
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/index.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
   <link href="heard/www/thing.css" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
@@ -66,6 +67,7 @@
   <article></article>
 
   <dialog>
+    <input type="button" onclick="dialogClose()" value="×">
     <form id="submit" post="post">
       <label for="timestamp">when you heard this thing ?</label>
       <input type="datetime-local" id="timestamp" required>
@@ -73,7 +75,6 @@
       <textarea name="comment" id="comment" rows="5" placeholder="あなたが聞いた言葉を入力してください" required></textarea>
       <button type="submit" id="enter">Submit</button>
     </form>
-    <button type="button" onclick="dialogClose()">×</button>
   </dialog>
 
   <script>
