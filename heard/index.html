@@ -27,6 +27,28 @@
   <script src="index.v2.js"></script>
   <script src="../js/thingsheard.v1.js"></script>
 
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'complete') {
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+          if (marker.class) {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker.properties.title}</h3>
+            <p class="date">
+            ${marker.properties.date}</br>
+            ${marker.properties.address}
+            </p>
+            `;
+            document.querySelector('#things').appendChild(thing)
+          }
+        }
+      }
+    });
+  </script>
+
   <link rel="icon" href="www/favicon.png">
   <link rel="icon" href="www/android.png" sizes="192x192">
   <link rel="apple-touch-icon-precomposed" href="www/ios.png" sizes="180x180">
@@ -68,31 +90,32 @@
   <footer id="www">
     <details>
       <summary>私（わたしたち）が聞いた言葉</summary>
-      <article id="things">
-        <section data-ruby="2023年11月1日(日)">
-          <a href="../">
-            あなたが聞いた言葉を投稿するウェブフォーム
-          </a>
-          を公開しました。
-        </section>
-        <section data-ruby="2022年8月12日(金)">
-          <a href="bnaaltermuseum/">
-            京都・河原町周辺で聞いた
-            <strong>55</strong>
-            の言葉
-          </a>
-          を公開しました。
-        </section>
-        <section data-ruby="2022年6月7日(火)">
-          <a href="otobuilding/">
-            大阪市住之江区全域と大正区・西成区の一部で聞いた
-            <strong>73</strong>
-            の言葉
-          </a>
-          を公開しました。
-        </section>
-      </article>
+      <article id="things"></article>
     </details>
+    <article id="log">
+      <section data-ruby="2023年11月1日(日)">
+        <a href="../">
+          あなたが聞いた言葉を投稿するウェブフォーム
+        </a>
+        を公開しました。
+      </section>
+      <section data-ruby="2022年8月12日(金)">
+        <a href="bnaaltermuseum/">
+          京都・河原町周辺で聞いた
+          <strong>55</strong>
+          の言葉
+        </a>
+        を公開しました。
+      </section>
+      <section data-ruby="2022年6月7日(火)">
+        <a href="otobuilding/">
+          大阪市住之江区全域と大正区・西成区の一部で聞いた
+          <strong>73</strong>
+          の言葉
+        </a>
+        を公開しました。
+      </section>
+    </article>
     <small id="copy">
       Copyright © 2020 -
       <time></time>

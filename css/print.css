@@ -1,12 +1,11 @@
-#things {
-    font-size: 0.75rem;
+#www article {
     display: flex;
     flex-flow: wrap;
     align-items: stretch;
     width: 100%;
 }
 
-#things section {
+#www article section {
     flex: 1 25rem;
 }
 
@@ -20,6 +19,10 @@
     height: 15rem;
 }
 
+#things {
+    font-size: 0.75rem;
+}
+
 @page {
     size: A4 landscape;
 }
@@ -28,10 +31,10 @@
 
     main,
     #changeHidden,
-    #things #readme,
     #things .thing input,
     #www summary,
-    #www small {
+    #www small,
+    #log {
         display: none;
     }
 
