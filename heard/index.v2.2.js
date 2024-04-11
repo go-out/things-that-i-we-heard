@@ -13,7 +13,7 @@ if (!urlParam) {
     let zoom = getRandomInt(1, 2)
 
     let thisYear = new Date().getFullYear() + "年";
-    let thisMonth = new Date().getMonth() + 1 + "月 に";
+    let thisMonth = new Date().getMonth() + 1 + "月";
 
     indexThis = {
         title: "things that i (we) heard",
@@ -27,7 +27,11 @@ if (!urlParam) {
             "../osaka/kita/things.js",
             "../osaka/nansei/things.js",
             "../osaka/nantou/things.v3.js",
-            "../osaka/sakai/things.js",
+            "../osaka/hokusetsu.js",
+            "../osaka/kawachi.js",
+            "../osaka/sakai.js",
+            "../japan/nara.js",
+            "../japan/tokyo.js",
             "../js/csvtojson.v2.js"
         ],
         center: [lng, lat],
@@ -170,7 +174,7 @@ if (!urlParam) {
                 title: "things that i (we) heard in sakai, osaka",
                 area: "大阪府堺市で",
                 things: [
-                    "../osaka/sakai/things.js"
+                    "../osaka/sakai.js"
                 ],
                 bounds: [
                     [135.38526278033711, 34.40613068725279], // 南西座標
@@ -179,7 +183,7 @@ if (!urlParam) {
                 center: [135.50012524849802, 34.5239972993108],
                 zoom: 12.5,
                 zoomIn: 14.5,
-                text: "../osaka/sakai/README.md"
+                html: "../osaka/index.html"
             }
         } else {
             indexThis = {
@@ -190,7 +194,9 @@ if (!urlParam) {
                     "../osaka/nantou/things.v3.js",
                     "../osaka/chuo/things.v2.js",
                     "../osaka/higashi/things.js",
-                    "../osaka/sakai/things.js"
+                    "../osaka/hokusetsu.js",
+                    "../osaka/kawachi.js",
+                    "../osaka/sakai.js"
                 ],
                 center: [135.5020763952882, 34.69376772507822],
                 bounds: [

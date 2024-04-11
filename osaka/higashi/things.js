@@ -107,6 +107,18 @@ let osaka6th = {
         date: '2024年2月12日 21:10',
         address: '東大阪市長田東長田駅'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.54455963577146, 34.6805514731858]
+      },
+      properties: {
+        title: '家しか財産ないもん',
+        date: '2024年3月16日 14:35',
+        address: '大阪市東成区東中本1-13中央線 緑橋駅'
+      }
     }
   ]
 };

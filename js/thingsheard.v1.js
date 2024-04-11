@@ -37,7 +37,7 @@ document.addEventListener('readystatechange', event => {
 
             const summary = document.querySelector('#www summary')
             if (!urlParam) {
-                summary.innerHTML = `${indexThis.area}投稿された言葉`;
+                summary.innerHTML = `${indexThis.area} に投稿された言葉`;
             } else {
                 summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
             }
