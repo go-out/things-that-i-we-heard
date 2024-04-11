@@ -50,33 +50,20 @@ document.addEventListener('readystatechange', e => {
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
-        const thingsAll = document.querySelector('#things')
-        if (localStorage.getItem("heard")) {
-            // things.features から マーカー・ポップアップを生成
-            let marker = things.features;
-            for (let i = 0; i < marker.length; i++) {
-                const thing = document.createElement('section');
-                thing.className = 'thing';
-                thing.innerHTML = `
-                <h3>${marker[i].properties.title}</h3>
-                <p class="date">
-                ${marker[i].properties.date}</br>
-                ${marker[i].properties.address}
-                </p>
-                <input type="button" onclick="removeThis(${i})" value="×">
-                `;
-                thingsAll.appendChild(thing)
-            }
-        } else {
+        // things.features から マーカー・ポップアップを生成
+        let marker = things.features;
+        for (let i = 0; i < marker.length; i++) {
             const thing = document.createElement('section');
-            thing.style.fontSize = "125%";
-            thing.style.padding = "0.5rem";
-            thingsAll.appendChild(thing)
-            fetch('README.md')
-                .then(response => response.text())
-                .then(innerText => {
-                    thing.innerText = innerText;
-                });
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker[i].properties.title}</h3>
+            <p class="date">
+            ${marker[i].properties.date}</br>
+            ${marker[i].properties.address}
+            </p>
+            <input type="button" onclick="removeThis(${i})" value="×">
+            `;
+            document.querySelector('#things').appendChild(thing)
         }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加

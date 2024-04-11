@@ -12,9 +12,12 @@ if (!urlParam) {
     let lat = getRandomInt(-90, 90)
     let zoom = getRandomInt(1, 2)
 
+    let thisYear = new Date().getFullYear() + "年";
+    let thisMonth = new Date().getMonth() + 1 + "月 に";
+
     indexThis = {
         title: "things that i (we) heard",
-        area: "私（わたしたち）が ",
+        area: thisYear + thisMonth,
         things: [
             "otobuilding/things.all.js",
             "bnaaltermuseum/things.all.js",
