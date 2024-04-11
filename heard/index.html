@@ -32,7 +32,7 @@
       if (event.target.readyState === 'complete') {
         // things.features から マーカー・ポップアップを生成
         for (const marker of things.features) {
-          if (marker.class) {
+          if (marker.submit) {
             const thing = document.createElement('section');
             thing.className = 'thing';
             thing.innerHTML = `
