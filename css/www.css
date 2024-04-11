@@ -1,0 +1,120 @@
+dialog[open] {
+    background: #CDCBCC;
+    border: none;
+    color: #fff;
+    display: grid;
+    place-items: center;
+}
+
+dialog a,
+#www a,
+#www details summary {
+    color: #fff;
+    text-decoration: none;
+    transition: 1s;
+}
+
+dialog a:hover,
+#www a:hover,
+#www u,
+#www details summary:hover {
+    background: #fff;
+    color: #CDCBCC;
+}
+
+dialog input[type="button"] {
+    font-size: 200%;
+}
+
+dialog h2,
+#www summary {
+    font-size: 150%;
+}
+
+dialog p,
+dialog a,
+#www a {
+    font-size: 125%;
+}
+
+[data-ruby]::before {
+    font-size: 75%;
+}
+
+dialog {
+    line-height: 200%;
+}
+
+dialog a {
+    font-style: italic;
+}
+
+aside a {
+    padding: 0.125rem 0.25rem;
+}
+
+#submit {
+    border: solid 0.1rem #fff;
+    border-radius: 50%;
+    padding: 0.25rem 1rem;
+    margin-bottom: 1rem;
+}
+
+dialog [data-ruby]::before {
+    padding: 0.5rem 0;
+}
+
+#www [data-ruby]::before {
+    padding: 0.25rem;
+}
+
+dialog input[type="button"],
+#www summary {
+    padding: 0.25rem 0.5rem;
+}
+
+#www section,
+#www small {
+    display: block;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+dialog input[type="button"] {
+    margin: 0;
+}
+
+[data-ruby]::before {
+    content: attr(data-ruby);
+}
+
+[data-ruby]::before {
+    color: #000;
+    display: block;
+    text-align: left;
+}
+
+#www [data-ruby]::before {
+    color: #fff;
+    background: #000;
+    display: inline-block;
+}
+
+[data-ruby] a::before {
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+dialog input[type="button"] {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+hr {
+    border: none;
+    margin: 1.5rem;
+}

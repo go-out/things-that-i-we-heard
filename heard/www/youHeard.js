@@ -50,6 +50,16 @@ document.addEventListener('readystatechange', e => {
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
+        if (localStorage.getItem("heard")) {
+            document.querySelector('#readme').hidden = true;
+        } else {
+            fetch('README.md')
+                .then(response => response.text())
+                .then(innerText => {
+                    document.querySelector('#readme').innerText = innerText;
+                });
+        }
+
         // things.features から マーカー・ポップアップを生成
         let marker = things.features;
         for (let i = 0; i < marker.length; i++) {

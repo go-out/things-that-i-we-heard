@@ -7,7 +7,7 @@
 }
 
 .mapboxgl-popup {
-  font-size: 0.75rem;
+  font-size: 90%;
   filter: invert(90%);
   width: 400px;
   min-width: 400px;
@@ -28,7 +28,7 @@
   font-family: 'Libre Baskerville', 'Zen Maru Gothic', serif;
   font-size: 150%;
   line-height: 150%;
-  padding: 2rem 0.5rem 1.5rem;
+  padding: 2rem 1rem 1.5rem;
 }
 
 .mapboxgl-popup p {
@@ -49,23 +49,23 @@
 }
 
 @media screen and (max-width: 550px) {
-  .thing {
-    width: 1rem;
-    height: 1rem;
+  .thing.mapboxgl-marker {
+    width: 3.21vw;
+    height: 3.21vw;
   }
 
   .mapboxgl-popup {
-    font-size: 2.22vw;
+    font-size: 75%;
     width: 75%;
     min-width: 75%;
     max-width: 75%;
   }
 
   .mapboxgl-popup h3 {
-    padding: 7.5vw 1vw 5.5vw;
+    padding: 7.5vw 2.5vw 5.5vw;
   }
 
   .mapboxgl-popup p {
-    padding: 1vw 2vw;
+    padding: 1vw;
   }
 }

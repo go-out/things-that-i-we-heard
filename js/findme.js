@@ -49,6 +49,8 @@ function geoFindMe() {
         return data;
       }
     }
+    document.body.classList.toggle('enter');
+
     onDragEnd()
   }
 

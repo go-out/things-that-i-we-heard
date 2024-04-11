@@ -16,11 +16,10 @@ form button {
 }
 
 dialog[open] {
-    border: none;
+    border: #111;
     display: grid;
-    padding: 0;
     place-items: center;
-    width: 90%;
+    width: 95%;
     max-width: 500px;
 }
 
@@ -29,7 +28,9 @@ dialog input[type="button"] {
     font-size: 200%;
     padding: 0;
     margin: 0.25rem 0.5rem;
-    place-self: start end;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 form button {
@@ -41,8 +42,9 @@ form label {
     font-style: italic;
 }
 
+form input[type="datetime-local"],
 form textarea {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 form label,
@@ -56,12 +58,12 @@ form button {
 }
 
 form label,
-form input {
+form input,
+form button {
     padding: 0.5rem;
 }
 
-form textarea,
-form button {
+form textarea {
     padding: 1rem;
 }
 

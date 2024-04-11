@@ -6,17 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <title>things that i (we) heard</title>
-  <meta name="description" content="私（わたしたち）が聞いた言葉">
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>things that i (we) heard around BnA Alter Museum</title>
+  <meta content="things that i (we) heard around BnA Alter Museum" property="og:title">
+  <meta content="私（わたしたち）が 京都・河原町周辺で聞いた言葉" name="description">
+  <meta content="私（わたしたち）が 京都・河原町周辺で聞いた言葉" name="og:description">
 
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="creative-community.space">
+  <!--for Twitter-->
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/" property="og:url">
+  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/img/card.png" property="og:image">
+  <meta content="https://creative-community.space/map/heard/bnaaltermuseum/img/card.png" name="twitter:image:src">
 
   <script>
-    let indexThis = {
+    'use strict'
+
+    // URLのパラメータを取得
+    let indexThis,
+      mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
+
+    indexThis = {
       title: "things that i (we) heard around BnA Alter Museum",
-      area: "京都・河原町周辺",
+      area: "京都・河原町周辺で",
       things: [
         "things.all.js"
       ],
@@ -27,12 +39,28 @@
       center: [135.76842457873613, 35.00022238171323],
       zoom: 15.5,
       zoomIn: 17,
-      card: "https://creative-community.space/map/heard/bnaaltermuseum/img/card.png",
       html: "credit.html"
     }
-  </script>
 
-  <script src="../www/js/thingsheard.js"></script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+          const thing = document.createElement('section');
+          thing.className = 'thing';
+          thing.innerHTML = `
+            <h3>${marker.properties.title}</h3>
+            <p class="date">
+                ${marker.properties.date}</br>
+                ${marker.properties.address}
+            </p>
+            `
+          document.querySelector('#things').appendChild(thing)
+        }
+      }
+    });
+  </script>
+  <script src="../www/thingsheard.js"></script>
 
   <link rel="icon" href="../www/icon/favicon.png">
   <link rel="icon" href="../www/icon/android.png" sizes="192x192">
@@ -43,75 +71,51 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Zen+Maru+Gothic&amp;display=swap">
 
-  <link href="../www/css/style.css" rel="stylesheet" />
-  <link href="../www/css/title.css" rel="stylesheet" />
-  <link href="../www/css/thing.css" rel="stylesheet" />
-  <link href="../www/css/about.css" rel="stylesheet" />
+  <link href="../../css/style.css" rel="stylesheet" />
+  <link href="../../css/map.css" rel="stylesheet" />
+  <link href="../../css/www.css" rel="stylesheet" />
+  <link href="../../heard/www/thing.css" rel="stylesheet" />
+  <link href="../../heard/www/print.css" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-
-  <style>
-    #title h1 {
-      font-size: 3.21rem;
-    }
-
-    .enter #title h1 {
-      font-size: 2rem;
-    }
-
-    #about {
-      background-position: center;
-      background-size: contain;
-    }
-
-    @media screen and (max-width: 920px) {
-      #title h1 {
-        font-size: 10vw;
-      }
-    }
-
-    @media screen and (max-width: 550px) {
-      #title h1 {
-        font-size: 15vw;
-      }
-
-      .enter #title h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <button id="changeHidden" class="play" type="button" name="button">?</button>
+  <button id="changeHidden" type="button" onclick="dialogOpen()">?</button>
 
-  <main id="title">
+  <main>
     <h1>things that i (we) heard</h1>
+    <div id="map"></div>
   </main>
 
-  <main id="about" hidden>
-    <article>
-      <h2>私（わたしたち）が聞いた言葉</h2>
-      <section id="credit"></section>
-    </article>
-    <small id="copy">Copyright © 2022 You. (Not) All Rights Reserved.</small>
-  </main>
+  <footer id="www">
+    <details>
+      <summary>私（わたしたち）が聞いた言葉</summary>
+      <article id="things"></article>
+    </details>
+    <small>
+      Copyright © 2022 You. (Not) All Rights Reserved.
+    </small>
+  </footer>
 
-  <div id="map"></div>
+  <dialog>
+    <input type="button" onclick="dialogClose()" value="×">
+    <section id="readme"></section>
+  </dialog>
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
-    let zoomIn = indexThis.zoomIn;
-
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
+      style: mapboxsStyle,
       center: indexThis.center,
       zoom: indexThis.zoom,
       maxBounds: indexThis.bounds
     });
+
+    let zoomIn = indexThis.zoomIn;
 
     function flyToMarker(e) {
       map.flyTo({

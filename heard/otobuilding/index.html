@@ -6,40 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <script>
-    let directory = "";
-    let things = {
-      'type': 'FeatureCollection',
-      'features': []
-    }
-  </script>
-  <script src="things.all.js"></script>
-
-  <script>
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
-        const play = document.querySelector('#changeHidden');
-        play.addEventListener('click', function () {
-          if (play.className === 'play') {
-            play.classList.replace('play', 'pause');
-            player.loadVideoById({ videoId: 'E_5MC9sASw8' });
-            player.playVideo();
-            fetchHTML('credit.html', '#about article');
-          } else {
-            play.classList.replace('pause', 'play');
-            const youtube = document.querySelector('#player')
-            youtube.hidden = false;
-            player.pauseVideo();
-          }
-        }, false)
-      } else if (event.target.readyState === 'complete') {
-        //
-      }
-    });
-  </script>
-  <script src="../www/js/index.js"></script>
-  <script src="../www/js/youtube.js"></script>
-
   <!--og:meta-->
   <meta content="website" property="og:type">
   <title>things that i (we) heard around OTO building</title>
@@ -47,82 +13,117 @@
   <meta content="私（わたしたち）が 大阪市住之江区全域と大正区・西成区の一部で聞いた 73 の言葉" name="description">
   <meta content="私（わたしたち）が 大阪市住之江区全域と大正区・西成区の一部で聞いた 73 の言葉" name="og:description">
 
-  <link rel="icon" href="../www/icon/favicon.png">
-  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
-
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">
   <meta content="https://creative-community.space/map/heard/otobuilding/" property="og:url">
   <meta content="https://creative-community.space/map/heard/otobuilding/card.png" property="og:image">
   <meta content="https://creative-community.space/map/heard/otobuilding/card.png" name="twitter:image:src">
 
-  <link href="../www/css/style.css" rel="stylesheet" />
-  <link href="../www/css/title.css" rel="stylesheet" />
-  <link href="../www/css/thing.css" rel="stylesheet" />
-  <link href="../www/css/about.css" rel="stylesheet" />
+  <script>
+    'use strict'
+
+    // URLのパラメータを取得
+    let indexThis,
+      mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
+
+    indexThis = {
+      title: "things that i (we) heard around OTO building",
+      area: "大阪市住之江区と大正区・西成区の一部で",
+      things: [
+        "things.all.js"
+      ],
+      bounds: [
+        [135.39146702295744, 34.59380194128228], // 南西座標
+        [135.5079278126247, 34.6540329633829] // 北東座標
+      ],
+      center: [135.47306292634534, 34.62458544610712],
+      zoom: 13.5,
+      zoomIn: 15,
+      html: "credit.html"
+    }
+
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'interactive') {
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+          const thing = document.createElement('section');
+          thing.className = 'thing';
+          thing.innerHTML = `
+        <h3>${marker.properties.title}</h3>
+        <p class="date">
+            ${marker.properties.date}</br>
+            ${marker.properties.address}
+        </p>
+        `
+          document.querySelector('#things').appendChild(thing)
+        }
+      }
+    });
+  </script>
+  <script src="../www/thingsheard.js"></script>
+
+  <link rel="icon" href="../www/icon/favicon.png">
+  <link rel="icon" href="../www/icon/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="../www/icon/ios.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Zen+Maru+Gothic&amp;display=swap">
+
+  <link href="../../css/style.css" rel="stylesheet" />
+  <link href="../../css/map.css" rel="stylesheet" />
+  <link href="../../css/www.css" rel="stylesheet" />
+  <link href="../../heard/www/thing.css" rel="stylesheet" />
+  <link href="../../heard/www/print.css" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-
-  <style>
-    #title h1 {
-      font-size: 5rem;
-    }
-
-    .enter #title h1 {
-      font-size: 2rem;
-    }
-
-    @media screen and (max-width: 920px) {
-      #title h1 {
-        font-size: 10vw;
-      }
-    }
-
-    @media screen and (max-width: 550px) {
-      #title h1 {
-        font-size: 14.5vw;
-      }
-
-      .enter #title h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <button id="changeHidden" class="play" type="button" name="button">?</button>
+  <button id="changeHidden" type="button" onclick="dialogOpen()">?</button>
 
-  <main id="title">
-    <h1>things that i (we) heard around OTO building</h1>
+  <main>
+    <h1>things that i (we) heard</h1>
+    <div id="map"></div>
   </main>
 
-  <main id="about" hidden>
-    <article></article>
-    <div id="player"></div>
-    <small id="copy">Copyright © 2020 - 2022 You. (Not) All Rights Reserved.</small>
-  </main>
+  <footer id="www">
+    <details>
+      <summary>私（わたしたち）が聞いた言葉</summary>
+      <article id="things"></article>
+    </details>
+    <small id="copy">
+      Copyright © 2020 - 2022 You. (Not) All Rights Reserved.
+    </small>
+  </footer>
 
-  <div id="map"></div>
+  <dialog>
+    <input type="button" onclick="dialogClose()" value="×">
+    <section id="readme"></section>
+  </dialog>
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicGVodSIsImEiOiJja3R4Y3diNmIybTg5Mm9waWgwYTdsc3FyIn0.lVvnPZ3aa6332EaWJIxPaQ';
 
-    const bounds = [
-      [135.39146702295744, 34.59380194128228], // 南西座標
-      [135.5079278126247, 34.6540329633829] // 北東座標
-    ],
-      zoomIn = 15;
-
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8',
-      center: [135.47306292634534, 34.62458544610712],
-      zoom: 13.5,
-      maxBounds: bounds
-    })
+      style: mapboxsStyle,
+      center: indexThis.center,
+      zoom: indexThis.zoom,
+      maxBounds: indexThis.bounds
+    });
+
+    let zoomIn = indexThis.zoomIn;
+
+    function flyToMarker(e) {
+      map.flyTo({
+        center: e.geometry.coordinates,
+        essential: true,
+        zoom: indexThis.zoomIn
+      });
+    }
   </script>
 </body>
 
