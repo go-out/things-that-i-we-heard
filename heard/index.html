@@ -27,6 +27,28 @@
   <script src="index.v2.js"></script>
   <script src="../js/thingsheard.v1.js"></script>
 
+  <script>
+    document.addEventListener('readystatechange', event => {
+      if (event.target.readyState === 'complete') {
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+          if (things.features.class === 'submit') {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker.properties.title}</h3>
+            <p class="date">
+            ${marker.properties.date}</br>
+            ${marker.properties.address}
+            </p>
+            `;
+            document.querySelector('#things').appendChild(thing)
+          }
+        }
+      }
+    });
+  </script>
+
   <link rel="icon" href="www/favicon.png">
   <link rel="icon" href="www/android.png" sizes="192x192">
   <link rel="apple-touch-icon-precomposed" href="www/ios.png" sizes="180x180">
