@@ -50,8 +50,8 @@
 
 @media screen and (max-width: 550px) {
   .thing.mapboxgl-marker {
-    width: 3.21vw;
-    height: 3.21vw;
+    width: 3.75vw;
+    height: 3.75vw;
   }
 
   .mapboxgl-popup {
