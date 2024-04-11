@@ -7,8 +7,9 @@ dialog[open] {
 }
 
 dialog a,
+#readme u,
 #www a,
-#www details summary {
+details summary {
     color: #fff;
     text-decoration: none;
     transition: 1s;
@@ -17,7 +18,7 @@ dialog a,
 dialog a:hover,
 #www a:hover,
 #www u,
-#www details summary:hover {
+details summary:hover {
     background: #fff;
     color: #CDCBCC;
 }
@@ -27,7 +28,7 @@ dialog input[type="button"] {
 }
 
 dialog h2,
-#www summary {
+details summary {
     font-size: 150%;
 }
 
@@ -35,13 +36,15 @@ dialog p,
 dialog a,
 #www a {
     font-size: 111%;
+    appearance: none;
 }
 
 [data-ruby]::before {
     font-size: 75%;
 }
 
-dialog {
+dialog p[data-ruby],
+dialog aside {
     line-height: 200%;
 }
 
@@ -49,6 +52,7 @@ dialog a {
     font-style: italic;
 }
 
+#readme u,
 aside a {
     padding: 0.125rem 0.25rem;
 }
@@ -69,7 +73,7 @@ dialog [data-ruby]::before {
 }
 
 dialog input[type="button"],
-#www summary {
+summary {
     padding: 0.25rem 0.5rem;
 }
 
@@ -94,6 +98,7 @@ dialog input[type="button"] {
     text-align: left;
 }
 
+#readme u,
 #www [data-ruby]::before {
     color: #fff;
     background: #000;
@@ -117,4 +122,23 @@ dialog input[type="button"] {
 hr {
     border: none;
     margin: 1.5rem;
+}
+
+#readme,
+#player {
+    margin: auto;
+    width: 85vw;
+    max-width: 750px;
+}
+
+#player {
+    height: 47.5vw;
+    max-height: 425px;
+}
+
+#readme img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }

@@ -51,30 +51,28 @@ document.addEventListener('readystatechange', e => {
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
 
         if (localStorage.getItem("heard")) {
-            document.querySelector('#readme').hidden = true;
+            // things.features から マーカー・ポップアップを生成
+            let marker = things.features;
+            for (let i = 0; i < marker.length; i++) {
+                const thing = document.createElement('section');
+                thing.className = 'thing';
+                thing.innerHTML = `
+                <h3>${marker[i].properties.title}</h3>
+                <p class="date">
+                    ${marker[i].properties.date}</br>
+                    ${marker[i].properties.address}
+                </p>
+                <input type="button" onclick="removeThis(${i})" value="×">
+                `;
+                const article = document.querySelector('#things')
+                article.appendChild(thing)
+            }
         } else {
             fetch('README.md')
                 .then(response => response.text())
                 .then(innerText => {
-                    document.querySelector('#readme').innerText = innerText;
+                    document.querySelector('#things').innerText = innerText;
                 });
-        }
-
-        // things.features から マーカー・ポップアップを生成
-        let marker = things.features;
-        for (let i = 0; i < marker.length; i++) {
-            const thing = document.createElement('section');
-            thing.className = 'thing';
-            thing.innerHTML = `
-            <h3>${marker[i].properties.title}</h3>
-            <p class="date">
-                ${marker[i].properties.date}</br>
-                ${marker[i].properties.address}
-            </p>
-            <input type="button" onclick="removeThis(${i})" value="×">
-            `;
-            const article = document.querySelector('#things')
-            article.appendChild(thing)
         }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加

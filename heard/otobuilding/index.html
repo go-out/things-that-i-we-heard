@@ -19,12 +19,14 @@
   <meta content="https://creative-community.space/map/heard/otobuilding/card.png" property="og:image">
   <meta content="https://creative-community.space/map/heard/otobuilding/card.png" name="twitter:image:src">
 
+  <script src="../../js/youtube.js"></script>
   <script>
     'use strict'
 
-    // URLのパラメータを取得
     let indexThis,
       mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
+
+    var youtubeID = 'E_5MC9sASw8';
 
     indexThis = {
       title: "things that i (we) heard around OTO building",
@@ -43,7 +45,7 @@
     }
 
     document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === 'interactive') {
+      if (event.target.readyState === 'complete') {
         // things.features から マーカー・ポップアップを生成
         for (const marker of things.features) {
           const thing = document.createElement('section');
@@ -102,6 +104,7 @@
   <dialog>
     <input type="button" onclick="dialogClose()" value="×">
     <section id="readme"></section>
+    <div id="player"></div>
   </dialog>
 
   <script>

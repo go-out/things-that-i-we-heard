@@ -19,7 +19,7 @@
     padding: 1rem;
     position: relative;
     place-content: center;
-    flex: 1 20rem;
+    flex: 1 25rem;
     height: 15rem;
 }
 
@@ -32,7 +32,9 @@
     main,
     #changeHidden,
     #things #readme,
-    #things .thing input {
+    #things .thing input,
+    #www summary,
+    #www small {
         display: none;
     }
 
@@ -45,7 +47,7 @@
         border: 0.1vw solid #fff;
         float: left;
         width: calc(100% / 3);
-        height: calc(100vh / 3);
+        height: calc(100vh / 4);
     }
 }
 
@@ -92,5 +94,6 @@
 #things .thing p {
     font-family: 'Zen Maru Gothic', serif;
     font-size: 100%;
+    margin: 2rem 0 0;
     line-height: 200%;
 }
