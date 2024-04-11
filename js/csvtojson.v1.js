@@ -21,5 +21,16 @@ async function csvtojson(csv) {
                 }
             };
             things.features.push(thisMarker);
+
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker[4].replace(/"/g, '')}</h3>
+            <p class="date">
+            ${marker[0]}</br>
+            ${marker[3].replace(/"/g, '')}
+            </p>
+            `;
+            document.querySelector('#things').appendChild(thing)
         });
 };
