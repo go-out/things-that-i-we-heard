@@ -11,8 +11,6 @@ if (!urlParam) {
     let lng = getRandomInt(-180, 180)
     let lat = getRandomInt(-90, 90)
     let zoom = getRandomInt(1, 2)
-    mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
-    userInteracting = 0;
 
     indexThis = {
         title: "things that i (we) heard",
@@ -36,10 +34,10 @@ if (!urlParam) {
         html: "www/index.html"
     }
 
+    mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
+    userInteracting = 0;
     csvtojson('../submit.csv')
 } else {
-    document.body.classList.toggle('map');
-
     // ?id=ID&area=エリア
     let param = urlParam.split('&');
     for (let i = 0; i < param.length; i++) {
@@ -183,6 +181,27 @@ if (!urlParam) {
             }
         }
     }
+
+    document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'interactive') {
+            document.body.classList.add('map');
+        }
+
+        // things.features から マーカー・ポップアップを生成
+        document.querySelector('#things').innerHTML = '';
+        for (const marker of things.features) {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+            <h3>${marker.properties.title}</h3>
+            <p class="date">
+                ${marker.properties.date}</br>
+                ${marker.properties.address}
+            </p>
+            `;
+            document.querySelector('#things').appendChild(thing)
+        }
+    })
 
     mapboxsStyle = "mapbox://styles/mapbox/light-v10";
     userInteracting = !0;

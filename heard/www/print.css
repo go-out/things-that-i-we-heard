@@ -6,20 +6,17 @@
     width: 100%;
 }
 
-#things #readme {
-    flex: 1 100%;
-    padding: 0.5rem;
-    font-size: 150%;
+#things section {
+    flex: 1 25rem;
 }
 
 #things .thing {
     background: #111;
-    display: grid;
     text-align: center;
+    display: grid;
     padding: 1rem;
-    position: relative;
     place-content: center;
-    flex: 1 25rem;
+    position: relative;
     height: 15rem;
 }
 
@@ -76,6 +73,10 @@
 #things,
 #things .thing input {
     color: #fff;
+}
+
+#things section[data-ruby] {
+    font-size: 125%;
 }
 
 #things .thing input {
