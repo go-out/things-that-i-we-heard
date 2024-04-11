@@ -70,7 +70,7 @@ document.addEventListener('readystatechange', e => {
         } else {
             const thing = document.createElement('section');
             thing.style.fontSize = "125%";
-            thing.style.padding = "1rem";
+            thing.style.padding = "0.5rem";
             thingsAll.appendChild(thing)
             fetch('README.md')
                 .then(response => response.text())
