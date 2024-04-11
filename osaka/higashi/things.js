@@ -52,18 +52,6 @@ let osaka6th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.6418948778076, 34.66077879962873]
-      },
-      properties: {
-        title: 'この後はプリズム八尾で',
-        date: '2024年2月12日 14:30',
-        address: '東大阪市瓢箪山町8-1瓢箪山稲荷神社'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.64003491139442, 34.66345651521239]
       },
       properties: {
@@ -103,9 +91,9 @@ let osaka6th = {
         coordinates: [135.63511604994824, 34.672687158283935]
       },
       properties: {
-        title: '東大阪市新町17番3',
+        title: 'ちょっとエチエチ過ぎじゃない？',
         date: '2024年2月12日 17:30',
-        address: 'ちょっとエチエチ過ぎじゃない？'
+        address: '東大阪市新町17番3'
       }
     },
     {
