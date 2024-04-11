@@ -25,7 +25,7 @@ if (!urlParam) {
             "../osaka/nansei/things.js",
             "../osaka/nantou/things.v3.js",
             "../osaka/sakai/things.js",
-            "../js/csvtojson.v1.js"
+            "../js/csvtojson.v2.js"
         ],
         center: [lng, lat],
         bounds: false,

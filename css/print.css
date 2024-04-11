@@ -78,6 +78,7 @@
     color: #fff;
 }
 
+#log section,
 #things section[data-ruby] {
     font-size: 125%;
 }

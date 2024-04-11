@@ -1,6 +1,11 @@
 'use strict'
 
-csvtojson('../submit.csv')
+let d = new Date();
+let year = d.getFullYear();
+let month = d.getMonth() + 1;
+
+
+csvtojson(`../${year}${month.toString().padStart(2, "0")}.csv`)
 
 async function csvtojson(csv) {
     const response = await fetch(csv);
@@ -9,8 +14,8 @@ async function csvtojson(csv) {
         .map(line => line.split(',').map(x => x.trim()))
         .map(marker => {
             let thisMarker = {
+                'submit': true,
                 'type': 'Feature',
-                'class': 'submit',
                 'geometry': {
                     'type': 'Point',
                     'coordinates': [marker[1], marker[2]]

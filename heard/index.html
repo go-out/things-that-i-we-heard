@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="things that i (we) heard | Inspired by Sarah Marshall">
   <meta name="twitter:image" content="https://creative-community.space/map/heard/www/card.png">
 
-  <script src="index.v2.js"></script>
+  <script src="index.v2.1.js"></script>
   <script src="../js/thingsheard.v1.js"></script>
 
   <script>
@@ -42,7 +42,7 @@
             ${marker.properties.address}
             </p>
             `;
-            document.querySelector('#things').appendChild(thing)
+            document.querySelector('#things').prepend(thing)
           }
         }
       }
@@ -92,6 +92,7 @@
       <summary>私（わたしたち）が聞いた言葉</summary>
       <article id="things"></article>
     </details>
+
     <article id="log">
       <section data-ruby="2023年11月1日(日)">
         <a href="../">
