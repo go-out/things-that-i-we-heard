@@ -10,6 +10,7 @@ async function csvtojson(csv) {
         .map(marker => {
             let thisMarker = {
                 'type': 'Feature',
+                'class': 'submit',
                 'geometry': {
                     'type': 'Point',
                     'coordinates': [marker[1], marker[2]]
