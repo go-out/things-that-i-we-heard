@@ -34,7 +34,7 @@ dialog h2,
 dialog p,
 dialog a,
 #www a {
-    font-size: 125%;
+    font-size: 111%;
 }
 
 [data-ruby]::before {
