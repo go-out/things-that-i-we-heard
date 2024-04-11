@@ -100,8 +100,8 @@ dialog input[type="button"] {
 
 #readme u,
 #www [data-ruby]::before {
-    color: #111;
-    background: #fff;
+    color: #fff;
+    background: #000;
     display: inline-block;
 }
 
