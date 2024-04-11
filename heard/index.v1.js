@@ -36,7 +36,6 @@ if (!urlParam) {
 
     mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
     userInteracting = 0;
-    csvtojson('../submit.csv')
 } else {
     // ?id=ID&area=エリア
     let param = urlParam.split('&');
