@@ -37,6 +37,26 @@ if (!urlParam) {
         html: "www/index.html"
     }
 
+    document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'complete') {
+            // things.features から マーカー・ポップアップを生成
+            for (const marker of things.features) {
+                if (marker.submit) {
+                    const thing = document.createElement('section');
+                    thing.className = 'thing';
+                    thing.innerHTML = `
+                    <h3>${marker.properties.title}</h3>
+                    <p class="date">
+                    ${marker.properties.date}</br>
+                    ${marker.properties.address}
+                    </p>
+                    `;
+                    document.querySelector('#things').prepend(thing)
+                }
+            }
+        }
+    });
+
     mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
     userInteracting = 0;
 } else {
