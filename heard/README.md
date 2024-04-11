@@ -1,57 +1,43 @@
-# This is a webform for submit the things that you heard
-これは、あなたが聞いた言葉を投稿するウェブフォームです。
-
-JavaScript
-* [findme.js](js/findme.js)
-* [submit.js](js/submit.js)
-* [index.js](js/index.js)
-
-PHP
-* [submit.php](submit.php)
-
-***
-
-1. 位置情報 API[^1] が 端末の現在地 を取得し、地図上にドラッグ可能マーカーを追加
-2. Mapbox Geocoding API[^2] が、ドラッグ可能マーカーの地理座標 を 位置情報(住所・場所名) に変換
-3. あなたが聞いた言葉を ローカルストレージ[^3]・CSV に追加
-4. ローカルストレージからあなたが聞いた言葉を取得し、地図上にピンとポップアップを表示
-
-___
-
-[^1]: [位置情報 API (Geolocation API)](https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API) を使用すると、ユーザーが望む場合に、自分の位置情報をウェブアプリケーションに提供することができます。
-プライバシー上の理由から、ユーザーは位置情報を報告する許可を求められます。
-[^2]: [Mapbox Geocoding API](https://docs.mapbox.com/jp/api/geocoding/) には、位置情報を地理座標に変換する フォワードジオコーディング と、地理座標を位置情報に変換する リバースジオコーディング があります。
-[^3]: [ウェブストレージ API](https://developer.mozilla.org/ja/docs/Web/API/Web_Storage_API) は、ユーザーのローカル環境(ブラウザ)にデータを保存する仕組みです。
-ブラウザがプライベートモード・シークレットウインドウの場合や、閲覧履歴（キャッシュ）を消去した場合などは、ウェブストレージに保存されたデータは削除されます。
-
-
-## 私（わたしたち）が聞いた言葉 を CSV から読み込み、things JSON に 追加
+heard []
 ```
-let things = {
-    'type': 'FeatureCollection',
-    'features': []
-}
-
-async function csvtojson() {
-    const response = await fetch('CSVファイルのパス.csv')
-    const text = await response.text()
-    const data = text.trim().split('\n')
-    .map(line => line.split(',').map(x => x.trim()))
-    .map(csv => {
-        let weHeard = {
-            'type': 'Feature',
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [csv[2], csv[1]]
-            },
-            'properties': {
-                'title': csv[4].replace(/"/g, ''),
-                'date': csv[0],
-                'address': csv[3].replace(/"/g, '')
-            }
+{
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [__]
+    },
+    properties: {
+        title: '聞いた言葉',
+        date: 'YYYY年MM月DD日 00:00',
+        address: '住所',
+        link: {
+          html: 'URL',
+          youtube: '動画ID'
         }
-        things.features.push(weHeard)
-    })
+    }
 }
-csvtojson()
+
 ```
+
+[マップのパンを指定エリアに制限](https://docs.mapbox.com/jp/mapbox-gl-js/example/restrict-bounds/)
+
+指定エリアの南西・北東座標を指定
+maxBounds を設定して、マップが別の場所にパンさできないようにします。
+
+```
+const bounds = [
+    [南西座標],
+    [北東座標]
+];
+
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/スタイルシートのURL',
+    center: [地図中央の座標],
+    zoom: 15.5,
+    maxBounds: bounds
+});
+```
+
+[建物を3Dで表示](https://docs.mapbox.com/jp/mapbox-gl-js/example/3d-buildings/)
+[3d.js](www/js/3d.js)
