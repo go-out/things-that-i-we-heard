@@ -11,7 +11,8 @@ let bnaAll = {
         date: '2021-7-21 16:33',
         address: 'BnA Alter Museum',
         link: {
-          html: 'bnaaltermuseum/2020.html'
+          html: 'bnaaltermuseum/2020.html',
+          youtube: "pZrRi_9aMR8"
         }
       }
     },

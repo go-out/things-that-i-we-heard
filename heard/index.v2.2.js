@@ -46,12 +46,12 @@ if (!urlParam) {
                 const thing = document.createElement('section');
                 thing.className = 'thing';
                 thing.innerHTML = `
-                    <h3>${marker.properties.title}</h3>
-                    <p class="date">
-                    ${marker.properties.date}</br>
-                    ${marker.properties.address}
-                    </p>
-                    `;
+                <h3>${marker.properties.title}</h3>
+                <p class="date">
+                ${marker.properties.date}</br>
+                ${marker.properties.address}
+                </p>
+                `;
                 document.querySelector('#things').prepend(thing);
             }
         }
@@ -219,8 +219,8 @@ if (!urlParam) {
             thing.innerHTML = `
             <h3>${marker.properties.title}</h3>
             <p class="date">
-                ${marker.properties.date}</br>
-                ${marker.properties.address}
+            ${marker.properties.date}</br>
+            ${marker.properties.address}
             </p>
             `;
             document.querySelector('#things').appendChild(thing)

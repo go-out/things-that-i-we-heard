@@ -6,7 +6,9 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         videoId: youtubeID,
         playerVars: {
-            'controls': 0
+            'playsinline': 1,
+            'controls': 0,
+            'rel': 0
         }
     });
 }

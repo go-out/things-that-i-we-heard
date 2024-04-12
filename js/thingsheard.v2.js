@@ -118,6 +118,8 @@ function dialogOpen() {
 
 function dialogClose() {
     document.querySelector("dialog").close();
+    document.querySelector("#readme").innerHTML = "";
+    document.querySelector('#player').hidden = true;
 }
 
 function chengeHidden() {

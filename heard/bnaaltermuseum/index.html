@@ -28,7 +28,6 @@
       things: [
         "things.all.js"
       ],
-      youtube: "eAORIZUB7PE",
       bounds: [
         [135.75972724537672, 34.9950251407263], // 南西座標
         [135.772916683571, 35.00535650888111] // 北東座標
@@ -36,11 +35,12 @@
       center: [135.76842457873613, 35.00022238171323],
       zoom: 15.5,
       zoomIn: 17,
-      html: "credit.html"
+      html: "credit.html",
+      youtube: "eAORIZUB7PE"
     }
 
-    let mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8",
-      directory = '../';
+    let directory = '../',
+      mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'complete') {
@@ -54,13 +54,13 @@
           ${marker.properties.date}</br>
           ${marker.properties.address}
           </p>
-          `
+          `;
           document.querySelector('#things').appendChild(thing)
         }
       }
     });
   </script>
-  <script src="../../js/thingsheard.v1.js"></script>
+  <script src="../../js/thingsheard.v2.js"></script>
   <script src="../../js/youtube.js"></script>
 
   <link rel="icon" href="../www/favicon.png">
