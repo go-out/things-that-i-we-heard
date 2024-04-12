@@ -89,6 +89,8 @@ document.addEventListener('readystatechange', event => {
             el.addEventListener('click', () => {
                 flyToMarker(marker)
                 if (marker.properties.link) {
+                    document.querySelector("#readme").innerHTML = "";
+
                     if (marker.properties.link.html) {
                         let thisThing = directory + marker.properties.link.html
                         fetchHTML(thisThing, '#readme')
