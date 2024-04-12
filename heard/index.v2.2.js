@@ -10,10 +10,8 @@ let indexThis,
 if (!urlParam) {
     let thisYear = new Date().getFullYear() + "年";
     let thisMonth = new Date().getMonth() + 1 + "月に";
-    let count = 0;
 
     indexThis = {
-        thisCount: count,
         title: "things that i (we) heard",
         area: thisYear + thisMonth,
         things: [
@@ -41,6 +39,8 @@ if (!urlParam) {
 
     document.addEventListener('readystatechange', event => {
         if (event.target.readyState === 'complete') {
+            let count = 0;
+
             // things.features から マーカー・ポップアップを生成
             for (const marker of things.features) {
                 if (marker.submit) {
@@ -53,8 +53,9 @@ if (!urlParam) {
                     ${marker.properties.address}
                     </p>
                     `;
-                    document.querySelector('#things').prepend(thing);
                     count++;
+                    document.querySelector('#things').prepend(thing);
+                    document.querySelector('#count').textContent = count;
                 }
             }
         }
