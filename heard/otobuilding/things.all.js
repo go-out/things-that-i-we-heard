@@ -181,7 +181,10 @@ let otobuilAll = {
       properties: {
         title: '心清く。目上の人を敬う。',
         date: '2022年2月6日 15:30頃',
-        address: '住吉区住吉２丁目９−８９'
+        address: '住吉区住吉２丁目９−８９',
+        link: {
+          youtube: "wbOguTvuV0Q"
+        }
       }
     },
     {
@@ -677,7 +680,10 @@ let otobuilAll = {
       properties: {
         title: 'Enjoy Outing!',
         date: '2022年4月28日 18:52',
-        address: '住之江区平林南２丁目１１−１２'
+        address: '住之江区平林南２丁目１１−１２',
+        link: {
+          youtube: "tinBEuiKqzU"
+        }
       }
     },
     {
@@ -860,7 +866,10 @@ let otobuilAll = {
       properties: {
         title: '鳩おりゃあごい',
         date: '2022年5月3日 12:35',
-        address: '住之江区南港北１丁目３２'
+        address: '住之江区南港北１丁目３２',
+        link: {
+          youtube: "EoFg1eMWADg"
+        }
       }
     },
     {
