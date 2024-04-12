@@ -22,10 +22,7 @@
   <script>
     'use strict'
 
-    let indexThis,
-      mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
-
-    indexThis = {
+    let indexThis = {
       title: "things that i (we) heard around OTO building",
       area: "大阪市住之江区と大正区・西成区の一部で",
       things: [
@@ -42,27 +39,7 @@
       html: "credit.html"
     }
 
-    var youtubeID;
-    if (indexThis.youtube) {
-      youtubeID = indexThis.youtube;
-    }
-
-    function aboutThis() {
-      if (indexThis.youtube) {
-        youtubeID = indexThis.youtube;
-      }
-
-      if (indexThis.html && !indexThis.text) {
-        fetchHTML(indexThis.html, '#readme')
-      }
-
-      if (indexThis.text && !indexThis.html) {
-        fetchMD(indexThis.text, '#readme')
-      }
-
-      player.loadVideoById({ videoId: youtubeID })
-      dialogOpen()
-    }
+    let mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'complete') {

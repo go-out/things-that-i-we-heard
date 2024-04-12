@@ -22,18 +22,13 @@
   <script>
     'use strict'
 
-    // URLのパラメータを取得
-    let indexThis,
-      mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
-
-    var youtubeID = 'eAORIZUB7PE';
-
-    indexThis = {
+    let indexThis = {
       title: "things that i (we) heard around BnA Alter Museum",
       area: "京都・河原町周辺で",
       things: [
         "things.all.js"
       ],
+      youtube: "eAORIZUB7PE",
       bounds: [
         [135.75972724537672, 34.9950251407263], // 南西座標
         [135.772916683571, 35.00535650888111] // 北東座標
@@ -43,6 +38,8 @@
       zoomIn: 17,
       html: "credit.html"
     }
+
+    let mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'complete') {
@@ -85,7 +82,7 @@
 </head>
 
 <body>
-  <button id="changeHidden" type="button" onclick="dialogOpen()">?</button>
+  <button id="changeHidden" type="button" onclick="aboutThis()">?</button>
 
   <main>
     <h1>things that i (we) heard</h1>
@@ -97,7 +94,7 @@
       <summary>私（わたしたち）が聞いたこと</summary>
       <article id="things"></article>
     </details>
-    <small>
+    <small id="copy">
       Copyright © 2022 You. (Not) All Rights Reserved.
     </small>
   </footer>

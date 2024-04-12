@@ -19,6 +19,25 @@ switch (document.readyState) {
         break;
 }
 
+function aboutThis() {
+    if (indexThis.youtube) {
+        youtubeID = indexThis.youtube;
+        player.loadVideoById({ videoId: youtubeID })
+    } else {
+        document.querySelector('#player').hidden = true;
+    }
+
+    if (indexThis.html && !indexThis.text) {
+        fetchHTML(indexThis.html, '#readme')
+    }
+
+    if (indexThis.text && !indexThis.html) {
+        fetchMD(indexThis.text, '#readme')
+    }
+
+    dialogOpen()
+}
+
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
         if (indexThis) {
@@ -34,6 +53,14 @@ document.addEventListener('readystatechange', event => {
 
         if (indexThis.text && !indexThis.html) {
             fetchMD(indexThis.text, '#readme')
+        }
+
+        if (indexThis.youtube) {
+            var youtubeID = indexThis.youtube;
+        } else {
+            document.addEventListener("DOMContentLoaded", () => {
+                document.querySelector('#player').hidden = true;
+            });
         }
     } else if (event.target.readyState === 'complete') {
         document.body.classList.toggle('enter')
@@ -58,6 +85,16 @@ document.addEventListener('readystatechange', event => {
 
             el.addEventListener('click', () => {
                 flyToMarker(marker)
+                if (marker.properties.link) {
+                    if (marker.properties.link.youtube) {
+                        document.querySelector('#player').hidden = false;
+                        youtubeID = marker.properties.link.youtube;
+                        player.loadVideoById({ videoId: youtubeID })
+                    } else {
+                        document.querySelector('#player').hidden = true;
+                    }
+                    dialogOpen()
+                }
             })
         }
 

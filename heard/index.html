@@ -26,6 +26,7 @@
 
   <script src="index.v2.2.js"></script>
   <script src="../js/thingsheard.v1.js"></script>
+  <script src="../js/youtube.js"></script>
 
   <link rel="icon" href="www/favicon.png">
   <link rel="icon" href="www/android.png" sizes="192x192">
@@ -58,7 +59,7 @@
 </head>
 
 <body>
-  <button id="changeHidden" type="button" onclick="dialogOpen()">?</button>
+  <button id="changeHidden" type="button" onclick="aboutThis()">?</button>
 
   <main>
     <h1>things that i (we) heard</h1>
@@ -107,6 +108,7 @@
     <small>あなたが聞いたことを投稿する</small>
     <a href="../" id="submit">submit the thing you heard</a>
     <section id="readme"></section>
+    <div id="player"></div>
   </dialog>
 
   <script>
