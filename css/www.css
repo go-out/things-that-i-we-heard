@@ -88,9 +88,12 @@ summary {
     padding: 0.5rem;
 }
 
-dialog input[type="button"],
-#log p {
+dialog input[type="button"] {
     margin: 0;
+}
+
+#log p {
+    margin: 0.5rem 0;
 }
 
 [data-ruby]::before {
