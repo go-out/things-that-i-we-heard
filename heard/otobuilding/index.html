@@ -42,8 +42,9 @@
       html: "credit.html"
     }
 
+    var youtubeID;
     if (indexThis.youtube) {
-      let youtubeID = indexThis.youtube;
+      youtubeID = indexThis.youtube;
     }
 
     function aboutThis() {
@@ -58,6 +59,7 @@
       if (indexThis.text && !indexThis.html) {
         fetchMD(indexThis.text, '#readme')
       }
+
       dialogOpen()
     }
 
