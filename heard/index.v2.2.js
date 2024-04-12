@@ -213,7 +213,7 @@ if (!urlParam) {
 
         // things.features から マーカー・ポップアップを生成
         document.querySelector('#things').innerHTML = '';
-        for (const marker of things.features) {
+        for (const marker of shuffle(things.features)) {
             const thing = document.createElement('section');
             thing.className = 'thing';
             thing.innerHTML = `
@@ -229,6 +229,15 @@ if (!urlParam) {
 
     mapboxsStyle = "mapbox://styles/mapbox/light-v10";
     userInteracting = !0;
+}
+
+function shuffle(arrays) {
+    const array = arrays.slice();
+    for (let i = array.length - 1; i >= 0; i--) {
+        const shuffleArr = Math.floor(Math.random() * (i + 1));
+        [array[i], array[shuffleArr]] = [array[shuffleArr], array[i]];
+    }
+    return array;
 }
 
 function getRandomInt(min, max) {
