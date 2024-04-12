@@ -5,6 +5,8 @@ let things = {
     'features': []
 }
 
+var youtubeID
+
 switch (document.readyState) {
     case "loading":
         // この文書はまだ読み込み中
@@ -56,7 +58,7 @@ document.addEventListener('readystatechange', event => {
         }
 
         if (indexThis.youtube) {
-            var youtubeID = indexThis.youtube;
+            youtubeID = indexThis.youtube;
         } else {
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector('#player').hidden = true;
