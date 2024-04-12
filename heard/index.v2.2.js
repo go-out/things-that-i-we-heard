@@ -2,6 +2,7 @@
 
 // URLのパラメータを取得
 let indexThis,
+    directory = '',
     mapboxsStyle,
     userInteracting,
     paramArray = [],

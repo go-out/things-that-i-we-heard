@@ -5,7 +5,7 @@ let things = {
     'features': []
 }
 
-var youtubeID
+var youtubeID;
 
 switch (document.readyState) {
     case "loading":
@@ -88,6 +88,11 @@ document.addEventListener('readystatechange', event => {
             el.addEventListener('click', () => {
                 flyToMarker(marker)
                 if (marker.properties.link) {
+                    if (marker.properties.link.html) {
+                        let thisThing = directory + marker.properties.link.html
+                        fetchHTML(thisThing, '#readme')
+                    }
+
                     if (marker.properties.link.youtube) {
                         document.querySelector('#player').hidden = false;
                         youtubeID = marker.properties.link.youtube;
