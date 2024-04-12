@@ -21,6 +21,14 @@ switch (document.readyState) {
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
+        if (indexThis) {
+            const h1 = document.querySelector('h1')
+            h1.textContent = indexThis.title;
+
+            const summary = document.querySelector('#www summary')
+            summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
+        }
+
         if (indexThis.html && !indexThis.text) {
             fetchHTML(indexThis.html, '#readme')
         }
@@ -30,14 +38,6 @@ document.addEventListener('readystatechange', event => {
         }
     } else if (event.target.readyState === 'complete') {
         document.body.classList.toggle('enter');
-
-        if (indexThis) {
-            const h1 = document.querySelector('h1')
-            h1.textContent = indexThis.title;
-
-            const summary = document.querySelector('#www summary')
-            summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
-        }
 
         for (const marker of things.features) {
             const el = document.createElement('div');
