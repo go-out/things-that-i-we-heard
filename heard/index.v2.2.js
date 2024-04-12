@@ -10,7 +10,6 @@ let indexThis,
 if (!urlParam) {
     let thisYear = new Date().getFullYear() + "年";
     let thisMonth = new Date().getMonth() + 1 + "月に";
-    let count = 0;
 
     indexThis = {
         no: true,
@@ -53,7 +52,6 @@ if (!urlParam) {
                     </p>
                     `;
                 document.querySelector('#things').prepend(thing);
-                count++;
             }
         }
     });
