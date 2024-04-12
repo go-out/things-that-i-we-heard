@@ -7,7 +7,7 @@ heard []
         coordinates: [__]
     },
     properties: {
-        title: '聞いた言葉',
+        title: '聞いたこと',
         date: 'YYYY年MM月DD日 00:00',
         address: '住所',
         link: {
