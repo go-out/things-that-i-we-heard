@@ -61,7 +61,7 @@
             const log = document.createElement('section');
             log.dataset.ruby = marker.properties.date;
             log.innerHTML = `
-            ${marker.properties.title}
+            <p>${marker.properties.title}</p>
             `;
             document.querySelector('#log').prepend(log);
 
