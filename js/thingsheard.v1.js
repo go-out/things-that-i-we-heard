@@ -62,10 +62,10 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        if (!indexThis.count) {
+        if (!indexThis.thisCount) {
             thingsCount.textContent = things.features.length;
         } else {
-            thingsCount.textContent = indexThis.count;
+            thingsCount.textContent = indexThis.thisCount;
         }
     }
 })

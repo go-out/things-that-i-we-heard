@@ -13,7 +13,7 @@ if (!urlParam) {
     let count = 0;
 
     indexThis = {
-        count: count,
+        thisCount: count,
         title: "things that i (we) heard",
         area: thisYear + thisMonth,
         things: [
