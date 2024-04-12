@@ -88,7 +88,8 @@ summary {
     padding: 0.5rem;
 }
 
-dialog input[type="button"] {
+dialog input[type="button"],
+#log p {
     margin: 0;
 }
 
