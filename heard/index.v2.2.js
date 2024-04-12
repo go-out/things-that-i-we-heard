@@ -10,6 +10,7 @@ let indexThis,
 if (!urlParam) {
     let thisYear = new Date().getFullYear() + "年";
     let thisMonth = new Date().getMonth() + 1 + "月に";
+    let count = 0;
 
     indexThis = {
         count: true,
@@ -38,25 +39,21 @@ if (!urlParam) {
         html: "www/index.html"
     }
 
-    document.addEventListener('readystatechange', event => {
-        if (event.target.readyState === 'complete') {
-            let count = 0;
-
-            // things.features から マーカー・ポップアップを生成
-            for (const marker of things.features) {
-                if (marker.submit) {
-                    const thing = document.createElement('section');
-                    thing.className = 'thing';
-                    thing.innerHTML = `
+    window.addEventListener("load", (event) => {
+        // things.features から マーカー・ポップアップを生成
+        for (const marker of things.features) {
+            if (marker.submit) {
+                const thing = document.createElement('section');
+                thing.className = 'thing';
+                thing.innerHTML = `
                     <h3>${marker.properties.title}</h3>
                     <p class="date">
                     ${marker.properties.date}</br>
                     ${marker.properties.address}
                     </p>
                     `;
-                    document.querySelector('#things').prepend(thing);
-                    count++;
-                }
+                document.querySelector('#things').prepend(thing);
+                count++;
             }
         }
     });
