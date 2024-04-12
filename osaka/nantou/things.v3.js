@@ -11,7 +11,7 @@ let osaka2nd = {
         date: '2022年6月19日 18:31',
         address: '大阪市住吉区帝塚山東2丁目7',
         link: {
-          html: 'osaka/nantou/mandaiike.html',
+          html: '../osaka/nantou/mandaiike.html',
           youtube: '-7DEl_jxuW8'
         }
       }
