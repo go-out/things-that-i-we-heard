@@ -39,6 +39,11 @@ dialog a,
     appearance: none;
 }
 
+details summary b small {
+    font-size: 75%;
+    font-weight: 500;;
+}
+
 [data-ruby]::before {
     font-size: 75%;
 }

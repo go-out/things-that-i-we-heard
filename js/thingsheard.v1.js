@@ -25,7 +25,7 @@ document.addEventListener('readystatechange', event => {
             const h1 = document.querySelector('h1')
             const summary = document.querySelector('#www summary')
             h1.textContent = indexThis.title;
-            summary.innerHTML = `${indexThis.area}聞いた <b id="count">?</b> の こと`;
+            summary.innerHTML = `${indexThis.area}聞いた <b id="count"></b> こと`;
         }
 
         if (indexThis.html && !indexThis.text) {
@@ -61,10 +61,8 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        if (indexThis.count) {
-            document.querySelector('#count').textContent = count;
-        } else {
-            document.querySelector('#count').textContent = things.features.length;
+        if (!indexThis.no) {
+            document.querySelector('#count').textContent = things.features.length + '<small>の</small>';
         }
     }
 })
