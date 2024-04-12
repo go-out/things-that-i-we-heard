@@ -13,7 +13,7 @@ if (!urlParam) {
     let zoom = getRandomInt(1, 2)
 
     let thisYear = new Date().getFullYear() + "年";
-    let thisMonth = new Date().getMonth() + 1 + "月";
+    let thisMonth = new Date().getMonth() + 1 + "月 までに";
 
     indexThis = {
         title: "things that i (we) heard",
