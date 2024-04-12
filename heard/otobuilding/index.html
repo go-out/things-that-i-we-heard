@@ -31,7 +31,7 @@
       things: [
         "things.all.js"
       ],
-      youtubeID: "E_5MC9sASw8",
+      youtube: "E_5MC9sASw8",
       bounds: [
         [135.39146702295744, 34.59380194128228], // 南西座標
         [135.5079278126247, 34.6540329633829] // 北東座標
@@ -42,13 +42,13 @@
       html: "credit.html"
     }
 
-    if (indexThis.youtubeID) {
-      youtubeID = indexThis.youtubeID;
+    if (indexThis.youtube) {
+      let youtubeID = indexThis.youtube;
     }
 
     function aboutThis() {
-      if (indexThis.youtubeID) {
-        youtubeID = indexThis.youtubeID;
+      if (indexThis.youtube) {
+        youtubeID = indexThis.youtube;
       }
 
       if (indexThis.html && !indexThis.text) {
