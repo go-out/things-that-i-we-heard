@@ -37,7 +37,7 @@ document.addEventListener('readystatechange', event => {
         }
     } else if (event.target.readyState === 'complete') {
         document.body.classList.toggle('enter')
-        const thingsThis = document.querySelector('#count')
+        const thingsCount = document.querySelector('#count')
 
         for (const marker of things.features) {
             const el = document.createElement('div');
@@ -62,10 +62,10 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        if (indexThis.count) {
-            thingsThis.textContent = indexThis.count;
+        if (!indexThis.count) {
+            thingsCount.textContent = things.features.length;
         } else {
-            thingsThis.textContent = things.features.length;
+            thingsCount.textContent = indexThis.count;
         }
     }
 })
