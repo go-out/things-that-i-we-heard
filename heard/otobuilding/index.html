@@ -56,6 +56,32 @@
           </p>
           `;
           document.querySelector('#things').appendChild(thing)
+
+          if (marker.properties.link) {
+            const log = document.createElement('section');
+            log.dataset.ruby = marker.properties.date;
+            log.innerHTML = `
+            <p>${marker.properties.title}</p>
+            `;
+            document.querySelector('#log').prepend(log);
+
+            log.addEventListener('click', () => {
+              if (marker.properties.link.html) {
+                let thisThing = directory + marker.properties.link.html
+                fetchHTML(thisThing, '#readme')
+              }
+
+              if (marker.properties.link.youtube) {
+                document.querySelector('#player').hidden = false;
+                youtubeID = marker.properties.link.youtube;
+                player.loadVideoById({ videoId: youtubeID })
+              } else {
+                document.querySelector('#player').hidden = true;
+              }
+
+              dialogOpen()
+            }, false)
+          }
         }
       }
     });
