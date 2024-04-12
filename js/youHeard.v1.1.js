@@ -39,8 +39,8 @@ if (localStorage.getItem("heard")) {
             .then(innerText => {
                 readme.innerText = innerText;
                 readme.id = '';
-                readme.computedStyleMap.color = '#fff';
-                readme.computedStyleMap.padding = '0.5rem';
+                readme.style.color = '#fff';
+                readme.style.padding = '0.5rem';
             });
     }, false);
 }
