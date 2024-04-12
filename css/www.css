@@ -77,13 +77,6 @@ summary {
     padding: 0.25rem 0.5rem;
 }
 
-#www section,
-#www small {
-    display: block;
-    color: #fff;
-    padding: 0.5rem;
-}
-
 dialog input[type="button"] {
     margin: 0;
 }
