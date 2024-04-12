@@ -25,14 +25,13 @@
     let indexThis,
       mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
 
-    var youtubeID = 'E_5MC9sASw8';
-
     indexThis = {
       title: "things that i (we) heard around OTO building",
       area: "大阪市住之江区と大正区・西成区の一部で",
       things: [
         "things.all.js"
       ],
+      youtubeID: "E_5MC9sASw8",
       bounds: [
         [135.39146702295744, 34.59380194128228], // 南西座標
         [135.5079278126247, 34.6540329633829] // 北東座標
@@ -41,6 +40,25 @@
       zoom: 13.5,
       zoomIn: 15,
       html: "credit.html"
+    }
+
+    if (indexThis.youtubeID) {
+      youtubeID = indexThis.youtubeID;
+    }
+
+    function aboutThis() {
+      if (indexThis.youtubeID) {
+        youtubeID = indexThis.youtubeID;
+      }
+
+      if (indexThis.html && !indexThis.text) {
+        fetchHTML(indexThis.html, '#readme')
+      }
+
+      if (indexThis.text && !indexThis.html) {
+        fetchMD(indexThis.text, '#readme')
+      }
+      dialogOpen()
     }
 
     document.addEventListener('readystatechange', event => {
@@ -84,7 +102,7 @@
 </head>
 
 <body>
-  <button id="changeHidden" type="button" onclick="dialogOpen()">?</button>
+  <button id="changeHidden" type="button" onclick="aboutThis()">?</button>
 
   <main>
     <h1>things that i (we) heard</h1>
