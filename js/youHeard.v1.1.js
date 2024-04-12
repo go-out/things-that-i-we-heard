@@ -38,7 +38,7 @@ if (localStorage.getItem("heard")) {
             .then(response => response.text())
             .then(innerText => {
                 readme.innerText = innerText;
-                readme.id = '';
+                readme.id = 'log';
                 readme.style.color = '#fff';
                 readme.style.fontSize = '125%';
                 readme.style.padding = '1rem 0.5rem';
