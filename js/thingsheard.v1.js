@@ -26,7 +26,7 @@ document.addEventListener('readystatechange', event => {
             h1.textContent = indexThis.title;
 
             const summary = document.querySelector('#www summary')
-            summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
+            summary.innerHTML = `${indexThis.area}聞いた <b id="count"></b> の 言葉`;
         }
 
         if (indexThis.html && !indexThis.text) {
@@ -60,6 +60,12 @@ document.addEventListener('readystatechange', event => {
             el.addEventListener('click', () => {
                 flyToMarker(marker)
             })
+        }
+
+        if (count) {
+            document.querySelector('#count').textContent = count;
+        } else {
+            document.querySelector('#count').textContent = things.features.length;
         }
     }
 })

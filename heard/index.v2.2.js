@@ -10,6 +10,7 @@ let indexThis,
 if (!urlParam) {
     let thisYear = new Date().getFullYear() + "年";
     let thisMonth = new Date().getMonth() + 1 + "月に";
+    let count = 0;
 
     indexThis = {
         title: "things that i (we) heard",
@@ -40,7 +41,6 @@ if (!urlParam) {
     document.addEventListener('readystatechange', event => {
         if (event.target.readyState === 'complete') {
             // things.features から マーカー・ポップアップを生成
-            let i = 0;
             for (const marker of things.features) {
                 if (marker.submit) {
                     const thing = document.createElement('section');
@@ -53,10 +53,9 @@ if (!urlParam) {
                     </p>
                     `;
                     document.querySelector('#things').prepend(thing);
-                    i++;
+                    count++;
                 }
             }
-            document.querySelector('#www summary b').textContent = i;
         }
     });
 
