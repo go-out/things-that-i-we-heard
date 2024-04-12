@@ -23,6 +23,11 @@
     font-size: 0.75rem;
 }
 
+#www small {
+    display: block;
+    padding: 0.5rem;
+}
+
 @page {
     size: A4 landscape;
 }
@@ -92,11 +97,6 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-}
-
-#www small {
-    display: block;
-    padding: 0.5rem;
 }
 
 #things .thing h3 {
