@@ -192,6 +192,7 @@ if (!urlParam) {
                     "../osaka/higashi/things.js",
                     "../osaka/hokusetsu.js",
                     "../osaka/kawachi.js",
+                    "../osaka/kita/things.js",
                     "../osaka/sakai.js"
                 ],
                 center: [135.5020763952882, 34.69376772507822],
