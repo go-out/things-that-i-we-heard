@@ -61,7 +61,11 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        document.querySelector('#count').textContent = things.features.length;
+        if (indexThis.count) {
+            document.querySelector('#count').textContent = count;
+        } else {
+            document.querySelector('#count').textContent = things.features.length;
+        }
     }
 })
 

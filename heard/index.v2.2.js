@@ -12,6 +12,7 @@ if (!urlParam) {
     let thisMonth = new Date().getMonth() + 1 + "月に";
 
     indexThis = {
+        count: true,
         title: "things that i (we) heard",
         area: thisYear + thisMonth,
         things: [
@@ -53,9 +54,8 @@ if (!urlParam) {
                     ${marker.properties.address}
                     </p>
                     `;
-                    count++;
                     document.querySelector('#things').prepend(thing);
-                    document.querySelector('#count').textContent = count;
+                    count++;
                 }
             }
         }
