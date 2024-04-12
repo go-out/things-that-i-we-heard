@@ -61,7 +61,7 @@
             const log = document.createElement('section');
             log.dataset.ruby = marker.properties.date;
             log.innerHTML = `
-            <p>${marker.properties.title}</p>
+            ${marker.properties.title}
             `;
             document.querySelector('#log').prepend(log);
 
@@ -78,7 +78,7 @@
               } else {
                 document.querySelector('#player').hidden = true;
               }
-              
+
               dialogOpen()
             }, false)
           }
