@@ -77,6 +77,11 @@ summary {
     padding: 0.25rem 0.5rem;
 }
 
+#www section {
+    display: block;
+    padding: 0.5rem;
+}
+
 dialog input[type="button"] {
     margin: 0;
 }
