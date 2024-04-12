@@ -63,7 +63,7 @@ document.addEventListener('readystatechange', event => {
 
         if (!indexThis.no) {
             document.querySelector('#count').innerHTML = things.features.length + ' <i>の</i>';
-            document.querySelector('#count').style.padding = "0 0 0 0.25rem";
+            document.querySelector('#count').style.padding = "0 0 0 0.5rem";
         }
     }
 })
