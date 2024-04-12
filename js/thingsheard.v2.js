@@ -25,6 +25,7 @@ function aboutThis() {
     if (indexThis.youtube) {
         youtubeID = indexThis.youtube;
         player.loadVideoById({ videoId: youtubeID })
+        document.querySelector('#player').hidden = false;
     } else {
         document.querySelector('#player').hidden = true;
     }
