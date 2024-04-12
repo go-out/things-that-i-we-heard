@@ -8,12 +8,8 @@ let indexThis,
     urlParam = location.search.substring(1);
 
 if (!urlParam) {
-    let lng = getRandomInt(-180, 180)
-    let lat = getRandomInt(-90, 90)
-    let zoom = getRandomInt(1, 2)
-
     let thisYear = new Date().getFullYear() + "年";
-    let thisMonth = new Date().getMonth() + 1 + "月 までに";
+    let thisMonth = new Date().getMonth() + 1 + "月に";
 
     indexThis = {
         title: "things that i (we) heard",
@@ -34,9 +30,9 @@ if (!urlParam) {
             "../japan/tokyo.js",
             "../js/csvtojson.v2.js"
         ],
-        center: [lng, lat],
+        center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
         bounds: false,
-        zoom: zoom,
+        zoom: getRandomInt(1, 2),
         zoomIn: 14.5,
         html: "www/index.html"
     }
@@ -56,6 +52,7 @@ if (!urlParam) {
                     </p>
                     `;
                     document.querySelector('#things').prepend(thing)
+                    document.querySelector('#www summary b').textContent = marker.submit.length;
                 }
             }
         }
