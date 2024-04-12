@@ -31,6 +31,16 @@ if (localStorage.getItem("heard")) {
         }
         things.features.push(iHeard)
     }
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        const readme = document.querySelector('#things')
+        fetch('README.md')
+            .then(response => response.text())
+            .then(innerText => {
+                readme.innerText = innerText;
+                readme.id = '';
+            });
+    }, false);
 }
 
 function removeThis(e) {
