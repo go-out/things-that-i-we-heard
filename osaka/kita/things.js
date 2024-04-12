@@ -88,18 +88,6 @@ let osaka5th = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [135.561850973219, 34.75720548980648]
-      },
-      properties: {
-        title: '一人知らんやつおる<br>新メンバー',
-        date: '2024年3月18日 16:16',
-        address: '大阪府摂津市一津屋2丁目11番25'
-      }
-    },
-    {
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
         coordinates: [135.50679974497035, 34.74409247444555]
       },
       properties: {
