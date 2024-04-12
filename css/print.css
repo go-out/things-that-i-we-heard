@@ -29,6 +29,10 @@
 
 @media print {
 
+    #www article {
+        display: block;
+    }
+
     main,
     #changeHidden,
     #things .thing input,
@@ -40,7 +44,6 @@
 
     #things {
         font-size: 0.75vw;
-        display: block;
     }
 
     #things .thing {
