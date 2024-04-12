@@ -40,7 +40,8 @@ if (localStorage.getItem("heard")) {
                 readme.innerText = innerText;
                 readme.id = '';
                 readme.style.color = '#fff';
-                readme.style.padding = '0.5rem';
+                readme.style.fontSize = '125%';
+                readme.style.padding = '1rem 0.5rem';
             });
     }, false);
 }

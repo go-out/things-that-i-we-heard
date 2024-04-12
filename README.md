@@ -5,7 +5,8 @@
 2. Mapbox Geocoding API[^2] が、ドラッグ可能マーカーの地理座標 を 位置情報(住所・場所名) に変換
 3. あなたが聞いた言葉を ローカルストレージ[^3]・CSV に追加
 4. ローカルストレージからあなたが聞いた言葉を取得し、地図上にピンとポップアップを表示
-___
+
+***
 
 JavaScript
 * [findme.js](js/findme.js)
@@ -14,7 +15,7 @@ JavaScript
 PHP
 * [submit.php](submit.php)
 
-***
+___
 
 [^1]: [位置情報 API (Geolocation API)](https://developer.mozilla.org/ja/docs/Web/API/Geolocation_API) を使用すると、ユーザーが望む場合に、自分の位置情報をウェブアプリケーションに提供することができます。
 プライバシー上の理由から、ユーザーは位置情報を報告する許可を求められます。
