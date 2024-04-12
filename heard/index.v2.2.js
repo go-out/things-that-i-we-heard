@@ -40,6 +40,7 @@ if (!urlParam) {
     document.addEventListener('readystatechange', event => {
         if (event.target.readyState === 'complete') {
             // things.features から マーカー・ポップアップを生成
+            let i = 0;
             for (const marker of things.features) {
                 if (marker.submit) {
                     const thing = document.createElement('section');
@@ -51,10 +52,11 @@ if (!urlParam) {
                     ${marker.properties.address}
                     </p>
                     `;
-                    document.querySelector('#things').prepend(thing)
-                    document.querySelector('#www summary b').textContent = marker.submit.length;
+                    document.querySelector('#things').prepend(thing);
+                    i++;
                 }
             }
+            document.querySelector('#www summary b').textContent = i;
         }
     });
 
