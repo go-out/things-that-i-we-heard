@@ -36,11 +36,7 @@ document.addEventListener('readystatechange', event => {
             h1.textContent = indexThis.title;
 
             const summary = document.querySelector('#www summary')
-            if (!urlParam) {
-                summary.innerHTML = `${indexThis.area} に投稿された言葉`;
-            } else {
-                summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
-            }
+            summary.innerHTML = `${indexThis.area}聞いた <b>${things.features.length}</b> の 言葉`;
         }
 
         for (const marker of things.features) {
