@@ -100,6 +100,7 @@ document.addEventListener('readystatechange', event => {
                     } else {
                         document.querySelector('#player').hidden = true;
                     }
+
                     dialogOpen()
                 }
             })
