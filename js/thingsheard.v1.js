@@ -62,7 +62,7 @@ document.addEventListener('readystatechange', event => {
         }
 
         if (!indexThis.no) {
-            document.querySelector('#count').innerHTML = things.features.length + '<small>の</small>';
+            document.querySelector('#count').innerHTML = things.features.length + '<i>の</i>';
         }
     }
 })
