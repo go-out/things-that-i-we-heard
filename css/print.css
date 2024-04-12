@@ -14,7 +14,7 @@
     text-align: center;
     display: grid;
     padding: 1rem;
-    place-content: center;
+    place-content: end center;
     position: relative;
     height: 15rem;
 }
@@ -103,11 +103,12 @@
     font-family: 'Libre Baskerville', 'Zen Maru Gothic', serif;
     font-size: 150%;
     line-height: 150%;
+    place-self: center;
 }
 
 #things .thing p {
     font-family: 'Zen Maru Gothic', serif;
     font-size: 100%;
-    margin: 2rem 0 0;
+    margin: 0.5rem;
     line-height: 200%;
 }
