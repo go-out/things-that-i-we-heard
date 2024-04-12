@@ -37,7 +37,7 @@ document.addEventListener('readystatechange', event => {
         }
     } else if (event.target.readyState === 'complete') {
         document.body.classList.toggle('enter')
-        const thingsThis = document.querySelector('count')
+        const thingsThis = document.querySelector('#count')
 
         for (const marker of things.features) {
             const el = document.createElement('div');
