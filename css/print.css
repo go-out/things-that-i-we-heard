@@ -28,6 +28,10 @@
     padding: 0.5rem;
 }
 
+#log {
+    margin: 0.5rem 0;
+}
+
 @page {
     size: A4 landscape;
 }
