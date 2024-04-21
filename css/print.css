@@ -19,7 +19,8 @@
     height: 15rem;
 }
 
-#things .thing i {
+#things .thing i,
+#things .thing input {
     position: absolute;
     top: 0;
     right: 0;
@@ -105,14 +106,8 @@
     font-size: 125%;
 }
 
+#things .thing h3,
 #things .thing input {
-    font-size: 200%;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-}
-
-#things .thing h3 {
     font-family: 'Libre Baskerville', 'Zen Maru Gothic', serif;
     font-size: 150%;
     line-height: 150%;
@@ -124,4 +119,8 @@
     font-size: 100%;
     margin: 1rem 0.5rem 0.5rem;
     line-height: 200%;
+}
+
+#things .thing input {
+    font-style: italic;
 }

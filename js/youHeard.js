@@ -73,9 +73,12 @@ document.addEventListener('readystatechange', e => {
             ${marker[i].properties.date}</br>
             ${marker[i].properties.address}
             </p>
-            <input type="button" onclick="removeThis(${i})" value="×">
+            <input type="button" value="i">
             `;
             document.querySelector('#things').appendChild(thing)
+            thing.addEventListener('click', function () {
+                removeThis(i)
+            })
         }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加
