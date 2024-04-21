@@ -30,7 +30,7 @@ if (!urlParam) {
             "../osaka/sakai.js",
             "../japan/nara.js",
             "../japan/tokyo.js",
-            "../js/csvtojson.js?v=1"
+            "../js/csvtojson.js?v=2"
         ],
         center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
         bounds: false,
