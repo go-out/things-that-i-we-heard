@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
+  <link rel="icon" href="../www/favicon.png">
+  <link rel="icon" href="../www/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="../www/ios.png" sizes="180x180">
+
   <!--og:meta-->
   <meta content="website" property="og:type">
   <title>things that i (we) heard around BnA Alter Museum</title>
@@ -55,17 +59,9 @@
           ${marker.properties.address}
           </p>
           `;
-          document.querySelector('#things').appendChild(thing)
-
           if (marker.properties.link) {
-            const log = document.createElement('section');
-            log.dataset.ruby = marker.properties.date;
-            log.innerHTML = `
-            <p>${marker.properties.title}</p>
-            `;
-            document.querySelector('#log').prepend(log);
-
-            log.addEventListener('click', () => {
+            thing.innerHTML += "<i>i</i>";
+            thing.addEventListener('click', () => {
               if (marker.properties.link.html) {
                 let thisThing = directory + marker.properties.link.html
                 fetchHTML(thisThing, '#readme')
@@ -82,27 +78,24 @@
               dialogOpen()
             }, false)
           }
+          document.querySelector('#things').appendChild(thing)
         }
       }
     });
   </script>
-  <script src="../../js/thingsheard.v2.js"></script>
-  <script src="../../js/youtube.js"></script>
-
-  <link rel="icon" href="../www/favicon.png">
-  <link rel="icon" href="../www/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="../www/ios.png" sizes="180x180">
+  <script src="../../js/thingsheard.js?v=1"></script>
+  <script src="../../js/youtube.js?v=1"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Zen+Maru+Gothic&amp;display=swap">
 
-  <link href="../../css/style.css" rel="stylesheet" />
-  <link href="../../css/map.css" rel="stylesheet" />
-  <link href="../../css/www.css" rel="stylesheet" />
-  <link href="../../css/thing.css" rel="stylesheet" />
-  <link href="../../css/print.css" rel="stylesheet" />
+  <link href="../../css/style.css?v=1" rel="stylesheet" />
+  <link href="../../css/map.css?v=1" rel="stylesheet" />
+  <link href="../../css/www.css?v=1" rel="stylesheet" />
+  <link href="../../css/thing.css?v=1" rel="stylesheet" />
+  <link href="../../css/print.css?v=1" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
@@ -122,6 +115,17 @@
       <article id="things"></article>
     </details>
     <article id="log"></article>
+    <details>
+      <summary>記録写真</summary>
+      <img src="img/001.jpeg" alt="">
+      <img src="img/002.jpeg" alt="">
+      <img src="img/003.jpeg" alt="">
+      <img src="img/004.jpeg" alt="">
+      <img src="img/005.jpeg" alt="">
+      <img src="img/006.jpeg" alt="">
+      <img src="img/007.jpeg" alt="">
+      <img src="img/008.jpeg" alt="">
+    </details>
     <small id="copy">
       Copyright © 2022 You. (Not) All Rights Reserved.
     </small>

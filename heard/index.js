@@ -20,17 +20,17 @@ if (!urlParam) {
             "otobuilding/things.all.js",
             "bnaaltermuseum/things.all.js",
             "../osaka/bayarea/things.js",
-            "../osaka/chuo/things.v2.js",
+            "../osaka/chuo/things.js?v=2",
             "../osaka/higashi/things.js",
             "../osaka/kita/things.js",
             "../osaka/nansei/things.js",
-            "../osaka/nantou/things.v3.js",
+            "../osaka/nantou/things.js?v=3",
             "../osaka/hokusetsu.js",
             "../osaka/kawachi.js",
             "../osaka/sakai.js",
             "../japan/nara.js",
             "../japan/tokyo.js",
-            "../js/csvtojson.v2.js"
+            "../js/csvtojson.js?v=1"
         ],
         center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
         bounds: false,
@@ -90,7 +90,7 @@ if (!urlParam) {
                 title: "things that i (we) heard in southeast osaka",
                 area: "大阪市住吉区・東住吉区・阿倍野区・平野区と西成区・八尾市の一部で",
                 things: [
-                    "../osaka/nantou/things.v3.js"
+                    "../osaka/nantou/things.js?v=3"
                 ],
                 bounds: [
                     [135.48000, 34.5876], // 南西座標
@@ -122,7 +122,7 @@ if (!urlParam) {
                 title: "things that i (we) heard in osaka center area",
                 area: "大阪市中央区・浪速区・天王寺区と西区の一部で",
                 things: [
-                    "../osaka/chuo/things.v2.js"
+                    "../osaka/chuo/things.js?v=2"
                 ],
                 bounds: [
                     [135.475455, 34.645457], // 南西座標
@@ -187,8 +187,8 @@ if (!urlParam) {
                 area: "大阪府全域で",
                 things: [
                     "otobuilding/things.all.js",
-                    "../osaka/nantou/things.v3.js",
-                    "../osaka/chuo/things.v2.js",
+                    "../osaka/nantou/things.js?v=3",
+                    "../osaka/chuo/things.js?v=2",
                     "../osaka/higashi/things.js",
                     "../osaka/hokusetsu.js",
                     "../osaka/kawachi.js",

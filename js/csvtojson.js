@@ -1,7 +1,7 @@
 'use strict'
 
 let month = new Date().getMonth() + 1;
-csvtojson(`../${new Date().getFullYear()}${month.toString().padStart(2, "0")}.csv`)
+csvtojson(`../${new Date().getFullYear()}${month.toString().padStart(2, "0")}.csv&${Date.now()}`)
 
 async function csvtojson(csv) {
     const response = await fetch(csv);

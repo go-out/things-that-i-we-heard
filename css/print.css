@@ -19,6 +19,14 @@
     height: 15rem;
 }
 
+#things .thing i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    font-size: 200%;
+}
+
 #things {
     font-size: 0.75rem;
 }
@@ -30,7 +38,7 @@
 
 #log {
     word-break: break-word;
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 @page {
