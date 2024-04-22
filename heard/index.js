@@ -26,6 +26,7 @@ if (!urlParam) {
         areaThis = "私（わたしたち）が " + thisYear + thisMonth;
         mapboxsStyle = "mapbox://styles/mapbox/light-v10";
         window.addEventListener("load", () => {
+            document.body.classList.add('map');
             // things.features から マーカー・ポップアップを生成
             for (const marker of things.features) {
                 if (marker.submit) {
