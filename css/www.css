@@ -61,6 +61,7 @@ details summary b i {
     font-size: 95%;
 }
 
+#os,
 [data-ruby]::before {
     font-size: 75%;
 }
@@ -77,6 +78,11 @@ dialog aside {
 
 dialog a {
     font-style: italic;
+}
+
+#things button {
+    padding: 0;
+    margin: 0;
 }
 
 #readme u,
@@ -97,6 +103,7 @@ dialog [data-ruby]::before {
 
 #www [data-ruby]::before {
     padding: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 dialog input[type="button"],
