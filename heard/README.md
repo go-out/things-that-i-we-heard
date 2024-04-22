@@ -1,5 +1,25 @@
-heard []
+[index.js](index.js)
+
+# indexThis
 ```
+indexThis = {
+    title: "things that i (we) heard in __",
+    area: "__ で",
+    things: [
+        "../___/things.js?v=0"
+    ],
+    no: false,
+    bounds: false,
+    center: [___],
+    zoom: __,
+    zoomIn: __,
+    text: "__.md"
+}
+```
+
+## things.js
+```
+heard []
 {
     type: 'Feature',
     geometry: {
@@ -11,18 +31,29 @@ heard []
         date: 'YYYY年MM月DD日 00:00',
         address: '住所',
         link: {
-          html: 'URL',
+          html: '__.html',
+          text: '__.md',
           youtube: '動画ID'
         }
     }
 }
-
 ```
 
+### indexThis.no
+値が true のとき、things.featuresの数をカウントする
+```
+if (indexThis.no === true) {
+    document.querySelector('#count').innerHTML = things.features.length + ' <i>の</i>';
+    document.querySelector('#count').style.padding = "0 0 0 0.25rem";
+} else {
+    document.querySelector('#count').remove()
+}
+```
+
+### indexThis.bounds
 [マップのパンを指定エリアに制限](https://docs.mapbox.com/jp/mapbox-gl-js/example/restrict-bounds/)
 
-指定エリアの南西・北東座標を指定
-maxBounds を設定して、マップが別の場所にパンさできないようにします。
+maxBounds（指定エリアの南西・北東座標を指定）を設定し、マップが別の場所にパンさできないようにする
 
 ```
 const bounds = [
@@ -38,6 +69,3 @@ const map = new mapboxgl.Map({
     maxBounds: bounds
 });
 ```
-
-[建物を3Dで表示](https://docs.mapbox.com/jp/mapbox-gl-js/example/3d-buildings/)
-[3d.js](www/js/3d.js)

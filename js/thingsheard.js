@@ -21,32 +21,20 @@ switch (document.readyState) {
         break;
 }
 
-function aboutThis() {
-    if (indexThis.youtube) {
-        youtubeID = indexThis.youtube;
-        player.loadVideoById({ videoId: youtubeID })
-        document.querySelector('#player').hidden = false;
-    } else {
-        document.querySelector('#player').hidden = true;
-    }
-
-    if (indexThis.html && !indexThis.text) {
-        fetchHTML(indexThis.html, '#readme')
-    }
-
-    if (indexThis.text && !indexThis.html) {
-        fetchMD(indexThis.text, '#readme')
-    }
-
-    dialogOpen()
-}
-
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
+        if (!localStorage.getItem('yourInfo')) {
+            const menbersAll = document.querySelectorAll('.members')
+            menbersAll.forEach((only) => {
+                only.remove()
+            })
+        }
+
         if (indexThis) {
             const h1 = document.querySelector('h1')
-            const summary = document.querySelector('#www summary')
             h1.textContent = indexThis.title;
+
+            const summary = document.querySelector('#www summary')
             summary.innerHTML = `${indexThis.area}聞いた<b id="count"></b>こと`;
         }
 
@@ -63,7 +51,7 @@ document.addEventListener('readystatechange', event => {
         } else {
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector('#player').hidden = true;
-            });
+            }, false)
         }
     } else if (event.target.readyState === 'complete') {
         document.body.classList.toggle('enter')
@@ -92,7 +80,7 @@ document.addEventListener('readystatechange', event => {
                     document.querySelector("#readme").innerHTML = "";
 
                     if (marker.properties.link.html) {
-                        let thisThing = directory + marker.properties.link.html
+                        let thisThing = directory + marker.properties.link.html;
                         fetchHTML(thisThing, '#readme')
                     }
 
@@ -109,9 +97,11 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        if (!indexThis.no) {
+        if (indexThis.no === true) {
             document.querySelector('#count').innerHTML = things.features.length + ' <i>の</i>';
             document.querySelector('#count').style.padding = "0 0 0 0.25rem";
+        } else {
+            document.querySelector('#count').remove()
         }
     }
 })
@@ -138,6 +128,26 @@ function chengeHidden() {
             mainBtn.textContent = "×";
         }
     })
+}
+
+function aboutThis() {
+    if (indexThis.youtube) {
+        youtubeID = indexThis.youtube;
+        player.loadVideoById({ videoId: youtubeID })
+        document.querySelector('#player').hidden = false;
+    } else {
+        document.querySelector('#player').hidden = true;
+    }
+
+    if (indexThis.html && !indexThis.text) {
+        fetchHTML(indexThis.html, '#readme')
+    }
+
+    if (indexThis.text && !indexThis.html) {
+        fetchMD(indexThis.text, '#readme')
+    }
+
+    dialogOpen()
 }
 
 async function fetchHTML(url = '', query = '') {

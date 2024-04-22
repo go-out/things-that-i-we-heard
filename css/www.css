@@ -23,13 +23,26 @@ details summary:hover {
     color: #CDCBCC;
 }
 
+#things button {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: underline solid 0.2rem;
+}
+
 dialog input[type="button"] {
     font-size: 200%;
 }
 
+#things button,
 dialog h2,
 details summary {
     font-size: 150%;
+}
+
+#things div p,
+dialog p[data-ruby] {
+    font-size: 125%;
+    line-height: 150%;
 }
 
 dialog p,
@@ -39,19 +52,27 @@ dialog a,
     appearance: none;
 }
 
+#things div strong {
+    font-size: 100%;
+}
+
 details summary b i {
     font-style: normal;
     font-size: 95%;
-    font-weight: 500;
 }
 
 [data-ruby]::before {
     font-size: 75%;
 }
 
-dialog p[data-ruby],
+details summary b,
+#things div strong {
+    font-weight: 500;
+}
+
 dialog aside {
-    line-height: 200%;
+    margin-top: 1rem;
+    line-height: 175%;
 }
 
 dialog a {
@@ -106,6 +127,7 @@ dialog input[type="button"] {
     text-align: left;
 }
 
+#things div b,
 #readme u,
 #www [data-ruby]::before {
     color: #fff;
@@ -129,7 +151,7 @@ dialog input[type="button"] {
 
 hr {
     border: none;
-    margin: 1.5rem;
+    margin: 0.5rem;
 }
 
 #readme,

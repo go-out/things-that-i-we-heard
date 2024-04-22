@@ -9,13 +9,49 @@ let indexThis,
     urlParam = location.search.substring(1);
 
 if (!urlParam) {
-    let thisYear = new Date().getFullYear() + "年";
-    let thisMonth = new Date().getMonth() + 1 + "月に";
+    let areaThis;
+
+    if (!localStorage.getItem('yourInfo')) {
+        areaThis = '私（わたしたち）が';
+
+        const menbersAll = document.querySelectorAll('.members')
+        menbersAll.forEach((only) => {
+            only.remove()
+        })
+
+        window.addEventListener("load", () => {
+            fetchHTML('enter.php', '#things')
+            const readme = document.querySelector('#things')
+            readme.style.fontSize = '111%';
+            readme.style.padding = '0.5rem 0.25rem';
+        }, false)
+    } else {
+        let thisYear = new Date().getFullYear() + "年";
+        let thisMonth = new Date().getMonth() + 1 + "月に";
+        areaThis = thisYear + thisMonth;
+
+        window.addEventListener("load", () => {
+            // things.features から マーカー・ポップアップを生成
+            for (const marker of things.features) {
+                if (marker.submit) {
+                    const thing = document.createElement('section');
+                    thing.className = 'thing';
+                    thing.innerHTML = `
+                    <h3>${marker.properties.title}</h3>
+                    <p class="date">
+                    ${marker.properties.date}</br>
+                    ${marker.properties.address}
+                    </p>
+                    `;
+                    document.querySelector('#things').prepend(thing);
+                }
+            }
+        }, false)
+    }
 
     indexThis = {
-        no: true,
         title: "things that i (we) heard",
-        area: thisYear + thisMonth,
+        area: areaThis,
         things: [
             "otobuilding/things.all.js",
             "bnaaltermuseum/things.all.js",
@@ -30,32 +66,15 @@ if (!urlParam) {
             "../osaka/sakai.js",
             "../japan/nara.js",
             "../japan/tokyo.js",
-            "../js/csvtojson.js?v=2"
+            "../js/csvtojson.js?v=0"
         ],
-        center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
+        no: false,
         bounds: false,
+        center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
         zoom: getRandomInt(1, 2),
         zoomIn: 14.5,
         html: "www/index.html"
     }
-
-    window.addEventListener("load", (event) => {
-        // things.features から マーカー・ポップアップを生成
-        for (const marker of things.features) {
-            if (marker.submit) {
-                const thing = document.createElement('section');
-                thing.className = 'thing';
-                thing.innerHTML = `
-                <h3>${marker.properties.title}</h3>
-                <p class="date">
-                ${marker.properties.date}</br>
-                ${marker.properties.address}
-                </p>
-                `;
-                document.querySelector('#things').prepend(thing);
-            }
-        }
-    });
 
     mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
     userInteracting = 0;
@@ -76,6 +95,7 @@ if (!urlParam) {
                     "otobuilding/things.all.js",
                     "../osaka/nansei/things.js"
                 ],
+                no: true,
                 bounds: [
                     [135.39146702295744, 34.59380194128228], // 南西座標
                     [135.5079278126247, 34.6540329633829] // 北東座標
@@ -92,6 +112,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/nantou/things.js?v=3"
                 ],
+                no: true,
                 bounds: [
                     [135.48000, 34.5876], // 南西座標
                     [135.625511, 34.650] // 北東座標
@@ -108,6 +129,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/bayarea/things.js"
                 ],
+                no: true,
                 bounds: [
                     [135.3730315262652, 34.64093264180789], // 南西座標
                     [135.4856383984765, 34.70968074072181] // 北東座標
@@ -124,6 +146,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/chuo/things.js?v=2"
                 ],
+                no: true,
                 bounds: [
                     [135.475455, 34.645457], // 南西座標
                     [135.54296771952292, 34.69639232460691] // 北東座標
@@ -140,6 +163,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/kita/things.js"
                 ],
+                no: true,
                 bounds: [
                     [135.4031370031613, 34.66921938627379], // 南西座標
                     [135.5629861101545, 34.77421451454586] // 北東座標
@@ -156,6 +180,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/higashi/things.js"
                 ],
+                no: true,
                 bounds: [
                     [135.51687809235827, 34.63269505296771], // 南西座標
                     [135.64909374681636, 34.73249747918041] // 北東座標
@@ -172,6 +197,7 @@ if (!urlParam) {
                 things: [
                     "../osaka/sakai.js"
                 ],
+                no: true,
                 bounds: [
                     [135.38526278033711, 34.40613068725279], // 南西座標
                     [135.57458389988736, 34.61841500845924] // 北東座標
@@ -195,6 +221,7 @@ if (!urlParam) {
                     "../osaka/kita/things.js",
                     "../osaka/sakai.js"
                 ],
+                no: true,
                 center: [135.5020763952882, 34.69376772507822],
                 bounds: [
                     [135.0590791040609, 34.256820829045935], // 南西座標
