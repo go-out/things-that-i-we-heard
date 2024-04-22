@@ -33,6 +33,19 @@ if (!urlParam) {
         areaThis = "私（わたしたち）が " + thisYear + thisMonth;
         htmlThis = "members.html";
         window.addEventListener("load", () => {
+            const submit = document.createElement('section');
+            submit.className = 'thing';
+            submit.innerHTML = `
+            <h3>あなたが聞いたことを投稿する</h3>
+            <p class="date">
+            submit the things that you heard
+            </p>
+            `;
+            submit.addEventListener('click', () => {
+                location.assign('../')
+            })
+            document.querySelector('#things').prepend(submit);
+
             document.body.classList.add('map');
             // things.features から マーカー・ポップアップを生成
             for (const marker of things.features) {
@@ -49,19 +62,6 @@ if (!urlParam) {
                     document.querySelector('#things').prepend(thing);
                 }
             }
-
-            const submit = document.createElement('section');
-            submit.className = 'thing';
-            submit.innerHTML = `
-            <h3>あなたが聞いたことを投稿する</h3>
-            <p class="date">
-            submit the things that you heard
-            </p>
-            `;
-            submit.addEventListener('click', () => {
-                location.assign('../')
-            })
-            document.querySelector('#things').prepend(submit);
         }, false)
     }
 
