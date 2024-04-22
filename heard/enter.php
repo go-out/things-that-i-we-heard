@@ -14,7 +14,7 @@
     $hqdn = $_SERVER["REMOTE_PORT"];
     $os = $_SERVER["HTTP_USER_AGENT"];
 
-    echo "IP <b id='ip'>" . $ip . "</b>";
+    echo "IP <u id='ip'>" . $ip . "</u>";
     echo "<u id='hqdn' hidden>" . $hqdn . "</u><br />";
     echo "<button type='button' onclick='setLOG()'>Come on join us !</button><br />";
     echo "<u id='os'>" . $os . "</u>";
