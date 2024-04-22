@@ -14,12 +14,11 @@
     $hqdn = $_SERVER["REMOTE_PORT"];
     $os = $_SERVER["HTTP_USER_AGENT"];
 
-    echo "IP <b id='ip'>" . $ip . "</b> | ";
-    echo "PORT <b id='hqdn'>" . $hqdn . "</b>";
-    echo "<p hidden><u id='os'>" . $os . "</u></p>";
+    echo "IP <b id='ip'>" . $ip . "</b>";
+    echo "<b id='hqdn' hidden>" . $hqdn . "</b><br />";
+    echo "<button type='button' onclick='setLOG()'>Come on join us !</button><br />";
+    echo "<u id='os'>" . $os . "</u>";
     ?>
-    <br />
-    <button type="button" onclick="setLOG()">Come on join us !</button>
 </div>
 <small>※
     Come on join us ! を クリックすると、このウェブサイトに
