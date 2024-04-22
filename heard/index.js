@@ -8,13 +8,20 @@ let indexThis,
     paramArray = [],
     urlParam = location.search.substring(1);
 
+if (!localStorage.getItem('yourInfo')) {
+    mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
+} else {
+    mapboxsStyle = "mapbox://styles/mapbox/light-v10";
+
+}
 if (!urlParam) {
     let areaThis;
+    let htmlThis;
 
     if (!localStorage.getItem('yourInfo')) {
         areaThis = '私（わたしたち）が ';
-        mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
-        window.addEventListener("load", () => {
+        htmlThis = "www/index.html";
+        document.addEventListener('DOMContentLoaded', function () {
             fetchHTML('enter.php', '#things')
             const readme = document.querySelector('#things')
             readme.style.fontSize = '111%';
@@ -24,7 +31,7 @@ if (!urlParam) {
         let thisYear = new Date().getFullYear() + "年";
         let thisMonth = new Date().getMonth() + 1 + "月 に";
         areaThis = "私（わたしたち）が " + thisYear + thisMonth;
-        mapboxsStyle = "mapbox://styles/mapbox/light-v10";
+        htmlThis = "members.html";
         window.addEventListener("load", () => {
             document.body.classList.add('map');
             // things.features から マーカー・ポップアップを生成
@@ -42,8 +49,20 @@ if (!urlParam) {
                     document.querySelector('#things').prepend(thing);
                 }
             }
-        }, false)
 
+            const submit = document.createElement('section');
+            submit.className = 'thing';
+            submit.innerHTML = `
+            <h3>あなたが聞いたことを投稿する</h3>
+            <p class="date">
+            submit the things that you heard
+            </p>
+            `;
+            submit.addEventListener('click', () => {
+                location.assign('../')
+            })
+            document.querySelector('#things').prepend(submit);
+        }, false)
     }
 
     indexThis = {
@@ -70,7 +89,7 @@ if (!urlParam) {
         center: [getRandomInt(-180, 180), getRandomInt(-90, 90)],
         zoom: getRandomInt(1, 2),
         zoomIn: 14.5,
-        html: "www/index.html"
+        html: htmlThis
     }
 
     userInteracting = 0;
@@ -225,7 +244,7 @@ if (!urlParam) {
                 ],
                 zoom: 9.87654321,
                 zoomIn: 14.5,
-                html: "../osaka/index.html"
+                html: "members.html"
             }
         }
     }
@@ -251,7 +270,6 @@ if (!urlParam) {
         }
     })
 
-    mapboxsStyle = "mapbox://styles/mapbox/light-v10";
     userInteracting = !0;
 }
 

@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="things that i (we) heard | Inspired by Sarah Marshall">
   <meta name="twitter:image" content="https://creative-community.space/map/heard/www/card.png">
 
-  <script src="index.js?v=3"></script>
+  <script src="index.js?v=4"></script>
   <script src="../js/thingsheard.js?v=3"></script>
   <script src="../js/youtube.js?v=1"></script>
   <script src="https://creative-community.space/ver/js/login.js?v=1"></script>
@@ -68,33 +68,47 @@
   </main>
 
   <footer id="www">
-    <details>
+    <details open>
       <summary>私（わたしたち）が 聞いたこと</summary>
       <article id="things"></article>
     </details>
 
-    <article id="log">
-      <section data-ruby="2023年11月1日(日)">
-        あなたが聞いたことを投稿するウェブフォーム
-        を公開しました。
-      </section>
-      <section data-ruby="2022年8月12日(金)">
-        <a href="bnaaltermuseum/">
-          京都・河原町周辺で聞いた
-          <strong>55</strong>
-          のこと
-        </a>
-        を公開しました。
-      </section>
-      <section data-ruby="2022年6月7日(火)">
-        <a href="otobuilding/">
-          大阪市住之江区全域と大正区・西成区の一部で聞いた
-          <strong>73</strong>
-          のこと
-        </a>
-        を公開しました。
-      </section>
-    </article>
+    <details id="log">
+      <summary>
+        更新情報
+        <i>Last-Modified <time></time></i>
+      </summary>
+      <article>
+        <section data-ruby="2023年11月1日(日)" class="members">
+          <a href="../">
+            あなたが聞いたことを投稿するウェブフォーム
+          </a>
+          を公開しました。
+        </section>
+        <section data-ruby="2022年8月12日(金)">
+          <a href="bnaaltermuseum/">
+            京都・河原町周辺で聞いた
+            <strong>55</strong>
+            のこと
+          </a>
+          を公開しました。
+        </section>
+        <section data-ruby="2022年6月7日(火)">
+          <a href="otobuilding/">
+            大阪市住之江区全域と大正区・西成区の一部で聞いた
+            <strong>73</strong>
+            のこと
+          </a>
+          を公開しました。
+        </section>
+        <section data-ruby="2022年5月22日(日)">
+          <a href="../">
+            私（わたしたち）が 聞いたこと
+          </a>
+          の制作を開始公開しました。
+        </section>
+      </article>
+    </details>
 
     <small id="copy">
       Copyright © 2020 -
@@ -156,6 +170,7 @@
 
     const year = new Date().getFullYear();
     document.querySelector('#copy time').innerHTML = year;
+    document.querySelector('#log time').innerHTML = document.lastModified;
   </script>
 </body>
 

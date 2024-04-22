@@ -1,0 +1,50 @@
+details summary {
+    color: #fff;
+    font-size: 150%;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    transition: 1s;
+}
+
+details summary:hover {
+    background: #fff;
+    color: #CDCBCC;
+}
+
+#log section {
+    display: block;
+    padding: 0.5rem;
+}
+
+[data-ruby]::before {
+    content: attr(data-ruby);
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    font-size: 75%;
+    text-align: left;
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+[data-ruby] a::before {
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+#log p {
+    margin: 0.5rem 0;
+}
+
+#log a {
+    color: #fff;
+    text-decoration: none;
+    transition: 1s;
+}
+
+#log a:hover {
+    background: #fff;
+    color: #CDCBCC;
+}

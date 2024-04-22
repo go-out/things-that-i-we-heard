@@ -29,11 +29,11 @@ details summary:hover {
     text-decoration: underline solid 0.2rem;
 }
 
+#things button,
 dialog input[type="button"] {
     font-size: 200%;
 }
 
-#things button,
 dialog h2,
 details summary {
     font-size: 150%;
@@ -97,15 +97,6 @@ aside a {
     margin-bottom: 1rem;
 }
 
-dialog [data-ruby]::before {
-    padding: 0.5rem 0;
-}
-
-#www [data-ruby]::before {
-    padding: 0.25rem;
-    margin-top: 0.5rem;
-}
-
 dialog input[type="button"],
 summary {
     padding: 0.25rem 0.5rem;
@@ -126,12 +117,18 @@ dialog input[type="button"] {
 
 [data-ruby]::before {
     content: attr(data-ruby);
+    text-align: left;
 }
 
-[data-ruby]::before {
+dialog [data-ruby]::before {
     color: #000;
     display: block;
-    text-align: left;
+    padding: 0.5rem 0;
+}
+
+#www [data-ruby]::before {
+    padding: 0.25rem;
+    margin-top: 0.5rem;
 }
 
 #things div b,
