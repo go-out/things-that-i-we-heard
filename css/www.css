@@ -61,9 +61,13 @@ details summary b i {
     font-size: 95%;
 }
 
-#os,
 [data-ruby]::before {
     font-size: 75%;
+}
+
+#www u {
+    font-size: 75%;
+    text-decoration: none;
 }
 
 details summary b,
