@@ -9,7 +9,7 @@
     </p>
     <button type="button" onclick="setLOG()">Come on join us !</button>
     <hr />
-    <p><u>あなたの通信情報／ブラウザ等情報</u></p>
+    <u>あなたの通信情報／ブラウザ等情報</u><br />
     <?php
     $ip = $_SERVER["REMOTE_ADDR"];
     $hqdn = $_SERVER["REMOTE_PORT"];
