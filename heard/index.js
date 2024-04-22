@@ -12,12 +12,7 @@ if (!urlParam) {
     let areaThis;
 
     if (!localStorage.getItem('yourInfo')) {
-        areaThis = '私（わたしたち）が';
-
-        const menbersAll = document.querySelectorAll('.members')
-        menbersAll.forEach((only) => {
-            only.remove()
-        })
+        areaThis = '私（わたしたち）が ';
 
         window.addEventListener("load", () => {
             fetchHTML('enter.php', '#things')
@@ -27,8 +22,8 @@ if (!urlParam) {
         }, false)
     } else {
         let thisYear = new Date().getFullYear() + "年";
-        let thisMonth = new Date().getMonth() + 1 + "月に";
-        areaThis = thisYear + thisMonth;
+        let thisMonth = new Date().getMonth() + 1 + "月 に";
+        areaThis = "私（わたしたち）が " + thisYear + thisMonth;
 
         window.addEventListener("load", () => {
             // things.features から マーカー・ポップアップを生成

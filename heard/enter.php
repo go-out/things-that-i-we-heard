@@ -13,7 +13,7 @@
     <p>
         下記の Come on join us ! を クリックすると、このウェブサイトに
         あなたの通信情報／ブラウザ等情報 が 送信され、あなたが聞いたこと
-        を 追加・記録できるようになります。
+        を 追加・記録 できるようになります。
     </p>
 </div>
 <button type="button" onclick="setLOG()">Come on join us !</button>
