@@ -15,7 +15,7 @@
     $os = $_SERVER["HTTP_USER_AGENT"];
 
     echo "IP <b id='ip'>" . $ip . "</b>";
-    echo "<b id='hqdn' hidden>" . $hqdn . "</b><br />";
+    echo "<u id='hqdn' hidden>" . $hqdn . "</u><br />";
     echo "<button type='button' onclick='setLOG()'>Come on join us !</button><br />";
     echo "<u id='os'>" . $os . "</u>";
     ?>
