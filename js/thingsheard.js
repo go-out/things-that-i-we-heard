@@ -33,7 +33,6 @@ document.addEventListener('readystatechange', event => {
         if (indexThis) {
             const h1 = document.querySelector('h1')
             h1.textContent = indexThis.title;
-
             const summary = document.querySelector('#www summary')
             summary.innerHTML = `${indexThis.area}聞いた<b id="count"></b>こと`;
         }
@@ -97,7 +96,7 @@ document.addEventListener('readystatechange', event => {
             })
         }
 
-        if (indexThis.no === true) {
+        if (indexThis.no) {
             document.querySelector('#count').innerHTML = things.features.length + ' <i>の</i>';
             document.querySelector('#count').style.padding = "0 0 0 0.25rem";
         } else {

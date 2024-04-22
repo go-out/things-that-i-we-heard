@@ -13,7 +13,7 @@ if (!urlParam) {
 
     if (!localStorage.getItem('yourInfo')) {
         areaThis = '私（わたしたち）が ';
-
+        mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
         window.addEventListener("load", () => {
             fetchHTML('enter.php', '#things')
             const readme = document.querySelector('#things')
@@ -24,7 +24,7 @@ if (!urlParam) {
         let thisYear = new Date().getFullYear() + "年";
         let thisMonth = new Date().getMonth() + 1 + "月 に";
         areaThis = "私（わたしたち）が " + thisYear + thisMonth;
-
+        mapboxsStyle = "mapbox://styles/mapbox/light-v10";
         window.addEventListener("load", () => {
             // things.features から マーカー・ポップアップを生成
             for (const marker of things.features) {
@@ -42,6 +42,7 @@ if (!urlParam) {
                 }
             }
         }, false)
+
     }
 
     indexThis = {
@@ -71,7 +72,6 @@ if (!urlParam) {
         html: "www/index.html"
     }
 
-    mapboxsStyle = "mapbox://styles/pehu/cl2ap5cwu00d914mtfw4h3sn8";
     userInteracting = 0;
 } else {
     // ?id=ID&area=エリア
