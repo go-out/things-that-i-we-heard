@@ -11,7 +11,7 @@
     }
   </script>
   <script src="js/findme.js?v=1"></script>
-  <script src="js/youHeard.js?v=1"></script>
+  <script src="js/youHeard.js?v=2"></script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -40,6 +40,7 @@
   <link href="css/index.css?v=1" rel="stylesheet" />
   <link href="css/form.css?v=1" rel="stylesheet" />
   <link href="css/thing.css?v=1" rel="stylesheet" />
+  <link href="css/www.css?v=1" rel="stylesheet" />
   <link href="css/print.css?v=1" rel="stylesheet" />
 
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
@@ -61,7 +62,22 @@
   </main>
 
   <footer id="www">
-    <article id="things"></article>
+    <details id="you">
+      <summary>This is a webform for submit the things that you heard</summary>
+      <article id="things"></article>
+    </details>
+    <article id="log">
+      <section data-ruby="things that i (we) heard">
+        <a href="heard/">
+          私（わたしたち）が 聞いたこと
+        </a>
+      </section>
+      <section data-ruby="↩">
+        <a href="/">
+          creative-community.space
+        </a>
+      </section>
+    </article>
     <small id="copy">
       Copyright © 2023 -
       <time></time>
@@ -139,6 +155,14 @@
       geoFindMe()
     });
 
+    function dialogOpen() {
+      document.querySelector("dialog").showModal();
+    }
+
+    function dialogClose() {
+      document.querySelector("dialog").close();
+    }
+
     const year = new Date().getFullYear();
     document.querySelector('#copy time').innerHTML = year;
   </script>
@@ -152,7 +176,7 @@
       showCursor: false,
       strings: [
         'Move the Pin to where you want to submit the thing you heard',
-        'あなたが聞いたこと を 投稿したい場所 へ ピンを移動してください'
+        'あなたが聞いたことを投稿したい 正しい場所 へ ピンを移動してください'
       ],
       typeSpeed: 100,            //タイピングのスピード
       backSpeed: 50,             //文字が消えていくときのスピード

@@ -1,10 +1,9 @@
-# This is a webform for submit the things that you heard
 これは、あなたが聞いたことを投稿するウェブフォームです。
 
 1. 位置情報 API[^1] が 端末の現在地 を取得し、地図上にドラッグ可能マーカーを追加
 2. Mapbox Geocoding API[^2] が、ドラッグ可能マーカーの地理座標 を 位置情報(住所・場所名) に変換
-3. あなたが聞いたことを ローカルストレージ[^3]・CSV に追加
-4. ローカルストレージからあなたが聞いたことを取得し、地図上にピンとポップアップを表示
+3. JavaScript/PHPを使用して、ウェブフォームによる投稿を ローカルストレージ[^3]・CSV に記録
+4. ローカルストレージから あなたが聞いたこと を取得し、地図上にピン・ポップアップを表示
 
 ***
 
@@ -23,7 +22,5 @@ ___
 [^3]: [ウェブストレージ API](https://developer.mozilla.org/ja/docs/Web/API/Web_Storage_API) は、ユーザーのローカル環境(ブラウザ)にデータを保存する仕組みです。
 ブラウザがプライベートモード・シークレットウインドウの場合や、閲覧履歴（キャッシュ）を消去した場合などは、ウェブストレージに保存されたデータは削除されます。
 
-***
 
-[建物を3Dで表示](https://docs.mapbox.com/jp/mapbox-gl-js/example/3d-buildings/)
-[3d.js](js/3d.js)
+[GitHub](https://github.com/go-out/things-that-i-we-heard)

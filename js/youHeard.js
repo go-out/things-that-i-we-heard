@@ -31,6 +31,34 @@ if (localStorage.getItem("heard")) {
         }
         things.features.push(iHeard)
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // things.features から マーカー・ポップアップを生成
+        let marker = things.features;
+        for (let i = 0; i < marker.length; i++) {
+            const thing = document.createElement('section');
+            thing.className = 'thing';
+            thing.innerHTML = `
+                    <h3>${marker[i].properties.title}</h3>
+                    <p class="date">
+                    ${marker[i].properties.date}</br>
+                    ${marker[i].properties.address}
+                    </p>
+                    <input type="button" value="i">
+                    `;
+            document.querySelector('#things').appendChild(thing)
+            thing.addEventListener('click', function () {
+                removeThis(i)
+            })
+        }
+        document.querySelector('#you').open = true;
+        const summary = document.querySelector('#you summary')
+        summary.innerHTML = `
+        あなたが聞いた
+        <b>${things.features.length}</b>
+        のこと
+        `;
+    }, false);
 } else {
     document.addEventListener('DOMContentLoaded', function () {
         const readme = document.querySelector('#things')
@@ -61,25 +89,6 @@ document.addEventListener('readystatechange', e => {
         const now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
         document.querySelector('#timestamp').value = now.toISOString().slice(0, -5);
-
-        // things.features から マーカー・ポップアップを生成
-        let marker = things.features;
-        for (let i = 0; i < marker.length; i++) {
-            const thing = document.createElement('section');
-            thing.className = 'thing';
-            thing.innerHTML = `
-            <h3>${marker[i].properties.title}</h3>
-            <p class="date">
-            ${marker[i].properties.date}</br>
-            ${marker[i].properties.address}
-            </p>
-            <input type="button" value="i">
-            `;
-            document.querySelector('#things').appendChild(thing)
-            thing.addEventListener('click', function () {
-                removeThis(i)
-            })
-        }
     } else if (e.target.readyState === 'complete') {
         // localStorage に あなたが聞いた言葉 を 追加
         let array = JSON.parse(localStorage.getItem("heard")) || [];
@@ -140,11 +149,3 @@ document.addEventListener('readystatechange', e => {
         }, false)
     }
 }, false)
-
-function dialogOpen() {
-    document.querySelector("dialog").showModal();
-}
-
-function dialogClose() {
-    document.querySelector("dialog").close();
-}
