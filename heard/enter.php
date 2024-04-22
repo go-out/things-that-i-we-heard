@@ -7,8 +7,9 @@
         街で聞いた知らない誰かの会話や独り言、友人・知人との会話の中で印象に残ったことなど、
         みんなが「どこかで誰かに聞いたこと」を集めて、世界地図を作りましょう。
     </p>
-    <b>あなたの通信情報／ブラウザ等情報</b>
+    <button type="button" onclick="setLOG()">Come on join us !</button>
     <hr />
+    <p><u>あなたの通信情報／ブラウザ等情報<u></p>
     <?php
     $ip = $_SERVER["REMOTE_ADDR"];
     $hqdn = $_SERVER["REMOTE_PORT"];
@@ -18,7 +19,6 @@
     echo "PORT <b id='hqdn'>" . $hqdn . "</b>";
     echo "<p><u id='os'>" . $os . "</u></p>";
     ?>
-    <button type="button" onclick="setLOG()">Come on join us !</button>
 </div>
 <small>※
     Come on join us ! を クリックすると、このウェブサイトに
