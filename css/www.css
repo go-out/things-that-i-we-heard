@@ -57,21 +57,24 @@ dialog a,
 }
 
 details summary b i {
-    font-style: normal;
     font-size: 95%;
 }
 
-details summary small {
-    font-style: italic;
-}
-
+#www u,
 [data-ruby]::before {
     font-size: 75%;
 }
 
+dialog a {
+    font-style: italic;
+}
+
 #www u {
-    font-size: 75%;
     text-decoration: none;
+}
+
+details summary b i {
+    font-style: normal;
 }
 
 details summary b,
@@ -82,10 +85,6 @@ details summary b,
 dialog aside {
     margin-top: 1rem;
     line-height: 175%;
-}
-
-dialog a {
-    font-style: italic;
 }
 
 #things button {
