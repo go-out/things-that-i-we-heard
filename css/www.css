@@ -61,6 +61,10 @@ details summary b i {
     font-size: 95%;
 }
 
+details summary small {
+    font-style: italic;
+}
+
 [data-ruby]::before {
     font-size: 75%;
 }
