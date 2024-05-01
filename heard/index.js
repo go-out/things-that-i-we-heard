@@ -81,6 +81,7 @@ if (!urlParam) {
             "../osaka/kawachi.js",
             "../osaka/sakai.js",
             "../osaka/senshu.js",
+            "../japan/gifu.js",
             "../japan/nara.js",
             "../japan/tokyo.js",
             "../js/csvtojson.js"
