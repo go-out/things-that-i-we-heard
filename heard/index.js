@@ -222,7 +222,7 @@ if (!urlParam) {
                 center: [135.50012524849802, 34.5239972993108],
                 zoom: 12.5,
                 zoomIn: 14.5,
-                html: "../osaka/index.html"
+                html: "members.html"
             }
         } else {
             indexThis = {
