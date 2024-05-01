@@ -47,6 +47,18 @@ let osakaHokusetsu = {
                 date: '2024年3月18日 16:16',
                 address: '大阪府摂津市一津屋2丁目11番25'
             }
+        },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [135.57873648772647, 34.828778630750804]
+            },
+            properties: {
+                title: 'どんぐりのやつ',
+                date: '2024年4月7日 11:31',
+                address: '大阪府茨木市総持寺1丁目2番11'
+            }
         }
     ]
 };

@@ -227,6 +227,18 @@ let osaka4th = {
         date: '2024年4月7日 20:20',
         address: '大阪市中央区天王寺区上本町6-3-31 ハイハイアリーナ'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51012025940463, 34.64356347831607]
+      },
+      properties: {
+        title: '俺が死にかけたときお前',
+        date: '2024年4月30日 17:50',
+        address: '大阪市阿倍野区阿倍野筋3丁目13番23'
+      }
     }
   ]
 };

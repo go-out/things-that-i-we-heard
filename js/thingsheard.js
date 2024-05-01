@@ -14,8 +14,8 @@ switch (document.readyState) {
         if (indexThis) {
             for (const thingsJS of indexThis.things) {
                 const script = document.createElement("script")
-                script.src = thingsJS;
-                head.appendChild(script);
+                script.src = thingsJS + "?v=" + Date.now()
+                head.appendChild(script)
             }
         }
         break;
@@ -56,7 +56,7 @@ document.addEventListener('readystatechange', event => {
         document.body.classList.toggle('enter')
 
         for (const marker of things.features) {
-            const el = document.createElement('div');
+            const el = document.createElement('div')
             el.className = 'thing';
             new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
@@ -106,18 +106,18 @@ document.addEventListener('readystatechange', event => {
 })
 
 function dialogOpen() {
-    document.querySelector("dialog").showModal();
+    document.querySelector("dialog").showModal()
 }
 
 function dialogClose() {
-    document.querySelector("dialog").close();
+    document.querySelector("dialog").close()
     document.querySelector("#readme").innerHTML = "";
     document.querySelector('#player').hidden = true;
-    player.stopVideo();
+    player.stopVideo()
 }
 
 function chengeHidden() {
-    const mainAll = document.querySelectorAll('main');
+    const mainAll = document.querySelectorAll('main')
     mainAll.forEach(main => {
         if (main.hidden == false) {
             main.hidden = true;

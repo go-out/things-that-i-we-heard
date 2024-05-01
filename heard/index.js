@@ -72,17 +72,18 @@ if (!urlParam) {
             "otobuilding/things.all.js",
             "bnaaltermuseum/things.all.js",
             "../osaka/bayarea/things.js",
-            "../osaka/chuo/things.js?v=2",
+            "../osaka/chuo/things.js",
             "../osaka/higashi/things.js",
             "../osaka/kita/things.js",
             "../osaka/nansei/things.js",
-            "../osaka/nantou/things.js?v=3",
+            "../osaka/nantou/things.js",
             "../osaka/hokusetsu.js",
             "../osaka/kawachi.js",
             "../osaka/sakai.js",
+            "../osaka/senshu.js",
             "../japan/nara.js",
             "../japan/tokyo.js",
-            "../js/csvtojson.js?v=0"
+            "../js/csvtojson.js"
         ],
         no: false,
         bounds: false,
@@ -125,7 +126,7 @@ if (!urlParam) {
                 title: "things that i (we) heard in southeast osaka",
                 area: "大阪市住吉区・東住吉区・阿倍野区・平野区と西成区・八尾市の一部で",
                 things: [
-                    "../osaka/nantou/things.js?v=3"
+                    "../osaka/nantou/things.js"
                 ],
                 no: true,
                 bounds: [
@@ -159,7 +160,7 @@ if (!urlParam) {
                 title: "things that i (we) heard in osaka center area",
                 area: "大阪市中央区・浪速区・天王寺区と西区の一部で",
                 things: [
-                    "../osaka/chuo/things.js?v=2"
+                    "../osaka/chuo/things.js"
                 ],
                 no: true,
                 bounds: [
@@ -228,13 +229,16 @@ if (!urlParam) {
                 area: "大阪府全域で",
                 things: [
                     "otobuilding/things.all.js",
-                    "../osaka/nantou/things.js?v=3",
-                    "../osaka/chuo/things.js?v=2",
+                    "../osaka/bayarea/things.js",
+                    "../osaka/chuo/things.js",
                     "../osaka/higashi/things.js",
+                    "../osaka/kita/things.js",
+                    "../osaka/nansei/things.js",
+                    "../osaka/nantou/things.js",
                     "../osaka/hokusetsu.js",
                     "../osaka/kawachi.js",
-                    "../osaka/kita/things.js",
-                    "../osaka/sakai.js"
+                    "../osaka/sakai.js",
+                    "../osaka/senshu.js"
                 ],
                 no: true,
                 center: [135.5020763952882, 34.69376772507822],
