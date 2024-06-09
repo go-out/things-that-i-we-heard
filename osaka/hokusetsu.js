@@ -203,18 +203,6 @@ let osakaHokusetsu = {
             date: '2024年5月11日 16:10',
             address: '大阪府豊中市服部緑地 新蒟蒻橋'
           }
-        },
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [___]
-          },
-          properties: {
-            title: '___',
-            date: '2024年5月__日 ___',
-            address: '___'
-          }
         }
     ]
 };
