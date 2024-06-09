@@ -1009,7 +1009,151 @@ let osaka2nd = {
       properties: {
         title: '願成就',
         date: '2024年4月28日 15:30',
-        address: '大阪府八尾市本町5-8-1常光寺'
+        address: '大阪府八尾市本町5-8-1 常光寺'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.55654079079318,34.623586529872185]
+      },
+      properties: {
+        title: '今の人はね、そんなんしないの',
+        date: '2024年5月2日 13:35',
+        address: '日本大阪府大阪市平野区平野東2丁目1番5'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5591412375632,34.62195396968001]
+      },
+      properties: {
+        title: 'ええからもうどっか入ろうよ',
+        date: '2024年5月2日 13:38',
+        address: '日本大阪府大阪市平野区平野東3丁目6番1'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.54896149568816,34.62616621558435]
+      },
+      properties: {
+        title: '止まってください止まれ止まれ',
+        date: '2024年5月2日 13:49',
+        address: '日本大阪府大阪市平野区平野上町1丁目10番30'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.551316023185,34.626521714394144]
+      },
+      properties: {
+        title: '野崎さんはな、<br>あんまり宣伝せえへんやろ金持ちやから',
+        date: '2024年5月2日 13:51',
+        address: '日本大阪府大阪市平野区平野上町1丁目14番5'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5535862917895,34.62661648299884]
+      },
+      properties: {
+        title: '公園ついたら何して遊ぶの？',
+        date: '2024年5月2日 14:53',
+        address: '日本大阪府大阪市平野区平野上町2丁目7番2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.55437221573072,34.62899515773414]
+      },
+      properties: {
+        title: 'レロレロレロレロレロレロレロレロ',
+        date: '2024年5月2日 14:57',
+        address: '日本大阪府大阪市平野区平野宮町1丁目8番3'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5491170964683,34.621177873670305]
+      },
+      properties: {
+        title: '一言一言うるせーんだよお前は',
+        date: '2024年5月2日 15:12',
+        address: '日本大阪府大阪市平野区平野本町2丁目10番25'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50109219026052,34.60920077435692]
+      },
+      properties: {
+        title: 'バスにご注意ください',
+        date: '2024年5月9日 17:13',
+        address: '日本大阪府大阪市住吉区千躰1-1-5 細江川親水河川'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51217836179916,34.594746409598855]
+      },
+      properties: {
+        title: 'そういうことあるよな',
+        date: '2024年5月9日 17:37',
+        address: '日本大阪府大阪市住吉区我孫子東3丁目8番2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.51199098932466,34.59176456550854]
+      },
+      properties: {
+        title: 'めっちゃええやん音源作ろや',
+        date: '2024年5月9日 19:16',
+        address: '日本大阪府大阪市住吉区住吉区浅香1-8-15 大阪市立住吉スポーツセンター'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50332641228874,34.594234378405076]
+      },
+      properties: {
+        title: '恋活プロフェッショナルに聞くわ',
+        date: '2024年5月9日 19:23',
+        address: '日本大阪府大阪市住吉区杉本2丁目31番15'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.5017529009546,34.598494827705295]
+      },
+      properties: {
+        title: 'マサキってめるる嫌いなん？',
+        date: '2024年5月9日 19:30',
+        address: '日本大阪府大阪市住吉区山之内1丁目16番9'
       }
     }
   ]
