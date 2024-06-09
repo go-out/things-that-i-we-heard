@@ -239,6 +239,54 @@ let osaka4th = {
         date: '2024年4月30日 17:50',
         address: '大阪市阿倍野区阿倍野筋3丁目13番23'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.493232774111,34.68545434926091]
+      },
+      properties: {
+        title: 'めっちゃバラきれい',
+        date: '2024年5月17日 9:54',
+        address: '大阪市西区靱本町1-9 靱公園'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.50177940387732,34.68910937819102]
+      },
+      properties: {
+        title: 'ほな5ヶ月でなんとかするっちゅうことですな',
+        date: '2024年5月17日 10:47',
+        address: '大阪市中央区伏見町3-3-3 芝川ビル'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.4948617858027,34.68851628640218]
+      },
+      properties: {
+        title: '無駄にワンオペでやってる',
+        date: '2024年5月17日 12:49',
+        address: '大阪市西区江戸堀1丁目20番16'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49642873657206,34.68652967857436]
+      },
+      properties: {
+        title: 'もしかしたら120%になるかも知れんし<br>20%が50%になるかも知れへんし',
+        date: '2024年5月17日 12:55',
+        address: '大阪市西区靱本町1-8-4 大阪科学技術館'
+      }
     }
   ]
 };
