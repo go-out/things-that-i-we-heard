@@ -179,6 +179,114 @@ let osaka5th = {
         date: '2024年3月28日 14:09',
         address: '大阪市北区天神橋4丁目4番1'
       }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.4954231866488,34.69771577052107]
+      },
+      properties: {
+        title: 'ソースが味しない',
+        date: '2024年5月5日 14:00',
+        address: '大阪市北区曾根崎新地1 Daru食堂'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49013630024865,34.704540579899756]
+      },
+      properties: {
+        title: '星５つ',
+        date: '2024年5月5日 19:22',
+        address: '大阪市北区大淀中1-1-20 アマデウス'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.489181005489,34.70389077613068]
+      },
+      properties: {
+        title: 'Sex up',
+        date: '2024年5月5日 19:00',
+        address: '大阪市北区大淀南1丁目4番15'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49463349747236,34.70141048144204]
+      },
+      properties: {
+        title: '豚骨臭すぎ',
+        date: '2024年5月5日 20:40',
+        address: '大阪市北区梅田3-1-1 博多一幸舎'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.52102623074097,34.705115433675886]
+      },
+      properties: {
+        title: '55分遅れています',
+        date: '2024年5月16日 18:10',
+        address: '大阪市都島区中野町5-1-22 JR桜ノ宮駅'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49728298600814,34.69943221074651]
+      },
+      properties: {
+        title: 'ええことないわー私',
+        date: '2024年5月16日 18:39',
+        address: '大阪市北区梅田1-2-2'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49342844591763,34.69589122036426]
+      },
+      properties: {
+        title: 'そして、東京建物ブリリアント代表取締役',
+        date: '2024年5月17日 11:18',
+        address: '大阪市北区堂島2丁目4番5'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.49170739022605,34.69648041650957]
+      },
+      properties: {
+        title: 'いったんいらんもん片付けますね',
+        date: '2024年5月17日 11:34',
+        address: '大阪市北区堂島3丁目1 電話100年記念花時計'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [135.4942831789421,34.69617798147905]
+      },
+      properties: {
+        title: 'それって...持ってきてくれたか？',
+        date: '2024年5月17日 12:12',
+        address: '大阪市北区堂島2丁目1番24'
+      }
     }
   ]
 };
